@@ -7,7 +7,12 @@
 
 #import "ViewController.h"
 #import "MPThread.h"
+#import "MPLRSource.h"
+#import "MPRunloopObserver.h"
+
 @interface ViewController ()
+
+@property (nonatomic, strong) MPRunloopObserver *runloopOB;
 
 @end
 
@@ -15,11 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.runloopOB = [MPRunloopObserver beginObserver];
 //    self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view.
 //    [self runloopCallingOut];
-    [self threadAndRunloop];
+//    [self threadAndRunloop];
+    [MPLRSource run];
 }
+
 
 - (void)loadView {
     self.view = [self scrollView];
