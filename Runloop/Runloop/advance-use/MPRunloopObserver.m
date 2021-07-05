@@ -78,26 +78,24 @@ void myRunLoopBeginCallback(CFRunLoopObserverRef observer, CFRunLoopActivity act
         case kCFRunLoopEntry:
             RunLoopLog(@"begin---kCFRunLoopEntry");
             break;
-
         case kCFRunLoopBeforeTimers:
             RunLoopLog(@"begin---kCFRunLoopBeforeTimers");
             break;
-
         case kCFRunLoopBeforeSources:
             RunLoopLog(@"begin---kCFRunLoopBeforeSources");
-
             break;
-
+        case kCFRunLoopBeforeWaiting:
+            RunLoopLog(@"begin---kCFRunLoopBeforeWaiting");
+            break;
         case kCFRunLoopAfterWaiting:
             RunLoopLog(@"begin---kCFRunLoopAfterWaiting");
-
             break;
-
         case kCFRunLoopAllActivities:
             RunLoopLog(@"begin---kCFRunLoopAllActivities");
-
             break;
-
+        case kCFRunLoopExit:
+            RunLoopLog(@"begin---kCFRunLoopExit");
+            break;
         default:
             break;
     }
@@ -107,19 +105,27 @@ void myRunLoopEndCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activ
 {
 
     switch (activity) {
+        case kCFRunLoopEntry:
+            RunLoopLog(@"end---kCFRunLoopEntry");
+            break;
+        case kCFRunLoopBeforeTimers:
+            RunLoopLog(@"end---kCFRunLoopBeforeTimers");
+            break;
+        case kCFRunLoopBeforeSources:
+            RunLoopLog(@"end---kCFRunLoopBeforeSources");
+            break;
         case kCFRunLoopBeforeWaiting:
             RunLoopLog(@"end---kCFRunLoopBeforeWaiting");
-
             break;
-
-        case kCFRunLoopExit:
-            RunLoopLog(@"end---kCFRunLoopExit");
+        case kCFRunLoopAfterWaiting:
+            RunLoopLog(@"end---kCFRunLoopAfterWaiting");
             break;
-
         case kCFRunLoopAllActivities:
             RunLoopLog(@"end---kCFRunLoopAllActivities");
             break;
-
+        case kCFRunLoopExit:
+            RunLoopLog(@"end---kCFRunLoopExit");
+            break;
         default:
             break;
     }
@@ -130,26 +136,24 @@ void myInitializetionRunLoopBeginCallback(CFRunLoopObserverRef observer, CFRunLo
     switch (activity) {
         case kCFRunLoopEntry:
             RunLoopLog(@"init-begin---kCFRunLoopEntry");
-
             break;
-
         case kCFRunLoopBeforeTimers:
             RunLoopLog(@"init-begin---kCFRunLoopBeforeTimers");
-
             break;
-
         case kCFRunLoopBeforeSources:
             RunLoopLog(@"init-begin---kCFRunLoopBeforeSources");
-
             break;
-
+        case kCFRunLoopBeforeWaiting:
+            RunLoopLog(@"init-begin---kCFRunLoopBeforeWaiting");
+            break;
         case kCFRunLoopAfterWaiting:
             RunLoopLog(@"init-begin---kCFRunLoopAfterWaiting");
-
             break;
-
         case kCFRunLoopAllActivities:
             RunLoopLog(@"init-begin---kCFRunLoopAllActivities");
+            break;
+        case kCFRunLoopExit:
+            RunLoopLog(@"init-begin---kCFRunLoopExit");
             break;
         default:
             break;
@@ -160,21 +164,27 @@ void myInitializetionRunLoopEndCallback(CFRunLoopObserverRef observer, CFRunLoop
 {
 
     switch (activity) {
+        case kCFRunLoopEntry:
+            RunLoopLog(@"init-end---kCFRunLoopEntry");
+            break;
+        case kCFRunLoopBeforeTimers:
+            RunLoopLog(@"init-end---kCFRunLoopBeforeTimers");
+            break;
+        case kCFRunLoopBeforeSources:
+            RunLoopLog(@"init-end---kCFRunLoopBeforeSources");
+            break;
         case kCFRunLoopBeforeWaiting:
             RunLoopLog(@"init-end---kCFRunLoopBeforeWaiting");
-
             break;
-
-        case kCFRunLoopExit:
-            RunLoopLog(@"init-end---kCFRunLoopExit");
-
+        case kCFRunLoopAfterWaiting:
+            RunLoopLog(@"init-end---kCFRunLoopAfterWaiting");
             break;
-
         case kCFRunLoopAllActivities:
             RunLoopLog(@"init-end---kCFRunLoopAllActivities");
-
             break;
-
+        case kCFRunLoopExit:
+            RunLoopLog(@"init-end---kCFRunLoopExit");
+            break;
         default:
             break;
     }
