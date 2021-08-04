@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MPRunloopObserver : NSObject
 
-+ (instancetype)beginObserver;
++ (void)beginObserver;
 
 @end
 

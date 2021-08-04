@@ -12,7 +12,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) MPRunloopObserver *runloopOB;
 
 @end
 
@@ -20,24 +19,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.runloopOB = [MPRunloopObserver beginObserver];
 //    self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view.
 //    [self runloopCallingOut];
 //    [self threadAndRunloop];
-    [MPLRSource run];
+//    [MPLRSource run];、
+    [self gcdTest];
+
 }
-
-
-- (void)loadView {
-    self.view = [self scrollView];
-    self.view.backgroundColor = UIColor.whiteColor;
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self runloopCallingOut];
-    
+    [self gcdTest];
 }
+
+- (void)gcdTest {
+    NSLog(@"1");
+    [self performSelector:@selector(test2)];
+    [self performSelector:@selector(test3) withObject:nil afterDelay:0];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"5");
+    });
+    [self test2];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"4");
+//    });
+//
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        NSLog(@"6");
+//    });
+//    [self test1];
+}
+
+- (void)test1 {
+    NSLog(@"1");
+}
+- (void)test2 {
+    NSLog(@"2");
+}
+- (void)test3 {
+    NSLog(@"3");
+}
+
+
+//- (void)loadView {
+//    self.view = [self scrollView];
+//    self.view.backgroundColor = UIColor.whiteColor;
+//}
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+////    [self runloopCallingOut];
+//
+//}
 
 - (void)threadAndRunloop {
     //子线程runloop默认不开启

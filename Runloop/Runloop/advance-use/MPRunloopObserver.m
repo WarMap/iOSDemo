@@ -20,10 +20,17 @@
 
 @implementation MPRunloopObserver
 
-+ (instancetype)beginObserver {
-    MPRunloopObserver *ob = [[MPRunloopObserver alloc] init];
-    [ob addRunLoopObserver];
-    return ob;
++ (instancetype)sharedInstance {
+    static id sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
++ (void)beginObserver {
+    [[self sharedInstance] addRunLoopObserver];
 }
 
 - (void)dealloc {
@@ -71,7 +78,7 @@
     CFRunLoopRemoveObserver(runloop, m_runLoopEndObserver, (CFRunLoopMode) @"UIInitializationRunLoopMode");
 }
 
-
+static NSInteger count = 0;
 void myRunLoopBeginCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info)
 {
     switch (activity) {
@@ -82,7 +89,8 @@ void myRunLoopBeginCallback(CFRunLoopObserverRef observer, CFRunLoopActivity act
             RunLoopLog(@"begin---kCFRunLoopBeforeTimers");
             break;
         case kCFRunLoopBeforeSources:
-            RunLoopLog(@"begin---kCFRunLoopBeforeSources");
+            count++;
+            RunLoopLog(@"begin---kCFRunLoopBeforeSources : %@", @(count));
             break;
         case kCFRunLoopBeforeWaiting:
             RunLoopLog(@"begin---kCFRunLoopBeforeWaiting");
