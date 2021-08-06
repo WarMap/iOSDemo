@@ -19,6 +19,9 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions {
+    return YES;
+}
 
 #pragma mark - UISceneSession lifecycle
 

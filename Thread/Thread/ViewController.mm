@@ -7,6 +7,11 @@
 
 #import "ViewController.h"
 #import "Star.h"
+#import "MPGCDTest.h"
+#import "MPOperationTest.h"
+#include <iostream>
+using namespace std;
+
 @interface ViewController ()
 
 @property (nonatomic, weak) NSObject *obj;
@@ -14,6 +19,12 @@
 
 @end
 
+// 线程，基本运行单元
+// 进程  操作系统分配资源的基本单位
+
+
+//线程生命周期
+//新建，就绪，运行，阻塞，死亡
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -22,8 +33,18 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self gcdTest];
+//    [self gcdTest];
+    [MPGCDTest test];
+    [MPOperationTest testOP];
+//    tossss();
 }
+
+void tossss() {
+    int a = 2;
+    string b = to_string(a);
+    cout << b;
+}
+
 
 - (void)gcdTest {
 
