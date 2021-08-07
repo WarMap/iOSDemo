@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE0F998926AED9020051A4EC /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F998826AED9020051A4EC /* Star.m */; };
 		EE42DAE126BCCB6E000ED277 /* MPOperationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE42DAE026BCCB6E000ED277 /* MPOperationTest.m */; };
+		EE42DAE426BE7F90000ED277 /* MPSomeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EE42DAE326BE7F90000ED277 /* MPSomeTask.m */; };
 		EE4CEA4F26BAA77F00D02193 /* MPGCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4CEA4E26BAA77F00D02193 /* MPGCDTest.m */; };
 		EEFABABD26AEB7CB004F074E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFABABC26AEB7CA004F074E /* AppDelegate.m */; };
 		EEFABAC026AEB7CB004F074E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFABABF26AEB7CB004F074E /* SceneDelegate.m */; };
@@ -24,6 +25,8 @@
 		EE0F998826AED9020051A4EC /* Star.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
 		EE42DADF26BCCB6E000ED277 /* MPOperationTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOperationTest.h; sourceTree = "<group>"; };
 		EE42DAE026BCCB6E000ED277 /* MPOperationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOperationTest.m; sourceTree = "<group>"; };
+		EE42DAE226BE7F90000ED277 /* MPSomeTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPSomeTask.h; sourceTree = "<group>"; };
+		EE42DAE326BE7F90000ED277 /* MPSomeTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPSomeTask.m; sourceTree = "<group>"; };
 		EE4CEA4D26BAA77F00D02193 /* MPGCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPGCDTest.h; sourceTree = "<group>"; };
 		EE4CEA4E26BAA77F00D02193 /* MPGCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPGCDTest.m; sourceTree = "<group>"; };
 		EEFABAB826AEB7CA004F074E /* Thread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thread.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,8 @@
 				EE4CEA4E26BAA77F00D02193 /* MPGCDTest.m */,
 				EE42DADF26BCCB6E000ED277 /* MPOperationTest.h */,
 				EE42DAE026BCCB6E000ED277 /* MPOperationTest.m */,
+				EE42DAE226BE7F90000ED277 /* MPSomeTask.h */,
+				EE42DAE326BE7F90000ED277 /* MPSomeTask.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				EE42DAE126BCCB6E000ED277 /* MPOperationTest.m in Sources */,
 				EE0F998926AED9020051A4EC /* Star.m in Sources */,
 				EEFABAC326AEB7CB004F074E /* ViewController.mm in Sources */,
+				EE42DAE426BE7F90000ED277 /* MPSomeTask.m in Sources */,
 				EEFABABD26AEB7CB004F074E /* AppDelegate.m in Sources */,
 				EEFABACE26AEB7CD004F074E /* main.m in Sources */,
 				EEFABAC026AEB7CB004F074E /* SceneDelegate.m in Sources */,

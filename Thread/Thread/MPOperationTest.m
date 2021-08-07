@@ -142,7 +142,7 @@ static inline void dumpThreads(NSString* str) {
 
 + (void)testOP {
     MPOperationTest *test = [self sharedInstance];
-    [test testOP];
+//    [test testOP];
 }
 
 - (void)testOP {
