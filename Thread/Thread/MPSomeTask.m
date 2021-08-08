@@ -6,8 +6,7 @@
 //
 
 #import "MPSomeTask.h"
-#include <pthread.h>
-#include <mach/mach.h>
+#import "MPThreadUtil.h"
 
 @interface MPSomeTask()<NSPortDelegate> {
     NSThread *_thread;
@@ -34,40 +33,29 @@
 }
 
 - (void)handleMachMessage:(void *)msg {
-    NSLog(@"subThread callback---");
-    NSThread* thread = [NSThread currentThread];
-    mach_port_t machTID = pthread_mach_thread_np(pthread_self());
-    NSLog(@"current thread num: %x thread name:%@", machTID,thread.name);
-    NSLog(@"---------------------");
+    currentThreadInfo(@"receive");
 }
 
 - (void)subThreadEntrance {
     [[NSRunLoop currentRunLoop] addPort:_port forMode:NSRunLoopCommonModes];
-    NSLog(@"---------------------");
     self.loop = [NSRunLoop currentRunLoop];
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate distantFuture]];
-    NSThread* thread = [NSThread currentThread];
-    mach_port_t machTID = pthread_mach_thread_np(pthread_self());
-    NSLog(@"current thread num: %x thread name:%@", machTID,thread.name);
-    NSLog(@"loop was killed ---------------------");
+    NSLog(@"loop exited ---------------------");
 }
 
 - (void)runPort {
     [self performSelector:@selector(firePort) onThread:_thread withObject:nil waitUntilDone:NO];
-
 }
 
-
 - (void)firePort {
+    currentThreadInfo(@"fire   ");
     NSData *data1 = [@"warmap" dataUsingEncoding:NSUTF8StringEncoding];
-    NSThread* thread = [NSThread currentThread];
-    mach_port_t machTID = pthread_mach_thread_np(pthread_self());
-    NSLog(@"current thread num: %x thread name:%@", machTID,thread.name);
     [mainPort sendBeforeDate:[NSDate date] msgid:198239 components:@[data1, _port].mutableCopy from:_port reserved:2];
 }
 
 - (void)killThread {
     [self.loop removePort:_port forMode:NSRunLoopCommonModes];
+    NSLog(@"loop %@", self.loop);
 }
 
 @end

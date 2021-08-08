@@ -10,6 +10,7 @@
 		EE0F998926AED9020051A4EC /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F998826AED9020051A4EC /* Star.m */; };
 		EE42DAE126BCCB6E000ED277 /* MPOperationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE42DAE026BCCB6E000ED277 /* MPOperationTest.m */; };
 		EE42DAE426BE7F90000ED277 /* MPSomeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EE42DAE326BE7F90000ED277 /* MPSomeTask.m */; };
+		EE42DAE726BF6905000ED277 /* MPThreadUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE42DAE626BF6905000ED277 /* MPThreadUtil.m */; };
 		EE4CEA4F26BAA77F00D02193 /* MPGCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4CEA4E26BAA77F00D02193 /* MPGCDTest.m */; };
 		EEFABABD26AEB7CB004F074E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFABABC26AEB7CA004F074E /* AppDelegate.m */; };
 		EEFABAC026AEB7CB004F074E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFABABF26AEB7CB004F074E /* SceneDelegate.m */; };
@@ -27,6 +28,8 @@
 		EE42DAE026BCCB6E000ED277 /* MPOperationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOperationTest.m; sourceTree = "<group>"; };
 		EE42DAE226BE7F90000ED277 /* MPSomeTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPSomeTask.h; sourceTree = "<group>"; };
 		EE42DAE326BE7F90000ED277 /* MPSomeTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPSomeTask.m; sourceTree = "<group>"; };
+		EE42DAE526BF6905000ED277 /* MPThreadUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPThreadUtil.h; sourceTree = "<group>"; };
+		EE42DAE626BF6905000ED277 /* MPThreadUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPThreadUtil.m; sourceTree = "<group>"; };
 		EE4CEA4D26BAA77F00D02193 /* MPGCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPGCDTest.h; sourceTree = "<group>"; };
 		EE4CEA4E26BAA77F00D02193 /* MPGCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPGCDTest.m; sourceTree = "<group>"; };
 		EEFABAB826AEB7CA004F074E /* Thread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thread.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +91,8 @@
 		EEFABABA26AEB7CA004F074E /* Thread */ = {
 			isa = PBXGroup;
 			children = (
+				EE42DAE526BF6905000ED277 /* MPThreadUtil.h */,
+				EE42DAE626BF6905000ED277 /* MPThreadUtil.m */,
 				EEFABABB26AEB7CA004F074E /* AppDelegate.h */,
 				EEFABABC26AEB7CA004F074E /* AppDelegate.m */,
 				EEFABAC126AEB7CB004F074E /* ViewController.h */,
@@ -177,6 +182,7 @@
 				EE0F998926AED9020051A4EC /* Star.m in Sources */,
 				EEFABAC326AEB7CB004F074E /* ViewController.mm in Sources */,
 				EE42DAE426BE7F90000ED277 /* MPSomeTask.m in Sources */,
+				EE42DAE726BF6905000ED277 /* MPThreadUtil.m in Sources */,
 				EEFABABD26AEB7CB004F074E /* AppDelegate.m in Sources */,
 				EEFABACE26AEB7CD004F074E /* main.m in Sources */,
 				EEFABAC026AEB7CB004F074E /* SceneDelegate.m in Sources */,

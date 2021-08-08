@@ -13,8 +13,7 @@
 #import <Foundation/NSPort.h>
 #import <objc/runtime.h>
 #import "MPSomeTask.h"
-#include <pthread.h>
-#include <mach/mach.h>
+#import "MPThreadUtil.h"
 
 using namespace std;
 
@@ -26,6 +25,7 @@ using namespace std;
 @property (nonatomic, strong) NSPort *aPort;
 @property (nonatomic, strong) NSPort *bPort;
 @property (nonatomic, strong) MPSomeTask *task;
+
 @end
 
 // 线程，基本运行单元
@@ -38,6 +38,7 @@ using namespace std;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupGes];
     
     self.aPort = [NSMachPort port];
     self.aPort.delegate = self;
@@ -47,52 +48,46 @@ using namespace std;
     // Do any additional setup after loading the view.
 }
 
-- (void)handleMachMessage:(void *)msg {
-    NSLog(@"mainThread callback---");
-    NSThread* thread = [NSThread currentThread];
-    mach_port_t machTID = pthread_mach_thread_np(pthread_self());
-    NSLog(@"current thread num: %x thread name:%@", machTID,thread.name);
-    NSLog(@"---------------------");
+- (void)setupGes {
+    UITapGestureRecognizer *tapGES = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleFingerdidTapView:)];
+    tapGES.numberOfTouchesRequired = 1;
+    tapGES.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tapGES];
+    UITapGestureRecognizer *tap2GES = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleFingerdidTapView:)];
+    tap2GES.numberOfTouchesRequired = 2;
+    tap2GES.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tap2GES];
+    UITapGestureRecognizer *tapGES2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleFingerdidTapViewTwo:)];
+    tapGES2.numberOfTouchesRequired = 1;
+    tapGES2.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:tapGES2];
+    
+    [tapGES requireGestureRecognizerToFail:tap2GES];
+    [tapGES requireGestureRecognizerToFail:tapGES2];
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self gcdTest];
+
+- (void)handleMachMessage:(void *)msg {
+    currentThreadInfo(@"receive");
+}
+
+- (void)singleFingerdidTapView:(UITapGestureRecognizer *)ges {
+    [self.task runPort];
+}
+
+- (void)doubleFingerdidTapView:(UITapGestureRecognizer *)ges {
+    currentThreadInfo(@"fire   ");
+    NSData *data1 = [@"warmap" dataUsingEncoding:NSUTF8StringEncoding];
+    [self.task.port sendBeforeDate:[NSDate date] components:@[data1, self.aPort].mutableCopy from:self.aPort reserved:4];
+}
+
+- (void)singleFingerdidTapViewTwo:(UITapGestureRecognizer *)ges {
+    [self.task killThread];
+}
+
+- (void)didTapView:(UITapGestureRecognizer *)ges {
     [MPGCDTest test];
     [MPOperationTest testOP];
-    if (event.allTouches.count == 1) {
-        [self.task runPort];
-    } else if (event.allTouches.count == 2) {
-        NSData *data1 = [@"warmap" dataUsingEncoding:NSUTF8StringEncoding];
-        [self.task.port sendBeforeDate:[NSDate date] components:@[data1, self.aPort].mutableCopy from:self.aPort reserved:4];
-    } else if (event.allTouches.count == 3) {
-        [self.task killThread];
-    }
-//    dumpThreads();
-//    tossss();
 }
-
-static inline void dumpThreads() {
-    
-    NSLog(@"-------------------");
-    char name[256];
-    thread_act_array_t threads = NULL;
-    mach_msg_type_number_t thread_count = 0;
-    task_threads(mach_task_self(), &threads, &thread_count);
-    for (mach_msg_type_number_t i = 0; i < thread_count; i++) {
-        thread_t thread = threads[i];
-        pthread_t pthread = pthread_from_mach_thread_np(thread);
-        pthread_getname_np(pthread, name, sizeof name);
-        // 打印当前所有线程
-        NSLog(@"mach thread %x: getname: %s", pthread_mach_thread_np(pthread), name);
-    }
-    NSLog(@"-------------------");
-}
-
-void tossss() {
-    int a = 2;
-    string b = to_string(a);
-    cout << b;
-}
-
 
 - (void)gcdTest {
 
