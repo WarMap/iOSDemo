@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Test/Test.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Runloop/../Thread/Thread.xcodeproj">
    </FileRef>
    <FileRef

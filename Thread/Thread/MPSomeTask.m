@@ -6,10 +6,11 @@
 //
 
 #import "MPSomeTask.h"
+#import "MPThread.h"
 #import "MPThreadUtil.h"
 
 @interface MPSomeTask()<NSPortDelegate> {
-    NSThread *_thread;
+    MPThread *_thread;
     NSPort *mainPort;
 }
 
@@ -25,22 +26,14 @@
         _port = [NSMachPort port];
         _port.delegate = self;
         mainPort = port;
-        _thread = [[NSThread alloc] initWithTarget:self selector:@selector(subThreadEntrance) object:nil];
+        _thread = [[MPThread alloc] init];
         _thread.name = @"subThread";
-        [_thread start];
     }
     return self;
 }
 
 - (void)handleMachMessage:(void *)msg {
     currentThreadInfo(@"receive");
-}
-
-- (void)subThreadEntrance {
-    [[NSRunLoop currentRunLoop] addPort:_port forMode:NSRunLoopCommonModes];
-    self.loop = [NSRunLoop currentRunLoop];
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate distantFuture]];
-    NSLog(@"loop exited ---------------------");
 }
 
 - (void)runPort {
@@ -55,6 +48,7 @@
 
 - (void)killThread {
     [self.loop removePort:_port forMode:NSRunLoopCommonModes];
+    CFRunLoopStop([self.loop getCFRunLoop]);
     NSLog(@"loop %@", self.loop);
 }
 
