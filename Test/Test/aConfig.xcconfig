@@ -34,7 +34,7 @@ MACH_PATH=${BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/${CONTENTS_FOL
 //CMD = objdump --macho -d ${MACH_PATH}
 CMD = objdump --macho --indirect-symbols ${MACH_PATH}
 
-TTY=/dev/ttys001
+TTY=/dev/ttys000
 // clang
 // man ld
 // -Xlinker

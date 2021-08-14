@@ -6,7 +6,8 @@
 //
 
 #import "ViewController.h"
-//#import <MPUIKit/MPUIKit.h>
+#import <MPUIKit/MPUIKit.h>
+
 @interface ViewController ()
 
 @end
@@ -23,6 +24,9 @@ void sayHi(void);
 - (void)viewDidLoad {
     [super viewDidLoad];
     sayHi();
+    Star *star = [Star new];
+    //symbol项目的other link flags要添加-ObjC参数，不然会找不到方法而crash
+    [star makeSound];
     // Do any additional setup after loading the view.
 }
 

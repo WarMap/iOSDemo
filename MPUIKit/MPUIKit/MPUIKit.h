@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MPUIKit/UIView+kit.h>
+#import <MPUIKit/Star.h>
 
 //! Project version number for MPUIKit.
 FOUNDATION_EXPORT double MPUIKitVersionNumber;
