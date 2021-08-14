@@ -11,6 +11,13 @@
 
 @end
 
+int global_uninit_value;
+int global_init_value = 10;
+int global_init_value;
+double default_x __attribute__((visibility("hidden"))) ;
+static int static_init_value = 9;
+static int static_uninit_value;
+
 @implementation ViewController
 void sayHi(void);
 - (void)viewDidLoad {
@@ -19,9 +26,7 @@ void sayHi(void);
     // Do any additional setup after loading the view.
 }
 
-void sayHi(void) {
-    NSLog(@"vc hi");
-}
+
 
 
 @end
