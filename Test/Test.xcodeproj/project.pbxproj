@@ -38,6 +38,7 @@
 		EEC2375E26C75F80007E1941 /* MPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEC2376626C75FE4007E1941 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2376526C75FE4007E1941 /* test.m */; };
 		EEC2376D26C7600C007E1941 /* TestExample.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2376926C7600C007E1941 /* TestExample.m */; };
+		EEC2377226C7758E007E1941 /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2377126C7758E007E1941 /* Star.m */; };
 		EEC2F75C26C62C83007E1941 /* MPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; };
 		EEC2F75D26C62C83007E1941 /* MPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -111,6 +112,8 @@
 		EEC2376926C7600C007E1941 /* TestExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExample.m; sourceTree = "<group>"; };
 		EEC2376B26C7600C007E1941 /* TestExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExample.h; sourceTree = "<group>"; };
 		EEC2376F26C76124007E1941 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		EEC2377026C7758E007E1941 /* Star.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
+		EEC2377126C7758E007E1941 /* Star.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
 		EEC2F75526C62770007E1941 /* MPUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MPUIKit.xcodeproj; path = ../MPUIKit/MPUIKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +245,8 @@
 			children = (
 				EEC2376926C7600C007E1941 /* TestExample.m */,
 				EEC2376B26C7600C007E1941 /* TestExample.h */,
+				EEC2377026C7758E007E1941 /* Star.h */,
+				EEC2377126C7758E007E1941 /* Star.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				EEC2375026C75F80007E1941 /* AppDelegate.m in Sources */,
 				EEC2375126C75F80007E1941 /* main.m in Sources */,
 				EEC2375226C75F80007E1941 /* SceneDelegate.m in Sources */,
+				EEC2377226C7758E007E1941 /* Star.m in Sources */,
 				EEC2375326C75F80007E1941 /* WeakImportSymbol.m in Sources */,
 				EEC2376D26C7600C007E1941 /* TestExample.m in Sources */,
 				EEC2375426C75F80007E1941 /* WeakSymbol.m in Sources */,

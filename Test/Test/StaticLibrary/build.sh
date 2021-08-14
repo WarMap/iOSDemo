@@ -11,6 +11,7 @@ SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Dev
 
 FILE_NAME=test
 STATICLIBRARY=TestExample
+LIBFIlESTAR=Star
 HEAD_PATH=./Library
 LIBRARY_PATH=./Library
 
@@ -31,7 +32,14 @@ clang -x $LANGUAGE  \
 -isysroot $SYSROOT  \
 -c ${STATICLIBRARY}.m -o ${STATICLIBRARY}.o
 
+clang -x $LANGUAGE  \
+-target $TAREGT     \
+-fobjc-arc          \
+-isysroot $SYSROOT  \
+-c ${LIBFIlESTAR}.m -o ${LIBFIlESTAR}.o
+
 ar -rc "lib${STATICLIBRARY}.a" ${STATICLIBRARY}.o
+ar -rc "lib${STATICLIBRARY}.a" ${LIBFIlESTAR}.o
 
 echo "-------------退出StaticLibrary目录------------------"
 
