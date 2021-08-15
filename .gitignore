@@ -68,8 +68,8 @@ fastlane/test_output
 iOSInjectionProject/
 
 
-./Test/Test/DynamicLibrary/dylib/TestExample.o
-./Test/Test/DynamicLibrary/dylib/libTestExample.a
-./Test/Test/DynamicLibrary/dylib/libTestExample.dylib
-./Test/Test/DynamicLibrary/test
-./Test/Test/DynamicLibrary/test.o
+Test/Test/DynamicLibrary/dylib/TestExample.o
+Test/Test/DynamicLibrary/dylib/libTestExample.a
+Test/Test/DynamicLibrary/dylib/libTestExample.dylib
+Test/Test/DynamicLibrary/test
+Test/Test/DynamicLibrary/test.o
