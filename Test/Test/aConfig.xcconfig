@@ -29,10 +29,10 @@ MACH_PATH=${BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/${CONTENTS_FOL
 //CMD = objdump --macho -private-header ${MACH_PATH}
 //CMD = otool -h ${MACH_PATH}
 //查看符号
-//CMD = objdump --macho --syms ${MACH_PATH}
+CMD = objdump --macho --syms ${MACH_PATH}
 //查看__TEXT段
 //CMD = objdump --macho -d ${MACH_PATH}
-CMD = objdump --macho --indirect-symbols ${MACH_PATH}
+//CMD = objdump --macho --indirect-symbols ${MACH_PATH}
 
 TTY=/dev/ttys000
 // clang
@@ -40,3 +40,7 @@ TTY=/dev/ttys000
 // -Xlinker
 
 //OTHER_LDFLAGS[config=Debug][sdk=iphonesimulator*][arch=x86_64] = $(inherited) -framework 'Cat'
+
+// -all_load
+// -OBJC
+//OTHER_LDFLAGS=-Xlinker -dead_strip

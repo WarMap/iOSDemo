@@ -7,7 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+void deadcode(void) {
+    NSLog(@"deaddddddd");
+}
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {

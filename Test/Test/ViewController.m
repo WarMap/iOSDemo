@@ -12,6 +12,8 @@
 
 @end
 
+
+
 int global_uninit_value;
 int global_init_value = 10;
 int global_init_value;

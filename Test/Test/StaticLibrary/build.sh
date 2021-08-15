@@ -50,6 +50,7 @@ clang -target $TAREGT   \
 -fobjc-arc              \
 -isysroot $SYSROOT      \
 -L${LIBRARY_PATH}       \
--l${STATICLIBRARY}           \
+-l${STATICLIBRARY}      \
+-Xlinker -dead_strip    \
 $FILE_NAME.o -o $FILE_NAME
 

@@ -12,5 +12,8 @@
 - (void)shining {
     NSLog(@"star is shining");
 }
+- (void)jump {
+    NSLog(@"star is jump");
+}
 
 @end
