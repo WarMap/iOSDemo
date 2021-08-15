@@ -41,6 +41,20 @@
 		EEC2377226C7758E007E1941 /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2377126C7758E007E1941 /* Star.m */; };
 		EEC2F75C26C62C83007E1941 /* MPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; };
 		EEC2F75D26C62C83007E1941 /* MPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EECAEFA526C81DA600D43A3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD386526C3BDAA00D5AD20 /* ViewController.m */; };
+		EECAEFA726C81DA600D43A3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD385F26C3BDAA00D5AD20 /* AppDelegate.m */; };
+		EECAEFA826C81DA600D43A3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD387026C3BDAC00D5AD20 /* main.m */; };
+		EECAEFA926C81DA600D43A3E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD386226C3BDAA00D5AD20 /* SceneDelegate.m */; };
+		EECAEFAB26C81DA600D43A3E /* WeakImportSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2374426C642AE007E1941 /* WeakImportSymbol.m */; };
+		EECAEFAD26C81DA600D43A3E /* WeakSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2374726C642AE007E1941 /* WeakSymbol.m */; };
+		EECAEFAE26C81DA600D43A3E /* VisibilitySymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2374B26C642E3007E1941 /* VisibilitySymbol.m */; };
+		EECAEFB026C81DA600D43A3E /* MPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; };
+		EECAEFB226C81DA600D43A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386C26C3BDAC00D5AD20 /* LaunchScreen.storyboard */; };
+		EECAEFB326C81DA600D43A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386A26C3BDAC00D5AD20 /* Assets.xcassets */; };
+		EECAEFB426C81DA600D43A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386726C3BDAA00D5AD20 /* Main.storyboard */; };
+		EECAEFB726C81DA600D43A3E /* MPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EECAEFC926C81DBC00D43A3E /* TestExample.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC126C81DBC00D43A3E /* TestExample.m */; };
+		EECAEFCD26C81DBC00D43A3E /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC626C81DBC00D43A3E /* test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +86,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EEC2F75D26C62C83007E1941 /* MPUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECAEFB626C81DA600D43A3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EECAEFB726C81DA600D43A3E /* MPUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +140,11 @@
 		EEC2377026C7758E007E1941 /* Star.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
 		EEC2377126C7758E007E1941 /* Star.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
 		EEC2F75526C62770007E1941 /* MPUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MPUIKit.xcodeproj; path = ../MPUIKit/MPUIKit.xcodeproj; sourceTree = "<group>"; };
+		EECAEFBB26C81DA600D43A3E /* DynamicLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECAEFBC26C81DA600D43A3E /* StaticLibrary copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StaticLibrary copy-Info.plist"; path = "/Users/mapeng/Documents/github/iOSDemo/Test/StaticLibrary copy-Info.plist"; sourceTree = "<absolute>"; };
+		EECAEFC126C81DBC00D43A3E /* TestExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExample.m; sourceTree = "<group>"; };
+		EECAEFC326C81DBC00D43A3E /* TestExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExample.h; sourceTree = "<group>"; };
+		EECAEFC626C81DBC00D43A3E /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEC2375726C75F80007E1941 /* MPUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECAEFAF26C81DA600D43A3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECAEFB026C81DA600D43A3E /* MPUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +221,7 @@
 				EE862D6626C3BE3F00AE6DC6 /* Test copy-Info.plist */,
 				EEC2F75B26C62C83007E1941 /* Frameworks */,
 				EEC2376326C75F81007E1941 /* Symbol copy-Info.plist */,
+				EECAEFBC26C81DA600D43A3E /* StaticLibrary copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +231,7 @@
 				EEAD385B26C3BDAA00D5AD20 /* Test.app */,
 				EE862D6526C3BE3F00AE6DC6 /* Symbol.app */,
 				EEC2376226C75F80007E1941 /* StaticLibrary.app */,
+				EECAEFBB26C81DA600D43A3E /* DynamicLibrary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +239,7 @@
 		EEAD385D26C3BDAA00D5AD20 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EECAEFBD26C81DBC00D43A3E /* DynamicLibrary */,
 				EEC2376426C75F9D007E1941 /* StaticLibrary */,
 				EEC2374326C6427B007E1941 /* Symbol */,
 				EEAD385E26C3BDAA00D5AD20 /* AppDelegate.h */,
@@ -266,6 +307,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EECAEFBD26C81DBC00D43A3E /* DynamicLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				EECAEFBE26C81DBC00D43A3E /* dylib */,
+				EECAEFC626C81DBC00D43A3E /* test.m */,
+			);
+			path = DynamicLibrary;
+			sourceTree = "<group>";
+		};
+		EECAEFBE26C81DBC00D43A3E /* dylib */ = {
+			isa = PBXGroup;
+			children = (
+				EECAEFC126C81DBC00D43A3E /* TestExample.m */,
+				EECAEFC326C81DBC00D43A3E /* TestExample.h */,
+			);
+			path = dylib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +383,25 @@
 			productReference = EEC2376226C75F80007E1941 /* StaticLibrary.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EECAEFA326C81DA600D43A3E /* DynamicLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EECAEFB826C81DA600D43A3E /* Build configuration list for PBXNativeTarget "DynamicLibrary" */;
+			buildPhases = (
+				EECAEFA426C81DA600D43A3E /* Sources */,
+				EECAEFAF26C81DA600D43A3E /* Frameworks */,
+				EECAEFB126C81DA600D43A3E /* Resources */,
+				EECAEFB526C81DA600D43A3E /* ShellScript */,
+				EECAEFB626C81DA600D43A3E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicLibrary;
+			productName = Test;
+			productReference = EECAEFBB26C81DA600D43A3E /* DynamicLibrary.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -360,6 +438,7 @@
 				EEAD385A26C3BDAA00D5AD20 /* Test */,
 				EE862D5726C3BE3F00AE6DC6 /* Symbol */,
 				EEC2374D26C75F80007E1941 /* StaticLibrary */,
+				EECAEFA326C81DA600D43A3E /* DynamicLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -405,6 +484,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EECAEFB126C81DA600D43A3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECAEFB226C81DA600D43A3E /* LaunchScreen.storyboard in Resources */,
+				EECAEFB326C81DA600D43A3E /* Assets.xcassets in Resources */,
+				EECAEFB426C81DA600D43A3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -428,6 +517,25 @@
 			shellScript = "/bin/sh \"$SRCROOT/xcode_run_cmd.sh\"\n\n";
 		};
 		EEC2375C26C75F80007E1941 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/newOutputFile",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/xcode_run_cmd.sh\"\n\n";
+		};
+		EECAEFB526C81DA600D43A3E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
@@ -488,6 +596,22 @@
 				EEC2376D26C7600C007E1941 /* TestExample.m in Sources */,
 				EEC2375426C75F80007E1941 /* WeakSymbol.m in Sources */,
 				EEC2375526C75F80007E1941 /* VisibilitySymbol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECAEFA426C81DA600D43A3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECAEFA526C81DA600D43A3E /* ViewController.m in Sources */,
+				EECAEFC926C81DBC00D43A3E /* TestExample.m in Sources */,
+				EECAEFA726C81DA600D43A3E /* AppDelegate.m in Sources */,
+				EECAEFA826C81DA600D43A3E /* main.m in Sources */,
+				EECAEFCD26C81DBC00D43A3E /* test.m in Sources */,
+				EECAEFA926C81DA600D43A3E /* SceneDelegate.m in Sources */,
+				EECAEFAB26C81DA600D43A3E /* WeakImportSymbol.m in Sources */,
+				EECAEFAD26C81DA600D43A3E /* WeakSymbol.m in Sources */,
+				EECAEFAE26C81DA600D43A3E /* VisibilitySymbol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +873,55 @@
 			};
 			name = Release;
 		};
+		EECAEFB926C81DA600D43A3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE862D6726C3BE7E00AE6DC6 /* aConfig.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKCW77FR7A;
+				INFOPLIST_FILE = "StaticLibrary copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test/StaticLibrary/StaticLibrary",
+					"$(PROJECT_DIR)/Test/DynamicLibrary/dylib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EECAEFBA26C81DA600D43A3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKCW77FR7A;
+				INFOPLIST_FILE = "StaticLibrary copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test/StaticLibrary/StaticLibrary",
+					"$(PROJECT_DIR)/Test/DynamicLibrary/dylib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -784,6 +957,15 @@
 			buildConfigurations = (
 				EEC2376026C75F80007E1941 /* Debug */,
 				EEC2376126C75F80007E1941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EECAEFB826C81DA600D43A3E /* Build configuration list for PBXNativeTarget "DynamicLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EECAEFB926C81DA600D43A3E /* Debug */,
+				EECAEFBA26C81DA600D43A3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
