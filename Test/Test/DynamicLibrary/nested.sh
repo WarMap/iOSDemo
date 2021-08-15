@@ -30,6 +30,7 @@ clang -target ${TARGET} \
 -fobjc-arc \
 -isysroot ${SYSROOT} \
 -I./Frameworks/${FRAMEWORK_NAME}.framework/Headers \
+-I./Frameworks/${FRAMEWORK_NAME}.framework/Frameworks/Sun.framework/Headers \
 -c ${FILE_NAME}.m -o ${FILE_NAME}.o
 
 pushd ./Frameworks/Star.framework

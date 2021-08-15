@@ -33,9 +33,13 @@ clang -dynamiclib  \
 -target ${TAREGT} \
 -fobjc-arc \
 -isysroot ${SYSROOT} \
+-Xlinker -reexport_framework -Xlinker ${FRAMEWORK_NAME} \
 -F./Frameworks \
 -framework ${FRAMEWORK_NAME} \
 -Xlinker -install_name -Xlinker @rpath/${LIBRARY}.framework/${LIBRARY} \
+-Xlinker -rpath -Xlinker @loader_path/Frameworks \
 ${LIBRARY}.o -o ${LIBRARY}
 
-install_name_tool -add_rpath @loader_path/Frameworks ${LIBRARY}
+##这句等于在下面那句， 重新导出Sun，让test看到Sun的符号
+#-Xlinker -rpath -Xlinker @loader_path/Frameworks
+#install_name_tool -add_rpath @loader_path/Frameworks ${LIBRARY}
