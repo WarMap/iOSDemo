@@ -57,6 +57,10 @@
 		EECAEFCD26C81DBC00D43A3E /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC626C81DBC00D43A3E /* test.m */; };
 		EED787EA26C8B81300AB2ADA /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = EED787E826C8B81300AB2ADA /* build.sh */; };
 		EED787EE26C8C74B00AB2ADA /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EED787ED26C8C74B00AB2ADA /* Star.m */; };
+		EED7C7DA26C8F49400AB2ADA /* Moon.m in Sources */ = {isa = PBXBuildFile; fileRef = EED7C7D926C8F49400AB2ADA /* Moon.m */; };
+		EED7C7DC26C8F4A700AB2ADA /* Script.sh in Resources */ = {isa = PBXBuildFile; fileRef = EED787EF26C8C77200AB2ADA /* Script.sh */; };
+		EED7C7E126C8F4D300AB2ADA /* Sun.m in Sources */ = {isa = PBXBuildFile; fileRef = EED7C7E026C8F4D300AB2ADA /* Sun.m */; };
+		EED7C7E626C8F86B00AB2ADA /* nested.sh in Resources */ = {isa = PBXBuildFile; fileRef = EED7C7E526C8F85F00AB2ADA /* nested.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +156,13 @@
 		EED787ED26C8C74B00AB2ADA /* Star.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
 		EED787EF26C8C77200AB2ADA /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 		EED7C7D526C8E22E00AB2ADA /* frameworkLink.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = frameworkLink.sh; sourceTree = "<group>"; };
+		EED7C7D826C8F49400AB2ADA /* Moon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Moon.h; sourceTree = "<group>"; };
+		EED7C7D926C8F49400AB2ADA /* Moon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Moon.m; sourceTree = "<group>"; };
+		EED7C7DF26C8F4D300AB2ADA /* Sun.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sun.h; sourceTree = "<group>"; };
+		EED7C7E026C8F4D300AB2ADA /* Sun.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sun.m; sourceTree = "<group>"; };
+		EED7C7E326C8F50D00AB2ADA /* sun.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = sun.sh; sourceTree = "<group>"; };
+		EED7C7E426C8F51B00AB2ADA /* Moon.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Moon.sh; sourceTree = "<group>"; };
+		EED7C7E526C8F85F00AB2ADA /* nested.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = nested.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +332,7 @@
 				EECAEFC626C81DBC00D43A3E /* test.m */,
 				EED787E826C8B81300AB2ADA /* build.sh */,
 				EED7C7D526C8E22E00AB2ADA /* frameworkLink.sh */,
+				EED7C7E526C8F85F00AB2ADA /* nested.sh */,
 				EECAEFBE26C81DBC00D43A3E /* dylib */,
 			);
 			path = DynamicLibrary;
@@ -356,9 +368,55 @@
 		EED7C7D626C8E3B900AB2ADA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EED7C7D726C8F47800AB2ADA /* Moon.framework */,
 				EED787EB26C8C73200AB2ADA /* Star.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		EED7C7D726C8F47800AB2ADA /* Moon.framework */ = {
+			isa = PBXGroup;
+			children = (
+				EED7C7DD26C8F4B800AB2ADA /* Frameworks */,
+				EED7C7DB26C8F49800AB2ADA /* Headers */,
+				EED7C7D926C8F49400AB2ADA /* Moon.m */,
+				EED7C7E426C8F51B00AB2ADA /* Moon.sh */,
+			);
+			path = Moon.framework;
+			sourceTree = "<group>";
+		};
+		EED7C7DB26C8F49800AB2ADA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EED7C7D826C8F49400AB2ADA /* Moon.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		EED7C7DD26C8F4B800AB2ADA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED7C7DE26C8F4C100AB2ADA /* Sun.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		EED7C7DE26C8F4C100AB2ADA /* Sun.framework */ = {
+			isa = PBXGroup;
+			children = (
+				EED7C7E226C8F4DD00AB2ADA /* Headers */,
+				EED7C7E026C8F4D300AB2ADA /* Sun.m */,
+				EED7C7E326C8F50D00AB2ADA /* sun.sh */,
+			);
+			path = Sun.framework;
+			sourceTree = "<group>";
+		};
+		EED7C7E226C8F4DD00AB2ADA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EED7C7DF26C8F4D300AB2ADA /* Sun.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +565,7 @@
 				EEAD386E26C3BDAC00D5AD20 /* LaunchScreen.storyboard in Resources */,
 				EEAD386B26C3BDAC00D5AD20 /* Assets.xcassets in Resources */,
 				EEAD386926C3BDAA00D5AD20 /* Main.storyboard in Resources */,
+				EED7C7DC26C8F4A700AB2ADA /* Script.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +587,7 @@
 				EED787EA26C8B81300AB2ADA /* build.sh in Resources */,
 				EECAEFB326C81DA600D43A3E /* Assets.xcassets in Resources */,
 				EECAEFB426C81DA600D43A3E /* Main.storyboard in Resources */,
+				EED7C7E626C8F86B00AB2ADA /* nested.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,10 +672,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED7C7DA26C8F49400AB2ADA /* Moon.m in Sources */,
 				EED787EE26C8C74B00AB2ADA /* Star.m in Sources */,
 				EEAD386626C3BDAA00D5AD20 /* ViewController.m in Sources */,
 				EEAD386026C3BDAA00D5AD20 /* AppDelegate.m in Sources */,
 				EEAD387126C3BDAC00D5AD20 /* main.m in Sources */,
+				EED7C7E126C8F4D300AB2ADA /* Sun.m in Sources */,
 				EEAD386326C3BDAA00D5AD20 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
