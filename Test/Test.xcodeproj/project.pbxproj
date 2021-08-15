@@ -55,6 +55,7 @@
 		EECAEFB726C81DA600D43A3E /* MPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EECAEFC926C81DBC00D43A3E /* TestExample.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC126C81DBC00D43A3E /* TestExample.m */; };
 		EECAEFCD26C81DBC00D43A3E /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC626C81DBC00D43A3E /* test.m */; };
+		EED787EA26C8B81300AB2ADA /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = EED787E826C8B81300AB2ADA /* build.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		EECAEFC126C81DBC00D43A3E /* TestExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExample.m; sourceTree = "<group>"; };
 		EECAEFC326C81DBC00D43A3E /* TestExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExample.h; sourceTree = "<group>"; };
 		EECAEFC626C81DBC00D43A3E /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		EED787E826C8B81300AB2ADA /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,8 +312,9 @@
 		EECAEFBD26C81DBC00D43A3E /* DynamicLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				EECAEFBE26C81DBC00D43A3E /* dylib */,
 				EECAEFC626C81DBC00D43A3E /* test.m */,
+				EED787E826C8B81300AB2ADA /* build.sh */,
+				EECAEFBE26C81DBC00D43A3E /* dylib */,
 			);
 			path = DynamicLibrary;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EECAEFB226C81DA600D43A3E /* LaunchScreen.storyboard in Resources */,
+				EED787EA26C8B81300AB2ADA /* build.sh in Resources */,
 				EECAEFB326C81DA600D43A3E /* Assets.xcassets in Resources */,
 				EECAEFB426C81DA600D43A3E /* Main.storyboard in Resources */,
 			);
