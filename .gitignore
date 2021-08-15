@@ -73,3 +73,7 @@ Test/Test/DynamicLibrary/dylib/libTestExample.a
 Test/Test/DynamicLibrary/dylib/libTestExample.dylib
 Test/Test/DynamicLibrary/test
 Test/Test/DynamicLibrary/test.o
+Test/Test/DynamicLibrary/Frameworks/Moon.framework/Frameworks/Sun.framework/Sun
+Test/Test/DynamicLibrary/Frameworks/Moon.framework/Frameworks/Sun.framework/Sun.o
+Test/Test/DynamicLibrary/Frameworks/Moon.framework/Moon
+Test/Test/DynamicLibrary/Frameworks/Moon.framework/Moon.o
