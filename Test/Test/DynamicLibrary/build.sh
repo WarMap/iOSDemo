@@ -49,3 +49,6 @@ clang -target ${TAREGT} \
 -L${HEAD_PATH}       \
 -l${LIBRARY_NAME}    \
 ${FILE_NAME}.o -o ${FILE_NAME}
+
+
+# 这样类似静态库执行完脚本后，生成的可执行文件，并不能正常的运行。会报错找不到动态库（image not found)，因为不想静态库会写进可执行程序，动态库是存放在别处，所以需要一个地址来找到

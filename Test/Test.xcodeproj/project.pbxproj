@@ -56,6 +56,7 @@
 		EECAEFC926C81DBC00D43A3E /* TestExample.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC126C81DBC00D43A3E /* TestExample.m */; };
 		EECAEFCD26C81DBC00D43A3E /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEFC626C81DBC00D43A3E /* test.m */; };
 		EED787EA26C8B81300AB2ADA /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = EED787E826C8B81300AB2ADA /* build.sh */; };
+		EED787EE26C8C74B00AB2ADA /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EED787ED26C8C74B00AB2ADA /* Star.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,10 @@
 		EECAEFC326C81DBC00D43A3E /* TestExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExample.h; sourceTree = "<group>"; };
 		EECAEFC626C81DBC00D43A3E /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		EED787E826C8B81300AB2ADA /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		EED787EC26C8C74B00AB2ADA /* Star.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
+		EED787ED26C8C74B00AB2ADA /* Star.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
+		EED787EF26C8C77200AB2ADA /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		EED7C7D526C8E22E00AB2ADA /* frameworkLink.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = frameworkLink.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,8 +317,10 @@
 		EECAEFBD26C81DBC00D43A3E /* DynamicLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EED7C7D626C8E3B900AB2ADA /* Frameworks */,
 				EECAEFC626C81DBC00D43A3E /* test.m */,
 				EED787E826C8B81300AB2ADA /* build.sh */,
+				EED7C7D526C8E22E00AB2ADA /* frameworkLink.sh */,
 				EECAEFBE26C81DBC00D43A3E /* dylib */,
 			);
 			path = DynamicLibrary;
@@ -326,6 +333,32 @@
 				EECAEFC326C81DBC00D43A3E /* TestExample.h */,
 			);
 			path = dylib;
+			sourceTree = "<group>";
+		};
+		EED787EB26C8C73200AB2ADA /* Star.framework */ = {
+			isa = PBXGroup;
+			children = (
+				EED787F026C8C7B000AB2ADA /* Headers */,
+				EED787ED26C8C74B00AB2ADA /* Star.m */,
+				EED787EF26C8C77200AB2ADA /* Script.sh */,
+			);
+			path = Star.framework;
+			sourceTree = "<group>";
+		};
+		EED787F026C8C7B000AB2ADA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EED787EC26C8C74B00AB2ADA /* Star.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		EED7C7D626C8E3B900AB2ADA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED787EB26C8C73200AB2ADA /* Star.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED787EE26C8C74B00AB2ADA /* Star.m in Sources */,
 				EEAD386626C3BDAA00D5AD20 /* ViewController.m in Sources */,
 				EEAD386026C3BDAA00D5AD20 /* AppDelegate.m in Sources */,
 				EEAD387126C3BDAC00D5AD20 /* main.m in Sources */,
