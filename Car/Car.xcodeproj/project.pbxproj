@@ -7,30 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EEC2F74B26C623B7007E1941 /* MPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC2F74926C623B7007E1941 /* MPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEC2F75326C62694007E1941 /* UIView+kit.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC2F75126C62694007E1941 /* UIView+kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEC2F75426C62694007E1941 /* UIView+kit.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2F75226C62694007E1941 /* UIView+kit.m */; };
-		EECAEF9C26C7F2A600D43A3E /* Star.h in Headers */ = {isa = PBXBuildFile; fileRef = EECAEF9A26C7F2A600D43A3E /* Star.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EECAEF9D26C7F2A600D43A3E /* Star.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEF9B26C7F2A600D43A3E /* Star.m */; };
-		EECAEFA026C7F2BA00D43A3E /* Star+Skill.h in Headers */ = {isa = PBXBuildFile; fileRef = EECAEF9E26C7F2BA00D43A3E /* Star+Skill.h */; };
-		EECAEFA126C7F2BA00D43A3E /* Star+Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = EECAEF9F26C7F2BA00D43A3E /* Star+Skill.m */; };
+		EED3D0F026CB447100936FA8 /* Car.h in Headers */ = {isa = PBXBuildFile; fileRef = EED3D0EE26CB447100936FA8 /* Car.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED3D0F826CB449600936FA8 /* CherryCar.h in Headers */ = {isa = PBXBuildFile; fileRef = EED3D0F626CB449600936FA8 /* CherryCar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED3D0F926CB449600936FA8 /* CherryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = EED3D0F726CB449600936FA8 /* CherryCar.m */; };
+		EED3D0FC26CB44AB00936FA8 /* BaseCar.h in Headers */ = {isa = PBXBuildFile; fileRef = EED3D0FA26CB44AB00936FA8 /* BaseCar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED3D0FD26CB44AB00936FA8 /* BaseCar.m in Sources */ = {isa = PBXBuildFile; fileRef = EED3D0FB26CB44AB00936FA8 /* BaseCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE9CCC7A26CCA13F00819DE7 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		EEC2F74626C623B7007E1941 /* MPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEC2F74926C623B7007E1941 /* MPUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPUIKit.h; sourceTree = "<group>"; };
-		EEC2F74A26C623B7007E1941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEC2F75126C62694007E1941 /* UIView+kit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+kit.h"; sourceTree = "<group>"; };
-		EEC2F75226C62694007E1941 /* UIView+kit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+kit.m"; sourceTree = "<group>"; };
-		EECAEF9A26C7F2A600D43A3E /* Star.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
-		EECAEF9B26C7F2A600D43A3E /* Star.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star.m; sourceTree = "<group>"; };
-		EECAEF9E26C7F2BA00D43A3E /* Star+Skill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Star+Skill.h"; sourceTree = "<group>"; };
-		EECAEF9F26C7F2BA00D43A3E /* Star+Skill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Star+Skill.m"; sourceTree = "<group>"; };
+		EED3D0EB26CB447100936FA8 /* Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED3D0EE26CB447100936FA8 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		EED3D0EF26CB447100936FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED3D0F626CB449600936FA8 /* CherryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CherryCar.h; sourceTree = "<group>"; };
+		EED3D0F726CB449600936FA8 /* CherryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CherryCar.m; sourceTree = "<group>"; };
+		EED3D0FA26CB44AB00936FA8 /* BaseCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCar.h; sourceTree = "<group>"; };
+		EED3D0FB26CB44AB00936FA8 /* BaseCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EEC2F74326C623B7007E1941 /* Frameworks */ = {
+		EED3D0E826CB447100936FA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,87 +35,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EEC2F73C26C623B7007E1941 = {
+		EED3D0E126CB447100936FA8 = {
 			isa = PBXGroup;
 			children = (
-				EE9CCC7A26CCA13F00819DE7 /* Config.xcconfig */,
-				EEC2F74826C623B7007E1941 /* MPUIKit */,
-				EEC2F74726C623B7007E1941 /* Products */,
+				EED3D0ED26CB447100936FA8 /* Car */,
+				EED3D0EC26CB447100936FA8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EEC2F74726C623B7007E1941 /* Products */ = {
+		EED3D0EC26CB447100936FA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EEC2F74626C623B7007E1941 /* MPUIKit.framework */,
+				EED3D0EB26CB447100936FA8 /* Car.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EEC2F74826C623B7007E1941 /* MPUIKit */ = {
+		EED3D0ED26CB447100936FA8 /* Car */ = {
 			isa = PBXGroup;
 			children = (
-				EEC2F74926C623B7007E1941 /* MPUIKit.h */,
-				EEC2F74A26C623B7007E1941 /* Info.plist */,
-				EEC2F75126C62694007E1941 /* UIView+kit.h */,
-				EEC2F75226C62694007E1941 /* UIView+kit.m */,
-				EECAEF9A26C7F2A600D43A3E /* Star.h */,
-				EECAEF9B26C7F2A600D43A3E /* Star.m */,
-				EECAEF9E26C7F2BA00D43A3E /* Star+Skill.h */,
-				EECAEF9F26C7F2BA00D43A3E /* Star+Skill.m */,
+				EED3D0EE26CB447100936FA8 /* Car.h */,
+				EED3D0EF26CB447100936FA8 /* Info.plist */,
+				EED3D0F626CB449600936FA8 /* CherryCar.h */,
+				EED3D0F726CB449600936FA8 /* CherryCar.m */,
+				EED3D0FA26CB44AB00936FA8 /* BaseCar.h */,
+				EED3D0FB26CB44AB00936FA8 /* BaseCar.m */,
 			);
-			path = MPUIKit;
+			path = Car;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EEC2F74126C623B7007E1941 /* Headers */ = {
+		EED3D0E626CB447100936FA8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC2F75326C62694007E1941 /* UIView+kit.h in Headers */,
-				EECAEF9C26C7F2A600D43A3E /* Star.h in Headers */,
-				EECAEFA026C7F2BA00D43A3E /* Star+Skill.h in Headers */,
-				EEC2F74B26C623B7007E1941 /* MPUIKit.h in Headers */,
+				EED3D0F826CB449600936FA8 /* CherryCar.h in Headers */,
+				EED3D0FC26CB44AB00936FA8 /* BaseCar.h in Headers */,
+				EED3D0F026CB447100936FA8 /* Car.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EEC2F74526C623B7007E1941 /* MPUIKit */ = {
+		EED3D0EA26CB447100936FA8 /* Car */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EEC2F74E26C623B7007E1941 /* Build configuration list for PBXNativeTarget "MPUIKit" */;
+			buildConfigurationList = EED3D0F326CB447100936FA8 /* Build configuration list for PBXNativeTarget "Car" */;
 			buildPhases = (
-				EEC2F74126C623B7007E1941 /* Headers */,
-				EEC2F74226C623B7007E1941 /* Sources */,
-				EEC2F74326C623B7007E1941 /* Frameworks */,
-				EEC2F74426C623B7007E1941 /* Resources */,
+				EED3D0E626CB447100936FA8 /* Headers */,
+				EED3D0E726CB447100936FA8 /* Sources */,
+				EED3D0E826CB447100936FA8 /* Frameworks */,
+				EED3D0E926CB447100936FA8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MPUIKit;
-			productName = MPUIKit;
-			productReference = EEC2F74626C623B7007E1941 /* MPUIKit.framework */;
+			name = Car;
+			productName = Car;
+			productReference = EED3D0EB26CB447100936FA8 /* Car.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EEC2F73D26C623B7007E1941 /* Project object */ = {
+		EED3D0E226CB447100936FA8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					EEC2F74526C623B7007E1941 = {
+					EED3D0EA26CB447100936FA8 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = EEC2F74026C623B7007E1941 /* Build configuration list for PBXProject "MPUIKit" */;
+			buildConfigurationList = EED3D0E526CB447100936FA8 /* Build configuration list for PBXProject "Car" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,18 +119,18 @@
 				en,
 				Base,
 			);
-			mainGroup = EEC2F73C26C623B7007E1941;
-			productRefGroup = EEC2F74726C623B7007E1941 /* Products */;
+			mainGroup = EED3D0E126CB447100936FA8;
+			productRefGroup = EED3D0EC26CB447100936FA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EEC2F74526C623B7007E1941 /* MPUIKit */,
+				EED3D0EA26CB447100936FA8 /* Car */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EEC2F74426C623B7007E1941 /* Resources */ = {
+		EED3D0E926CB447100936FA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,20 +140,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EEC2F74226C623B7007E1941 /* Sources */ = {
+		EED3D0E726CB447100936FA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC2F75426C62694007E1941 /* UIView+kit.m in Sources */,
-				EECAEFA126C7F2BA00D43A3E /* Star+Skill.m in Sources */,
-				EECAEF9D26C7F2A600D43A3E /* Star.m in Sources */,
+				EED3D0F926CB449600936FA8 /* CherryCar.m in Sources */,
+				EED3D0FD26CB44AB00936FA8 /* BaseCar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EEC2F74C26C623B7007E1941 /* Debug */ = {
+		EED3D0F126CB447100936FA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,7 +214,7 @@
 			};
 			name = Debug;
 		};
-		EEC2F74D26C623B7007E1941 /* Release */ = {
+		EED3D0F226CB447100936FA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,9 +270,8 @@
 			};
 			name = Release;
 		};
-		EEC2F74F26C623B7007E1941 /* Debug */ = {
+		EED3D0F426CB447100936FA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE9CCC7A26CCA13F00819DE7 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -290,27 +279,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Test/Test/Symbol\"";
-				INFOPLIST_FILE = MPUIKit/Info.plist;
+				INFOPLIST_FILE = Car/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.MPUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Car;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EEC2F75026C623B7007E1941 /* Release */ = {
+		EED3D0F526CB447100936FA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -319,20 +302,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Test/Test/Symbol\"";
-				INFOPLIST_FILE = MPUIKit/Info.plist;
+				INFOPLIST_FILE = Car/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.MPUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Car;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EEC2F74026C623B7007E1941 /* Build configuration list for PBXProject "MPUIKit" */ = {
+		EED3D0E526CB447100936FA8 /* Build configuration list for PBXProject "Car" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EEC2F74C26C623B7007E1941 /* Debug */,
-				EEC2F74D26C623B7007E1941 /* Release */,
+				EED3D0F126CB447100936FA8 /* Debug */,
+				EED3D0F226CB447100936FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EEC2F74E26C623B7007E1941 /* Build configuration list for PBXNativeTarget "MPUIKit" */ = {
+		EED3D0F326CB447100936FA8 /* Build configuration list for PBXNativeTarget "Car" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EEC2F74F26C623B7007E1941 /* Debug */,
-				EEC2F75026C623B7007E1941 /* Release */,
+				EED3D0F426CB447100936FA8 /* Debug */,
+				EED3D0F526CB447100936FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EEC2F73D26C623B7007E1941 /* Project object */;
+	rootObject = EED3D0E226CB447100936FA8 /* Project object */;
 }

@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  MPUIKit
+//
+//  Created by 马鹏 on 2021/8/18.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+//OTHER_LDFLAGS = $(inherited) -Xlinker -U -Xlinker _OBJC_CLASS_$_Bike

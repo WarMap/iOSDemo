@@ -14,6 +14,22 @@
 		EE862D5F26C3BE3F00AE6DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386C26C3BDAC00D5AD20 /* LaunchScreen.storyboard */; };
 		EE862D6026C3BE3F00AE6DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386A26C3BDAC00D5AD20 /* Assets.xcassets */; };
 		EE862D6126C3BE3F00AE6DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386726C3BDAA00D5AD20 /* Main.storyboard */; };
+		EE9C89E726CB572E00819DE7 /* aConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EE862D6726C3BE7E00AE6DC6 /* aConfig.xcconfig */; };
+		EE9CCC6026CC9D0E00819DE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD386526C3BDAA00D5AD20 /* ViewController.m */; };
+		EE9CCC6126CC9D0E00819DE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD385F26C3BDAA00D5AD20 /* AppDelegate.m */; };
+		EE9CCC6226CC9D0E00819DE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD387026C3BDAC00D5AD20 /* main.m */; };
+		EE9CCC6326CC9D0E00819DE7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD386226C3BDAA00D5AD20 /* SceneDelegate.m */; };
+		EE9CCC6426CC9D0E00819DE7 /* WeakImportSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2374426C642AE007E1941 /* WeakImportSymbol.m */; };
+		EE9CCC6526CC9D0E00819DE7 /* WeakSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2374726C642AE007E1941 /* WeakSymbol.m */; };
+		EE9CCC6626CC9D0E00819DE7 /* VisibilitySymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2374B26C642E3007E1941 /* VisibilitySymbol.m */; };
+		EE9CCC6826CC9D0E00819DE7 /* MPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; };
+		EE9CCC6A26CC9D0E00819DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386C26C3BDAC00D5AD20 /* LaunchScreen.storyboard */; };
+		EE9CCC6B26CC9D0E00819DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386A26C3BDAC00D5AD20 /* Assets.xcassets */; };
+		EE9CCC6C26CC9D0E00819DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD386726C3BDAA00D5AD20 /* Main.storyboard */; };
+		EE9CCC6D26CC9D0E00819DE7 /* aConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EE862D6726C3BE7E00AE6DC6 /* aConfig.xcconfig */; };
+		EE9CCC7026CC9D0E00819DE7 /* MPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2F75A26C62770007E1941 /* MPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE9CCC7926CCA0AF00819DE7 /* Bike.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CCC7826CCA0AF00819DE7 /* Bike.m */; };
+		EE9CCC7C26CCA20A00819DE7 /* Bike.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9CCC7726CCA0AF00819DE7 /* Bike.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEAD386026C3BDAA00D5AD20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD385F26C3BDAA00D5AD20 /* AppDelegate.m */; };
 		EEAD386326C3BDAA00D5AD20 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD386226C3BDAA00D5AD20 /* SceneDelegate.m */; };
 		EEAD386626C3BDAA00D5AD20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD386526C3BDAA00D5AD20 /* ViewController.m */; };
@@ -74,6 +90,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		EE9CCC6F26CC9D0E00819DE7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EE9CCC7026CC9D0E00819DE7 /* MPUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEC2375D26C75F80007E1941 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,6 +146,10 @@
 		EE862D6526C3BE3F00AE6DC6 /* Symbol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symbol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE862D6626C3BE3F00AE6DC6 /* Test copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Test copy-Info.plist"; path = "/Users/mapeng/Documents/github/iOSDemo/Test/Test copy-Info.plist"; sourceTree = "<absolute>"; };
 		EE862D6726C3BE7E00AE6DC6 /* aConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = aConfig.xcconfig; sourceTree = "<group>"; };
+		EE9CCC7426CC9D0E00819DE7 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9CCC7626CC9D0F00819DE7 /* Symbol copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Symbol copy2-Info.plist"; path = "/Users/mapeng/Documents/github/iOSDemo/Test/Symbol copy2-Info.plist"; sourceTree = "<absolute>"; };
+		EE9CCC7726CCA0AF00819DE7 /* Bike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bike.h; sourceTree = "<group>"; };
+		EE9CCC7826CCA0AF00819DE7 /* Bike.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bike.m; sourceTree = "<group>"; };
 		EEAD385B26C3BDAA00D5AD20 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAD385E26C3BDAA00D5AD20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EEAD385F26C3BDAA00D5AD20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -171,6 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEC2F75C26C62C83007E1941 /* MPUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9CCC6726CC9D0E00819DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9CCC6826CC9D0E00819DE7 /* MPUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +279,7 @@
 				EEC2F75B26C62C83007E1941 /* Frameworks */,
 				EEC2376326C75F81007E1941 /* Symbol copy-Info.plist */,
 				EECAEFBC26C81DA600D43A3E /* StaticLibrary copy-Info.plist */,
+				EE9CCC7626CC9D0F00819DE7 /* Symbol copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +290,7 @@
 				EE862D6526C3BE3F00AE6DC6 /* Symbol.app */,
 				EEC2376226C75F80007E1941 /* StaticLibrary.app */,
 				EECAEFBB26C81DA600D43A3E /* DynamicLibrary.app */,
+				EE9CCC7426CC9D0E00819DE7 /* Library.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,20 +298,13 @@
 		EEAD385D26C3BDAA00D5AD20 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EED3D10026CB45F500936FA8 /* ignore */,
 				EECAEFBD26C81DBC00D43A3E /* DynamicLibrary */,
 				EEC2376426C75F9D007E1941 /* StaticLibrary */,
 				EEC2374326C6427B007E1941 /* Symbol */,
-				EEAD385E26C3BDAA00D5AD20 /* AppDelegate.h */,
-				EEAD385F26C3BDAA00D5AD20 /* AppDelegate.m */,
-				EEAD386126C3BDAA00D5AD20 /* SceneDelegate.h */,
-				EEAD386226C3BDAA00D5AD20 /* SceneDelegate.m */,
 				EEAD386426C3BDAA00D5AD20 /* ViewController.h */,
 				EEAD386526C3BDAA00D5AD20 /* ViewController.m */,
-				EEAD386726C3BDAA00D5AD20 /* Main.storyboard */,
-				EEAD386A26C3BDAC00D5AD20 /* Assets.xcassets */,
-				EEAD386C26C3BDAC00D5AD20 /* LaunchScreen.storyboard */,
 				EEAD386F26C3BDAC00D5AD20 /* Info.plist */,
-				EEAD387026C3BDAC00D5AD20 /* main.m */,
 				EE862D6726C3BE7E00AE6DC6 /* aConfig.xcconfig */,
 			);
 			path = Test;
@@ -279,6 +313,8 @@
 		EEC2374326C6427B007E1941 /* Symbol */ = {
 			isa = PBXGroup;
 			children = (
+				EE9CCC7726CCA0AF00819DE7 /* Bike.h */,
+				EE9CCC7826CCA0AF00819DE7 /* Bike.m */,
 				EEC2374A26C642E3007E1941 /* VisibilitySymbol.h */,
 				EEC2374B26C642E3007E1941 /* VisibilitySymbol.m */,
 				EEC2374626C642AE007E1941 /* WeakImportSymbol.h */,
@@ -345,6 +381,21 @@
 				EECAEFC326C81DBC00D43A3E /* TestExample.h */,
 			);
 			path = dylib;
+			sourceTree = "<group>";
+		};
+		EED3D10026CB45F500936FA8 /* ignore */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD387026C3BDAC00D5AD20 /* main.m */,
+				EEAD385E26C3BDAA00D5AD20 /* AppDelegate.h */,
+				EEAD385F26C3BDAA00D5AD20 /* AppDelegate.m */,
+				EEAD386126C3BDAA00D5AD20 /* SceneDelegate.h */,
+				EEAD386226C3BDAA00D5AD20 /* SceneDelegate.m */,
+				EEAD386726C3BDAA00D5AD20 /* Main.storyboard */,
+				EEAD386A26C3BDAC00D5AD20 /* Assets.xcassets */,
+				EEAD386C26C3BDAC00D5AD20 /* LaunchScreen.storyboard */,
+			);
+			path = ignore;
 			sourceTree = "<group>";
 		};
 		EED787EB26C8C73200AB2ADA /* Star.framework */ = {
@@ -421,6 +472,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EE9CCC7B26CCA1FA00819DE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9CCC7C26CCA20A00819DE7 /* Bike.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		EE862D5726C3BE3F00AE6DC6 /* Symbol */ = {
 			isa = PBXNativeTarget;
@@ -439,6 +501,26 @@
 			name = Symbol;
 			productName = Test;
 			productReference = EE862D6526C3BE3F00AE6DC6 /* Symbol.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE9CCC5E26CC9D0E00819DE7 /* Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9CCC7126CC9D0E00819DE7 /* Build configuration list for PBXNativeTarget "Library" */;
+			buildPhases = (
+				EE9CCC7B26CCA1FA00819DE7 /* Headers */,
+				EE9CCC5F26CC9D0E00819DE7 /* Sources */,
+				EE9CCC6726CC9D0E00819DE7 /* Frameworks */,
+				EE9CCC6926CC9D0E00819DE7 /* Resources */,
+				EE9CCC6E26CC9D0E00819DE7 /* ShellScript */,
+				EE9CCC6F26CC9D0E00819DE7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Library;
+			productName = Test;
+			productReference = EE9CCC7426CC9D0E00819DE7 /* Library.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EEAD385A26C3BDAA00D5AD20 /* Test */ = {
@@ -533,6 +615,7 @@
 				EE862D5726C3BE3F00AE6DC6 /* Symbol */,
 				EEC2374D26C75F80007E1941 /* StaticLibrary */,
 				EECAEFA326C81DA600D43A3E /* DynamicLibrary */,
+				EE9CCC5E26CC9D0E00819DE7 /* Library */,
 			);
 		};
 /* End PBXProject section */
@@ -555,6 +638,18 @@
 				EE862D5F26C3BE3F00AE6DC6 /* LaunchScreen.storyboard in Resources */,
 				EE862D6026C3BE3F00AE6DC6 /* Assets.xcassets in Resources */,
 				EE862D6126C3BE3F00AE6DC6 /* Main.storyboard in Resources */,
+				EE9C89E726CB572E00819DE7 /* aConfig.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9CCC6926CC9D0E00819DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9CCC6A26CC9D0E00819DE7 /* LaunchScreen.storyboard in Resources */,
+				EE9CCC6B26CC9D0E00819DE7 /* Assets.xcassets in Resources */,
+				EE9CCC6C26CC9D0E00819DE7 /* Main.storyboard in Resources */,
+				EE9CCC6D26CC9D0E00819DE7 /* aConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +690,25 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		EE862D6826C3C04500AE6DC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/newOutputFile",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/xcode_run_cmd.sh\"\n\n";
+		};
+		EE9CCC6E26CC9D0E00819DE7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
@@ -665,6 +779,21 @@
 				EEC2374826C642AE007E1941 /* WeakImportSymbol.m in Sources */,
 				EEC2374926C642AE007E1941 /* WeakSymbol.m in Sources */,
 				EEC2374C26C642E3007E1941 /* VisibilitySymbol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9CCC5F26CC9D0E00819DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9CCC6026CC9D0E00819DE7 /* ViewController.m in Sources */,
+				EE9CCC6126CC9D0E00819DE7 /* AppDelegate.m in Sources */,
+				EE9CCC6226CC9D0E00819DE7 /* main.m in Sources */,
+				EE9CCC6326CC9D0E00819DE7 /* SceneDelegate.m in Sources */,
+				EE9CCC7926CCA0AF00819DE7 /* Bike.m in Sources */,
+				EE9CCC6426CC9D0E00819DE7 /* WeakImportSymbol.m in Sources */,
+				EE9CCC6526CC9D0E00819DE7 /* WeakSymbol.m in Sources */,
+				EE9CCC6626CC9D0E00819DE7 /* VisibilitySymbol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,13 +875,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = LKCW77FR7A;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Test copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.TestSymbol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -767,13 +900,68 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = LKCW77FR7A;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Test copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.TestSymbol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE9CCC7226CC9D0E00819DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE862D6726C3BE7E00AE6DC6 /* aConfig.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = LKCW77FR7A;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Symbol copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.TestSymbol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE9CCC7326CC9D0E00819DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = LKCW77FR7A;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Symbol copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.TestSymbol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -900,6 +1088,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LKCW77FR7A;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -918,6 +1107,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LKCW77FR7A;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1032,6 +1222,15 @@
 			buildConfigurations = (
 				EE862D6326C3BE3F00AE6DC6 /* Debug */,
 				EE862D6426C3BE3F00AE6DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9CCC7126CC9D0E00819DE7 /* Build configuration list for PBXNativeTarget "Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9CCC7226CC9D0E00819DE7 /* Debug */,
+				EE9CCC7326CC9D0E00819DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

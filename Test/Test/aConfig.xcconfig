@@ -9,6 +9,8 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 //#include "Project.Debug.xcconfig"
+//#include "LinkerConfig.xcconfig"
+
 VERBOSE_SCRIPT_LOGGING=-v
 // CMD = 运行到命令
 // CMD_FLAG = 运行到命令参数
@@ -29,7 +31,21 @@ MACH_PATH=${BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/${CONTENTS_FOL
 //CMD = objdump --macho -private-header ${MACH_PATH}
 //CMD = otool -h ${MACH_PATH}
 //查看符号
-CMD = objdump --macho --syms ${MACH_PATH}
+//CMD = echo "${SYMROOT}"
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) ${SRCROOT}
+//
+HEADER_SEARCH_PATHS = $(inherited) "${SRCROOT}/Car.framework/Headers"
+
+LD_RUNPATH_SEARCH_PATHS = $(inherited) "/Users/mapeng/Documents/github/iOSDemo/Test"
+//// weak：允许该库在运行时消失。
+//OTHER_LDFLAGS = -framework "Car"
+OTHER_LDFLAGS = $(inherited) -Xlinker -weak_framework -Xlinker "Car"
+//CMD = objdump --macho --syms ${MACH_PATH}
+
+//CMD = objdump --macho -private-header ${MACH_PATH}
+CMD = otool -l ${MACH_PATH}
+//CMD = echo $(HEADER_SEARCH_PATHS)
 //查看__TEXT段
 //CMD = objdump --macho -d ${MACH_PATH}
 //CMD = objdump --macho --indirect-symbols ${MACH_PATH}
