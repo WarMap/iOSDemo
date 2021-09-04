@@ -1,0 +1,6 @@
+framework module MPUIKit {
+  umbrella header "MPUIKit.h"
+
+  export *
+  module * { export * }
+}

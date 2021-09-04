@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <objc/runtime.h>
 #import <mach-o/dyld.h>
-
+#import <MPUIKit/MPUIKit.h>
 @interface ViewController ()
 
 @end
@@ -41,6 +41,8 @@ uintptr_t get_silde_address(void) {
     // Do any additional setup after loading the view.
 //    [self crash];
     [self getMethodVMA];
+    Star *star =[Star new];
+    [star makeSound];
 }
 
 - (void)crash {

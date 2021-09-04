@@ -1,0 +1,62 @@
+//
+//  aConfig.xcconfig
+//  Test
+//
+//  Created by 马鹏 on 2021/8/11.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+//#include "Project.Debug.xcconfig"
+//#include "LinkerConfig.xcconfig"
+
+VERBOSE_SCRIPT_LOGGING=-v
+// CMD = 运行到命令
+// CMD_FLAG = 运行到命令参数
+// TTY = 终端
+// $SRCROOT 代码的路径
+// nm -pa /Users/ws/Desktop/VIP课程/第一节、符号与链接/machoinfo
+
+// -p: 不排序
+// -a: 显示所有符号，包含调试符号
+// --extern-only： 只显示外部符号
+// nm -m ${MACH_PATH}
+// nm -pa ${MACH_PATH}
+// objdump --macho --exports-trie ${MACH_PATH}
+// objdump --macho --indirect-symbols ${MACH_PATH}
+// __attribute__关键字主要是用来在函数或数据声明中设置其属性。给函数赋给属性的主要目的在于让编译器进行优化。
+MACH_PATH=${BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/${CONTENTS_FOLDER_PATH}/${PRODUCT_NAME}
+//查看mach header
+//CMD = objdump --macho -private-header ${MACH_PATH}
+//CMD = otool -h ${MACH_PATH}
+//查看符号
+//CMD = echo "${SYMROOT}"
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) ${SRCROOT}
+//
+HEADER_SEARCH_PATHS = $(inherited) "${SRCROOT}/Car.framework/Headers"
+
+LD_RUNPATH_SEARCH_PATHS = $(inherited) "/Users/mapeng/Documents/github/iOSDemo/Test"
+//// weak：允许该库在运行时消失。
+//OTHER_LDFLAGS = -framework "Car"
+OTHER_LDFLAGS = $(inherited) -Xlinker -weak_framework -Xlinker "Car"
+//CMD = objdump --macho --syms ${MACH_PATH}
+
+//CMD = objdump --macho -private-header ${MACH_PATH}
+CMD = otool -l ${MACH_PATH}
+//CMD = echo $(HEADER_SEARCH_PATHS)
+//查看__TEXT段
+//CMD = objdump --macho -d ${MACH_PATH}
+//CMD = objdump --macho --indirect-symbols ${MACH_PATH}
+
+TTY=/dev/ttys000
+// clang
+// man ld
+// -Xlinker
+
+//OTHER_LDFLAGS[config=Debug][sdk=iphonesimulator*][arch=x86_64] = $(inherited) -framework 'Cat'
+
+// -all_load
+// -OBJC
+//OTHER_LDFLAGS=-Xlinker -dead_strip
