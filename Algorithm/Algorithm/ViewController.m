@@ -7,9 +7,13 @@
 
 #import "ViewController.h"
 #import "LRU.h"
+#import "List.h"
+#import "Search.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
+@property (nonatomic, strong) List *list;
+@property (nonatomic, strong) Search *search;
 @end
 
 @implementation ViewController
@@ -20,9 +24,19 @@
     @[@[@1,@1,@1],@[@1,@2,@2],@[@2,@1],@[@1,@3,@3],@[@2,@2],@[@1,@4,@4],@[@2,@1],@[@2,@3],@[@2,@4]];
 
     self.lru = [[LRU alloc] initWithArray:arr count:2];
+    
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    self.list = [[List alloc] initWithAray:@[@1, @2, @3]];
+//    self.list = [[List alloc] initWithAray:@[@1, @2, @3]];
+//    self.list = [[List alloc] initWithAray:@[]];
+//    [self.list reverse];
+    self.list = [[List alloc] initWithAray:@[@1, @2, @3,@4,@5] circlePoint:1];
+    [self.list checkCircle];
+    self.search = [[Search alloc] init];
+    [self.search bianrySearch:3];
+}
 @end
