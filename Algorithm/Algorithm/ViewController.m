@@ -9,11 +9,14 @@
 #import "LRU.h"
 #import "List.h"
 #import "Search.h"
+#import "BinaryTree.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
 @property (nonatomic, strong) List *list;
 @property (nonatomic, strong) Search *search;
+@property (nonatomic, strong) BinaryTree *bTree;
 @end
 
 @implementation ViewController
@@ -34,9 +37,11 @@
 //    self.list = [[List alloc] initWithAray:@[@1, @2, @3]];
 //    self.list = [[List alloc] initWithAray:@[]];
 //    [self.list reverse];
-    self.list = [[List alloc] initWithAray:@[@1, @2, @3,@4,@5] circlePoint:1];
-    [self.list checkCircle];
-    self.search = [[Search alloc] init];
-    [self.search bianrySearch:3];
+//    self.list = [[List alloc] initWithAray:@[@1, @2, @3,@4,@5] circlePoint:1];
+//    [self.list checkCircle];
+//    self.search = [[Search alloc] init];
+//    [self.search bianrySearch:3];
+    
+    self.bTree = [[BinaryTree alloc] init];
 }
 @end
