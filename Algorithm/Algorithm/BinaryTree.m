@@ -16,7 +16,10 @@
 @end
 
 @implementation TreeNode
-
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"value:%@", self.value];
+}
 @end
 @interface BinaryTree ()
 
@@ -31,8 +34,13 @@
     if (self) {
         NSArray *array  = @[@1, @2, @3, @-1, @-1, @4, @5, @6];
         [self treeWithArray:array];
+        [self test];
     }
     return self;
+}
+
+- (void)test {
+    [self levelScan];
 }
 
 
@@ -80,4 +88,26 @@
     NSLog(@"root: %@", _root);
 }
 
+- (void)levelScan {
+    if (!self.root) {
+        NSLog(@"has no node");
+        return;
+    }
+    NSMutableArray *result = [NSMutableArray array];
+    NSMutableArray<TreeNode *> *array = [NSMutableArray arrayWithObject:self.root];
+    while (array.count > 0) {
+        NSMutableArray<TreeNode *> *nextLevel = [NSMutableArray array];
+        [array enumerateObjectsUsingBlock:^(TreeNode *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [result addObject:obj];
+            if (obj.left) {
+                [nextLevel addObject:obj.left];
+            }
+            if (obj.right) {
+                [nextLevel addObject:obj.right];
+            }
+        }];
+        array = nextLevel;
+    }
+    NSLog(@"levelScan--%@", result);
+}
 @end
