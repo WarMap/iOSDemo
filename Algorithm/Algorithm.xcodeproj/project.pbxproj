@@ -18,6 +18,9 @@
 		EE271C7126E364AA00B384BF /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C7026E364AA00B384BF /* List.m */; };
 		EE271C7426E492A500B384BF /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C7326E492A500B384BF /* Search.m */; };
 		EE27616726E5ABE200B384BF /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = EE27616626E5ABE200B384BF /* BinaryTree.m */; };
+		EE905C4F2717149100FF9860 /* TwoSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C4E2717149100FF9860 /* TwoSum.m */; };
+		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
+		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,14 @@
 		EE271C7326E492A500B384BF /* Search.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		EE27616526E5ABE200B384BF /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		EE27616626E5ABE200B384BF /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
+		EE905C4D2717149100FF9860 /* TwoSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoSum.h; sourceTree = "<group>"; };
+		EE905C4E2717149100FF9860 /* TwoSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoSum.m; sourceTree = "<group>"; };
+		EE905C52271714F400FF9860 /* BaseDataStruct.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDataStruct.pch; sourceTree = "<group>"; };
+		EE905C532717152A00FF9860 /* TreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		EE905C542717152A00FF9860 /* TreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
+		EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmProtocol.h; sourceTree = "<group>"; };
+		EE905C5E2717179A00FF9860 /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		EE905C5F2717179A00FF9860 /* ListNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,17 +84,36 @@
 		EE271C5226E3513500B384BF /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				EE905C4B2717144500FF9860 /* core */,
+				EE905C452717120500FF9860 /* ignore */,
+				EE271C5A26E3513500B384BF /* ViewController.m */,
+				EE905C4D2717149100FF9860 /* TwoSum.h */,
+				EE905C4E2717149100FF9860 /* TwoSum.m */,
+				EE271C6426E3513600B384BF /* Info.plist */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		EE905C452717120500FF9860 /* ignore */ = {
+			isa = PBXGroup;
+			children = (
+				EE271C6526E3513600B384BF /* main.m */,
+				EE271C5C26E3513500B384BF /* Main.storyboard */,
+				EE271C5F26E3513600B384BF /* Assets.xcassets */,
+				EE271C6126E3513600B384BF /* LaunchScreen.storyboard */,
 				EE271C5326E3513500B384BF /* AppDelegate.h */,
 				EE271C5426E3513500B384BF /* AppDelegate.m */,
 				EE271C5626E3513500B384BF /* SceneDelegate.h */,
 				EE271C5726E3513500B384BF /* SceneDelegate.m */,
 				EE271C5926E3513500B384BF /* ViewController.h */,
-				EE271C5A26E3513500B384BF /* ViewController.m */,
-				EE271C5C26E3513500B384BF /* Main.storyboard */,
-				EE271C5F26E3513600B384BF /* Assets.xcassets */,
-				EE271C6126E3513600B384BF /* LaunchScreen.storyboard */,
-				EE271C6426E3513600B384BF /* Info.plist */,
-				EE271C6526E3513600B384BF /* main.m */,
+				EE905C52271714F400FF9860 /* BaseDataStruct.pch */,
+			);
+			path = ignore;
+			sourceTree = "<group>";
+		};
+		EE905C4B2717144500FF9860 /* core */ = {
+			isa = PBXGroup;
+			children = (
 				EE271C6C26E351D200B384BF /* LRU.h */,
 				EE271C6D26E351D200B384BF /* LRU.m */,
 				EE271C6F26E364AA00B384BF /* List.h */,
@@ -92,8 +122,13 @@
 				EE271C7326E492A500B384BF /* Search.m */,
 				EE27616526E5ABE200B384BF /* BinaryTree.h */,
 				EE27616626E5ABE200B384BF /* BinaryTree.m */,
+				EE905C532717152A00FF9860 /* TreeNode.h */,
+				EE905C542717152A00FF9860 /* TreeNode.m */,
+				EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */,
+				EE905C5E2717179A00FF9860 /* ListNode.h */,
+				EE905C5F2717179A00FF9860 /* ListNode.m */,
 			);
-			path = Algorithm;
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +204,9 @@
 				EE271C5526E3513500B384BF /* AppDelegate.m in Sources */,
 				EE271C6626E3513600B384BF /* main.m in Sources */,
 				EE271C7126E364AA00B384BF /* List.m in Sources */,
+				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
+				EE905C602717179A00FF9860 /* ListNode.m in Sources */,
+				EE905C552717152A00FF9860 /* TreeNode.m in Sources */,
 				EE27616726E5ABE200B384BF /* BinaryTree.m in Sources */,
 				EE271C5826E3513500B384BF /* SceneDelegate.m in Sources */,
 				EE271C6E26E351D200B384BF /* LRU.m in Sources */,
@@ -315,15 +353,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LKCW77FR7A;
+				DEVELOPMENT_TEAM = 776Q4HVMDN;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Algorithm/ignore/BaseDataStruct.pch;
 				INFOPLIST_FILE = Algorithm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Algorithm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Algorithm1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -333,15 +377,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LKCW77FR7A;
+				DEVELOPMENT_TEAM = 776Q4HVMDN;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Algorithm/ignore/BaseDataStruct.pch;
 				INFOPLIST_FILE = Algorithm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Algorithm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warmap.Algorithm1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

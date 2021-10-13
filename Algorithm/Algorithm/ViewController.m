@@ -10,7 +10,7 @@
 #import "List.h"
 #import "Search.h"
 #import "BinaryTree.h"
-
+#import "TwoSum.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -26,7 +26,7 @@
 //    @[@[@1,@1,@1],@[@1,@2,@2],@[@1,@3,@2],@[@2,@1],@[@1,@4,@4],@[@2,@2]];
     @[@[@1,@1,@1],@[@1,@2,@2],@[@2,@1],@[@1,@3,@3],@[@2,@2],@[@1,@4,@4],@[@2,@1],@[@2,@3],@[@2,@4]];
 
-    self.lru = [[LRU alloc] initWithArray:arr count:2];
+//    self.lru = [[LRU alloc] initWithArray:arr count:2];
     
     
     [super viewDidLoad];
@@ -42,6 +42,8 @@
 //    self.search = [[Search alloc] init];
 //    [self.search bianrySearch:3];
     
-    self.bTree = [[BinaryTree alloc] init];
+//    self.bTree = [[BinaryTree alloc] init];
+    
+    [TwoSum run];
 }
 @end

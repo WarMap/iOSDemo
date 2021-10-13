@@ -7,25 +7,6 @@
 
 #import "List.h"
 
-@interface ListNode : NSObject
-@property (nonatomic, assign) int value;
-@property (nonatomic, strong) ListNode *next;
-@end
-
-@implementation ListNode
-
-
-- (instancetype)initWithValue:(int)value next:(ListNode *)node {
-    self = [super init];
-    if (self) {
-        self.value = value;
-        self.next = node;
-    }
-    return self;
-}
-
-@end
-
 @interface List ()
 
 @property (nonatomic, strong) ListNode *node;

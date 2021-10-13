@@ -7,20 +7,6 @@
 
 #import "BinaryTree.h"
 
-@interface TreeNode : NSObject
-
-@property (nonatomic, strong) TreeNode *left;
-@property (nonatomic, strong) TreeNode *right;
-@property (nonatomic, strong) NSNumber *value;
-
-@end
-
-@implementation TreeNode
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"value:%@", self.value];
-}
-@end
 @interface BinaryTree ()
 
 @property (nonatomic, strong) TreeNode *root;
