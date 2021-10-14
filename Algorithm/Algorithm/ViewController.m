@@ -11,6 +11,7 @@
 #import "Search.h"
 #import "BinaryTree.h"
 #import "TwoSum.h"
+#import "RobRoom.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -44,6 +45,7 @@
     
 //    self.bTree = [[BinaryTree alloc] init];
     
-    [TwoSum run];
+//    [TwoSum run];
+    [RobRoom run];
 }
 @end
