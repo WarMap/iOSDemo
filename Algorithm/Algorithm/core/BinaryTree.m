@@ -19,68 +19,26 @@
     self = [super init];
     if (self) {
         NSArray *array  = @[@1, @2, @3, @-1, @-1, @4, @5, @6];
-        [self treeWithArray:array];
+        [TreeNode treeWithArray:array];
         [self test];
     }
     return self;
 }
 
-- (void)test {
-    [self levelScan];
++ (void)run {
+    NSArray *array  = @[@1, @2, @3, @-1, @-1, @4, @5, @6];
+    TreeNode *root = [TreeNode treeWithArray:array];
+    NSArray<TreeNode *> *nodes = [self levelScan:root];
+    NSLog(@"levelScan--%@", nodes);
 }
-
-
-- (void)treeWithArray:(NSArray<NSNumber *> *)array {
-    //异常判断
-    if (array.count == 0) {
-        return;
-    }
-    if (array.firstObject.intValue < 0) {
-        return;
-    }
-    
-    //特殊case处理
-    TreeNode *node = [[TreeNode alloc] init];
-    node.value = array.firstObject;
-    self.root = node;
-    
-    __block NSUInteger i = 1;
-    NSMutableArray<TreeNode *> *level = [NSMutableArray arrayWithObject:self.root];
-    while (i < array.count) {
-        NSMutableArray *nextLevel = [NSMutableArray array];
-
-        [level enumerateObjectsUsingBlock:^(TreeNode *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (i < array.count) {
-                if (array[i].intValue > 0) {
-                   TreeNode *node = [[TreeNode alloc] init];
-                   node.value = array[i];
-                   obj.left = node;
-                   [nextLevel addObject:node];
-               }
-                i++;
-            }
-            if (i < array.count) {
-                if (array[i].intValue > 0) {
-                   TreeNode *node = [[TreeNode alloc] init];
-                   node.value = array[i];
-                   obj.right = node;
-                   [nextLevel addObject:node];
-               }
-                i++;
-            }
-        }];
-        level = nextLevel;
-    }
-    NSLog(@"root: %@", _root);
-}
-
-- (void)levelScan {
-    if (!self.root) {
+//层级遍历
++ (NSArray<TreeNode *> *)levelScan:(TreeNode *)root {
+    if (root) {
         NSLog(@"has no node");
-        return;
+        return nil;
     }
     NSMutableArray *result = [NSMutableArray array];
-    NSMutableArray<TreeNode *> *array = [NSMutableArray arrayWithObject:self.root];
+    NSMutableArray<TreeNode *> *array = [NSMutableArray arrayWithObject:root];
     while (array.count > 0) {
         NSMutableArray<TreeNode *> *nextLevel = [NSMutableArray array];
         [array enumerateObjectsUsingBlock:^(TreeNode *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -94,6 +52,42 @@
         }];
         array = nextLevel;
     }
-    NSLog(@"levelScan--%@", result);
+}
+//前序遍历
+
++ (NSArray<TreeNode *> *)depthScan:(TreeNode *)root {
+    if (root) {
+        NSLog(@"has no node");
+        return nil;
+    }
+    NSMutableArray *array = [NSMutableArray array];
+    [self _preorderScan:root res:array];
+}
+
++ (void)_preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
+    if (!root) {
+        return;
+    }
+    [res addObject:root];
+    [self _preorderScan:root.left res:res];
+    [self _preorderScan:root.right res:res];
+}
+//中序遍历
++ (void)_inorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
+    if (!root) {
+        return;
+    }
+    [self _inorderScan:root.left res:res];
+    [res addObject:root];
+    [self _inorderScan:root.right res:res];
+}
+//后序遍历
++ (void)_postorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
+    if (!root) {
+        return;
+    }
+    [self _postorderScan:root.left res:res];
+    [self _postorderScan:root.right res:res];
+    [res addObject:root];
 }
 @end
