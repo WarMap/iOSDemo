@@ -11,7 +11,7 @@
 
 + (void)run {
     ListNode *n = [[ListNode alloc] initWithArray:@[@1, @2, @3, @4, @5]];
-    n = [self removeNth:5 fromList:n];
+    n = [self removeNth:2 fromList:n];
     [n output];
 }
 
@@ -21,6 +21,7 @@
 + (ListNode *)removeNth:(int)n fromList:(ListNode *)head {
     ListNode *result = [[ListNode alloc] initWithValue:-1 next:head];
     ListNode *pointer = head;
+    //找到要移除位置的元素，注意是倒数
     while (pointer) {
         pointer = pointer.next;
         n = n - 1;
@@ -28,9 +29,10 @@
             result = result.next;
         }
     }
+    //如果是result没有移动则是要删掉头
     if (result.value == -1) {
         head = head.next;
-    }else {
+    } else {
         result.next = result.next.next;
     }
     return head;
