@@ -18,6 +18,8 @@
 #import "MaxArea.h"
 #import "Permute.h"
 #import "Canjump.h"
+#import "MaxProfit.h"
+#import "DailyTem.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -59,6 +61,8 @@
 //    [TreeSum run];
 //    [MaxArea run];
 //    [Permute run];
-    [Canjump run];
+//    [Canjump run];
+//    [MaxProfit run];
+//    [DailyTem run];
 }
 @end
