@@ -15,16 +15,6 @@
 
 @implementation BinaryTree
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        NSArray *array  = @[@1, @2, @3, @-1, @-1, @4, @5, @6];
-        [TreeNode treeWithArray:array];
-        [self test];
-    }
-    return self;
-}
-
 + (void)run {
     NSArray *array  = @[@1, @2, @3, @-1, @-1, @4, @5, @6];
     TreeNode *root = [TreeNode treeWithArray:array];
@@ -52,6 +42,7 @@
         }];
         array = nextLevel;
     }
+    return result;
 }
 //前序遍历
 
@@ -62,6 +53,7 @@
     }
     NSMutableArray *array = [NSMutableArray array];
     [self _preorderScan:root res:array];
+    return array;
 }
 
 + (void)_preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
