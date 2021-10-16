@@ -5,16 +5,11 @@
 //  Created by 马鹏 on 2021/9/4.
 //
 
-#import <Foundation/Foundation.h>
+#import "Algorithm.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface List : NSObject
-
-- (instancetype)initWithAray:(NSArray *)array;
-- (instancetype)initWithAray:(NSArray *)array circlePoint:(NSUInteger)point;
-- (void)reverse;
-- (void)checkCircle;
+@interface List : Algorithm
 
 @end
 

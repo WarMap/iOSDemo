@@ -121,6 +121,7 @@
 		EE271C5226E3513500B384BF /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				EE0ED3B6271AEE1800FE6032 /* done.h */,
 				EE905C4B2717144500FF9860 /* core */,
 				EE905C452717120500FF9860 /* ignore */,
 				EE271C5A26E3513500B384BF /* ViewController.m */,
@@ -151,7 +152,6 @@
 		EE905C4B2717144500FF9860 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				EE0ED3B6271AEE1800FE6032 /* done.h */,
 				EE5068D02719ADCB00A94209 /* Algorithm.h */,
 				EE5068D12719ADCB00A94209 /* Algorithm.m */,
 				EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */,

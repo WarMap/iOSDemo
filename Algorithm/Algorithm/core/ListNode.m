@@ -33,8 +33,9 @@
 
 - (void)output {
     ListNode *tem = self;
+    int i = 1;
     while (tem) {
-        NSLog(@"%d", tem.value);
+        NSLog(@"第%d节点 - %d",i, tem.value);
         tem = tem.next;
     }
 }

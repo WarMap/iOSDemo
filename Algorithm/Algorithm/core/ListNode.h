@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ListNode : NSObject
 
-@property (nonatomic, strong) ListNode *next;
+@property (nonatomic, strong) ListNode * __nullable next;
 @property (nonatomic, assign) int value;
 
 - (instancetype)initWithValue:(int)value next:(ListNode * _Nullable)node;

@@ -7,88 +7,43 @@
 
 #import "List.h"
 
-@interface List ()
-
-@property (nonatomic, strong) ListNode *node;
-@property (nonatomic, assign) NSUInteger point;
-
-@end
-
 @implementation List
 
-- (instancetype)initWithAray:(NSArray *)array
-{
-    self = [super init];
-    if (self) {
-        [self setupList:array];
-    }
-    return self;
++ (void)run {
+    [self reverseTest];
+    [self checkCircle];
 }
 
-- (instancetype)initWithAray:(NSArray *)array circlePoint:(NSUInteger)point
-{
-    self = [super init];
-    if (self) {
-        [self setupLinkList:array point:point];
-        NSLog(@"链表：%@", array);
-    }
-    return self;
++ (void)checkCircle {
+        int a[] = {1,2,3,4,5,6,7};
+    ListNode *node = [[ListNode alloc] initWithArray:cArray2ocArray(a, 7)];
+    [self setupLink:node circle:3 count:7];
+    [self checkCircleTest:node];
 }
 
-- (void)setupLinkList:(NSArray *)array point:(NSUInteger)point {
-    if (array.count <= point) {
-        return;
-    }
-    ListNode *node = [[ListNode alloc] init];
-    __block ListNode *pointer = node;
-    [array enumerateObjectsUsingBlock:^(NSNumber *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        ListNode *tmp = [[ListNode alloc] init];
-        tmp.value = obj.intValue;
-        pointer.next = tmp;
-        pointer = tmp;
-    }];
-    self.node = node.next;
-    int k = (int)point;
-    if (k >= 0) {
-        while (k >= 0) {
-            node = node.next;
-            k--;
++ (void)setupLink:(ListNode *)head
+           circle:(NSUInteger)circle
+            count:(NSUInteger)count {
+    ListNode *dummy = [[ListNode alloc] initWithValue:0 next:head];
+    ListNode *circlePoint = nil;
+    for (int step = 0; step < count; ++step) {
+        dummy = dummy.next;
+        if (step == (circle-1)) {
+            circlePoint = dummy;
         }
-        pointer.next = node;
-        NSLog(@"环指向：%d", node.value);
-    } else {
-        NSLog(@"wu huan");
     }
-
+    dummy.next = circlePoint;
 }
 
-- (void)setupList:(NSArray *)array {
-    if (array.count == 0) {
-        return;
-    }
-//    self.node
-    ListNode *node = [[ListNode alloc] init];
-    __block ListNode *pointer = node;
-    [array enumerateObjectsUsingBlock:^(NSNumber *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        ListNode *tmp = [[ListNode alloc] init];
-        tmp.value = obj.intValue;
-        pointer.next = tmp;
-        pointer = tmp;
-    }];
-    self.node = node.next;
-    [self outputLikeList];
++ (void)reverseTest {
+    int a[] = {1,2,3,4,5};
+//    ListNode *node = [self reverse:[[ListNode alloc] initWithArray:cArray2ocArray(a, 5)]];
+    ListNode *node = [self reverse:[[ListNode alloc] initWithArray:cArray2ocArray(a, 5)] begin:2 end:3];
+    [node output];
 }
 
-- (void)outputLikeList {
-    ListNode *node = self.node;
-    while (node) {
-        NSLog(@"%d", node.value);
-        node = node.next;
-    }
-}
-
-- (void)reverse {
-    ListNode *node = self.node;
++ (ListNode *)reverse:(ListNode *)head {
+    ListNode *node = head;
     ListNode *node2 = node.next;
     node.next = nil;
     ListNode *node3 = node2.next;
@@ -98,20 +53,37 @@
         node2 = node3;
         node3 = node2.next;
     }
-    self.node = node;
-    NSLog(@"reversed---------");
-    [self outputLikeList];
+    return node;
 }
 
-- (void)checkCircle {
-    ListNode *slow = self.node;
-    ListNode *fast = self.node;
++ (ListNode *)reverse:(ListNode *)head begin:(NSUInteger)begin end:(NSUInteger)end {
+    ListNode *dummy = [[ListNode alloc] initWithValue:0 next:head];
+    ListNode *g = dummy;
+    
+    //移动到指定位置
+    for (int step = 0; step < begin-1; ++step) {
+        g = g.next;
+    }
+    ListNode *p = g.next;
+    NSUInteger count = end - begin;
+    for (int i = 0; i < count; ++i) {
+        ListNode *removed = p.next;
+        p.next = removed.next;
+        removed.next = g.next;
+        g.next = removed;
+    }
+    return head;
+}
+
++ (void)checkCircleTest:(ListNode *)node {
+    ListNode *slow = node;
+    ListNode *fast = node;
     while (slow && fast) {
         slow = slow.next;
         fast = fast.next.next;
         if (slow == fast) {
             NSLog(@"又环");
-            slow = self.node;
+            slow = node;
             int k = 0;
             while (slow != fast) {
                 slow = slow.next;
