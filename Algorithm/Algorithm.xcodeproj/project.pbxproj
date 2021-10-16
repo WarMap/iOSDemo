@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0ED39C271A69BF00FE6032 /* Permute.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED39B271A69BF00FE6032 /* Permute.m */; };
+		EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A0271AA25200FE6032 /* Canjump.m */; };
 		EE271C5526E3513500B384BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5426E3513500B384BF /* AppDelegate.m */; };
 		EE271C5826E3513500B384BF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5726E3513500B384BF /* SceneDelegate.m */; };
 		EE271C5B26E3513500B384BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5A26E3513500B384BF /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE0ED39A271A69BF00FE6032 /* Permute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Permute.h; sourceTree = "<group>"; };
+		EE0ED39B271A69BF00FE6032 /* Permute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Permute.m; sourceTree = "<group>"; };
+		EE0ED39F271AA25200FE6032 /* Canjump.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Canjump.h; sourceTree = "<group>"; };
+		EE0ED3A0271AA25200FE6032 /* Canjump.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Canjump.m; sourceTree = "<group>"; };
 		EE271C5026E3513500B384BF /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE271C5326E3513500B384BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE271C5426E3513500B384BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,8 +114,6 @@
 				EE905C4B2717144500FF9860 /* core */,
 				EE905C452717120500FF9860 /* ignore */,
 				EE271C5A26E3513500B384BF /* ViewController.m */,
-				EE5068E3271A614400A94209 /* MaxArea.h */,
-				EE5068E4271A614400A94209 /* MaxArea.m */,
 				EE5068DE2719C35C00A94209 /* Sort.h */,
 				EE5068DF2719C35C00A94209 /* Sort.m */,
 				EE271C6426E3513600B384BF /* Info.plist */,
@@ -137,6 +141,12 @@
 		EE905C4B2717144500FF9860 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				EE0ED39F271AA25200FE6032 /* Canjump.h */,
+				EE0ED3A0271AA25200FE6032 /* Canjump.m */,
+				EE0ED39A271A69BF00FE6032 /* Permute.h */,
+				EE0ED39B271A69BF00FE6032 /* Permute.m */,
+				EE5068E3271A614400A94209 /* MaxArea.h */,
+				EE5068E4271A614400A94209 /* MaxArea.m */,
 				EE5068DA2719C13C00A94209 /* TreeSum.h */,
 				EE5068DB2719C13C00A94209 /* TreeSum.m */,
 				EE905C4D2717149100FF9860 /* TwoSum.h */,
@@ -237,6 +247,7 @@
 			files = (
 				EE271C5B26E3513500B384BF /* ViewController.m in Sources */,
 				EE5068E02719C35C00A94209 /* Sort.m in Sources */,
+				EE0ED39C271A69BF00FE6032 /* Permute.m in Sources */,
 				EE271C5526E3513500B384BF /* AppDelegate.m in Sources */,
 				EE5068D82719BA5900A94209 /* SearchRange.m in Sources */,
 				EE271C6626E3513600B384BF /* main.m in Sources */,
@@ -244,6 +255,7 @@
 				EE28DADA2717BB2800EEE23E /* RobRoom.m in Sources */,
 				EE5068E5271A614400A94209 /* MaxArea.m in Sources */,
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
+				EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */,
 				EE905C602717179A00FF9860 /* ListNode.m in Sources */,
 				EE905C552717152A00FF9860 /* TreeNode.m in Sources */,
 				EE5068DC2719C13C00A94209 /* TreeSum.m in Sources */,

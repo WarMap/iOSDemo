@@ -16,6 +16,8 @@
 #import "SearchRange.h"
 #import "TreeSum.h"
 #import "MaxArea.h"
+#import "Permute.h"
+#import "Canjump.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -55,6 +57,8 @@
 //    [RemoveNthFromEnd run];
 //    [SearchRange run];
 //    [TreeSum run];
-    [MaxArea run];
+//    [MaxArea run];
+//    [Permute run];
+    [Canjump run];
 }
 @end
