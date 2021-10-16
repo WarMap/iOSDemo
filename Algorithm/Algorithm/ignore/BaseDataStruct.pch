@@ -12,6 +12,7 @@
 #import "AlgorithmProtocol.h"
 #import "ListNode.h"
 
+FOUNDATION_EXTERN NSArray *cArray2ocArray(int arr[], int size);
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
