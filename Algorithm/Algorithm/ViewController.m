@@ -15,6 +15,7 @@
 #import "RemoveNthFromEnd.h"
 #import "SearchRange.h"
 #import "TreeSum.h"
+#import "MaxArea.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -35,6 +36,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self touchesBegan:[NSSet set] withEvent:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    self.list = [[List alloc] initWithAray:@[@1, @2, @3]];
@@ -52,6 +54,7 @@
 //    [RobRoom run];
 //    [RemoveNthFromEnd run];
 //    [SearchRange run];
-    [TreeSum run];
+//    [TreeSum run];
+    [MaxArea run];
 }
 @end

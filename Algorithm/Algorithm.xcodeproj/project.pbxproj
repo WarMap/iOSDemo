@@ -24,6 +24,7 @@
 		EE5068D82719BA5900A94209 /* SearchRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068D72719BA5900A94209 /* SearchRange.m */; };
 		EE5068DC2719C13C00A94209 /* TreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068DB2719C13C00A94209 /* TreeSum.m */; };
 		EE5068E02719C35C00A94209 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068DF2719C35C00A94209 /* Sort.m */; };
+		EE5068E5271A614400A94209 /* MaxArea.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068E4271A614400A94209 /* MaxArea.m */; };
 		EE905C4F2717149100FF9860 /* TwoSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C4E2717149100FF9860 /* TwoSum.m */; };
 		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
 		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
@@ -62,6 +63,8 @@
 		EE5068DB2719C13C00A94209 /* TreeSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeSum.m; sourceTree = "<group>"; };
 		EE5068DE2719C35C00A94209 /* Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
 		EE5068DF2719C35C00A94209 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
+		EE5068E3271A614400A94209 /* MaxArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxArea.h; sourceTree = "<group>"; };
+		EE5068E4271A614400A94209 /* MaxArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxArea.m; sourceTree = "<group>"; };
 		EE905C4D2717149100FF9860 /* TwoSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoSum.h; sourceTree = "<group>"; };
 		EE905C4E2717149100FF9860 /* TwoSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoSum.m; sourceTree = "<group>"; };
 		EE905C52271714F400FF9860 /* BaseDataStruct.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDataStruct.pch; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				EE905C4B2717144500FF9860 /* core */,
 				EE905C452717120500FF9860 /* ignore */,
 				EE271C5A26E3513500B384BF /* ViewController.m */,
+				EE5068E3271A614400A94209 /* MaxArea.h */,
+				EE5068E4271A614400A94209 /* MaxArea.m */,
 				EE5068DE2719C35C00A94209 /* Sort.h */,
 				EE5068DF2719C35C00A94209 /* Sort.m */,
 				EE271C6426E3513600B384BF /* Info.plist */,
@@ -237,6 +242,7 @@
 				EE271C6626E3513600B384BF /* main.m in Sources */,
 				EE271C7126E364AA00B384BF /* List.m in Sources */,
 				EE28DADA2717BB2800EEE23E /* RobRoom.m in Sources */,
+				EE5068E5271A614400A94209 /* MaxArea.m in Sources */,
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
 				EE905C602717179A00FF9860 /* ListNode.m in Sources */,
 				EE905C552717152A00FF9860 /* TreeNode.m in Sources */,
