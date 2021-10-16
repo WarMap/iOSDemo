@@ -7,18 +7,15 @@
 
 #import "BinaryTree.h"
 
-@interface BinaryTree ()
-
-@property (nonatomic, strong) TreeNode *root;
-
-@end
-
 @implementation BinaryTree
 
+//pre  5 4 1 2 6 7 8
+//in   1 4 2 5 7 6 8
+//post 1 2 4 7 8 6 5
 + (void)run {
-    NSArray *array  = @[@1, @2, @3, @-1, @-1, @4, @5, @6];
-    TreeNode *root = [TreeNode treeWithArray:array];
-    NSArray<TreeNode *> *nodes = [self levelScan:root];
+    int arr[] = {5,4,6,1,2,7,8};
+    TreeNode *root = [TreeNode treeWithArray:cArray2ocArray(arr, 7)];
+    NSArray<TreeNode *> *nodes = [self _inorderScan:root];
     NSLog(@"levelScan--%@", nodes);
 }
 //层级遍历
@@ -44,7 +41,7 @@
     }
     return result;
 }
-//前序遍历
+
 
 + (NSArray<TreeNode *> *)depthScan:(TreeNode *)root {
     if (root) {
@@ -55,7 +52,7 @@
     [self _preorderScan:root res:array];
     return array;
 }
-
+//前序遍历
 + (void)_preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
     if (!root) {
         return;
@@ -64,7 +61,25 @@
     [self _preorderScan:root.left res:res];
     [self _preorderScan:root.right res:res];
 }
-//中序遍历
+
++ (NSArray<TreeNode *> *)_preorderScan:(TreeNode *)root {
+    NSMutableArray<TreeNode *> *stack = [NSMutableArray array];
+    NSMutableArray<TreeNode *> *result = [NSMutableArray array];
+    [stack addObject:root];
+    while (stack.count > 0) {
+        TreeNode *node = stack.lastObject;
+        [result addObject:node];
+        [stack removeLastObject];
+        if (node.right) {
+            [stack addObject:node.right];
+        }
+        if (node.left) {
+            [stack addObject:node.left];
+        }
+    }
+    return result;
+}
+//中序遍历 左中右
 + (void)_inorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
     if (!root) {
         return;
@@ -73,7 +88,27 @@
     [res addObject:root];
     [self _inorderScan:root.right res:res];
 }
-//后序遍历
+
++ (NSArray<TreeNode *> *)_inorderScan:(TreeNode *)root {
+    NSMutableArray<TreeNode *> *stack = [NSMutableArray array];
+    NSMutableArray<TreeNode *> *result = [NSMutableArray array];
+    while (root || stack.count>0) {
+        //一直遍历到最左侧
+        if (root) {
+            [stack addObject:root];
+            root = root.left;
+        } else {
+//          这是最左侧，当左侧取完下次的左侧也就是中间的，也就符合了左中右
+            root = stack.lastObject;
+            [stack removeLastObject];
+            [result addObject:root];
+//            在往栈里压右侧
+            root = root.right;
+        }
+    }
+    return result;
+}
+//后序遍历 左右中 （前序时中左右，类似写法搞成中右左，然后在反转）
 + (void)_postorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
     if (!root) {
         return;
@@ -81,5 +116,23 @@
     [self _postorderScan:root.left res:res];
     [self _postorderScan:root.right res:res];
     [res addObject:root];
+}
+//（前序时中左右，类似写法搞成中右左，然后在反转）
++ (NSArray<TreeNode *> *)_postorderScan:(TreeNode *)root {
+    NSMutableArray<TreeNode *> *stack = [NSMutableArray array];
+    NSMutableArray<TreeNode *> *result = [NSMutableArray array];
+    [stack addObject:root];
+    while (stack.count > 0) {
+        TreeNode *node = stack.lastObject;
+        [result addObject:node];
+        [stack removeLastObject];
+        if (node.left) {
+            [stack addObject:node.left];
+        }
+        if (node.right) {
+            [stack addObject:node.right];
+        }
+    }
+    return [result reverseObjectEnumerator].allObjects;
 }
 @end

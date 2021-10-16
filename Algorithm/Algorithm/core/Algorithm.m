@@ -9,4 +9,7 @@
 
 @implementation Algorithm
 
++ (void)run {
+    NSLog(@"subclass should rewrite it");
+}
 @end

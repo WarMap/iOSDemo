@@ -20,6 +20,7 @@
 #import "Canjump.h"
 #import "MaxProfit.h"
 #import "DailyTem.h"
+#import "ValidBST.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -64,5 +65,7 @@
 //    [Canjump run];
 //    [MaxProfit run];
 //    [DailyTem run];
+//    [BinaryTree run];
+    [ValidBST run];
 }
 @end

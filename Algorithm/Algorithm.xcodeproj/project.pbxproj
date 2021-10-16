@@ -11,6 +11,7 @@
 		EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A0271AA25200FE6032 /* Canjump.m */; };
 		EE0ED3A6271AAB8500FE6032 /* MaxProfit.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A5271AAB8500FE6032 /* MaxProfit.m */; };
 		EE0ED3AA271AB6CC00FE6032 /* DailyTem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A9271AB6CC00FE6032 /* DailyTem.m */; };
+		EE0ED3B4271AE9BE00FE6032 /* ValidBST.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */; };
 		EE271C5526E3513500B384BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5426E3513500B384BF /* AppDelegate.m */; };
 		EE271C5826E3513500B384BF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5726E3513500B384BF /* SceneDelegate.m */; };
 		EE271C5B26E3513500B384BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5A26E3513500B384BF /* ViewController.m */; };
@@ -43,6 +44,8 @@
 		EE0ED3A5271AAB8500FE6032 /* MaxProfit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxProfit.m; sourceTree = "<group>"; };
 		EE0ED3A8271AB6CC00FE6032 /* DailyTem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTem.h; sourceTree = "<group>"; };
 		EE0ED3A9271AB6CC00FE6032 /* DailyTem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTem.m; sourceTree = "<group>"; };
+		EE0ED3B2271AE9BE00FE6032 /* ValidBST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidBST.h; sourceTree = "<group>"; };
+		EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidBST.m; sourceTree = "<group>"; };
 		EE271C5026E3513500B384BF /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE271C5326E3513500B384BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE271C5426E3513500B384BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 		EE905C4B2717144500FF9860 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				EE0ED3B2271AE9BE00FE6032 /* ValidBST.h */,
+				EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */,
 				EE0ED3A8271AB6CC00FE6032 /* DailyTem.h */,
 				EE0ED3A9271AB6CC00FE6032 /* DailyTem.m */,
 				EE0ED3A4271AAB8500FE6032 /* MaxProfit.h */,
@@ -263,6 +268,7 @@
 				EE5068D82719BA5900A94209 /* SearchRange.m in Sources */,
 				EE271C6626E3513600B384BF /* main.m in Sources */,
 				EE271C7126E364AA00B384BF /* List.m in Sources */,
+				EE0ED3B4271AE9BE00FE6032 /* ValidBST.m in Sources */,
 				EE0ED3AA271AB6CC00FE6032 /* DailyTem.m in Sources */,
 				EE28DADA2717BB2800EEE23E /* RobRoom.m in Sources */,
 				EE5068E5271A614400A94209 /* MaxArea.m in Sources */,
