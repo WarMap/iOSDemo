@@ -65,7 +65,7 @@
 //    [Canjump run];
 //    [MaxProfit run];
 //    [DailyTem run];
-//    [BinaryTree run];
-    [ValidBST run];
+    [BinaryTree run];
+//    [ValidBST run];
 }
 @end

@@ -8,6 +8,10 @@
 #import "BinaryTree.h"
 
 @implementation BinaryTree
+//          5
+//       4     6
+//      1 2   7 8
+
 
 //pre  5 4 1 2 6 7 8
 //in   1 4 2 5 7 6 8
@@ -15,12 +19,14 @@
 + (void)run {
     int arr[] = {5,4,6,1,2,7,8};
     TreeNode *root = [TreeNode treeWithArray:cArray2ocArray(arr, 7)];
-    NSArray<TreeNode *> *nodes = [self _inorderScan:root];
-    NSLog(@"levelScan--%@", nodes);
+//    NSArray<TreeNode *> *nodes = [self _inorderScan:root];
+//    NSLog(@"levelScan--%@", nodes);
+    NSArray<NSArray *> *result = [self zigzagLevelScan:root];
+        NSLog(@"levelScan--%@", result);
 }
 //层级遍历
 + (NSArray<TreeNode *> *)levelScan:(TreeNode *)root {
-    if (root) {
+    if (!root) {
         NSLog(@"has no node");
         return nil;
     }
@@ -38,6 +44,36 @@
             }
         }];
         array = nextLevel;
+    }
+    return result;
+}
+
++ (NSArray<NSArray *> *)zigzagLevelScan:(TreeNode *)root {
+    if (!root) {
+        NSLog(@"has no node");
+        return nil;
+    }
+    NSMutableArray<NSArray *> *result = [NSMutableArray array];
+    NSMutableArray<TreeNode *> *level = [NSMutableArray array];
+    [level addObject:root];
+    BOOL reverse = true;
+    while (level.count > 0) {
+        if (reverse) {
+            [result addObject:level];
+        } else {
+            [result addObject:[level reverseObjectEnumerator].allObjects];
+        }
+        NSMutableArray<TreeNode *> *nextLevel = [NSMutableArray array];
+        for (TreeNode *node in level) {
+            if (node.left) {
+                [nextLevel addObject:node.left];
+            }
+            if (node.right) {
+                [nextLevel addObject:node.right];
+            }
+        }
+        reverse = !reverse;
+        level = nextLevel;
     }
     return result;
 }
