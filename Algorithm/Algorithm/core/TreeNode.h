@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TreeNode : NSObject
+@interface TreeNode : NSObject<NSCopying>
 
 @property (nonatomic, strong) TreeNode *left;
 @property (nonatomic, strong) TreeNode *right;

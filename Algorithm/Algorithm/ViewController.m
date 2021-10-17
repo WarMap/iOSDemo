@@ -21,6 +21,7 @@
 #import "MaxProfit.h"
 #import "DailyTem.h"
 #import "ValidBST.h"
+#import "BuildTree.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -68,6 +69,7 @@
 //    [BinaryTree run];
 //    [ValidBST run];
 //    [List run];
-    [Search run];
+//    [Search run];
+    [BuildTree run];
 }
 @end

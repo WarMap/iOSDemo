@@ -12,6 +12,7 @@
 		EE0ED3A6271AAB8500FE6032 /* MaxProfit.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A5271AAB8500FE6032 /* MaxProfit.m */; };
 		EE0ED3AA271AB6CC00FE6032 /* DailyTem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A9271AB6CC00FE6032 /* DailyTem.m */; };
 		EE0ED3B4271AE9BE00FE6032 /* ValidBST.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */; };
+		EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3BA271BBA1700FE6032 /* BuildTree.m */; };
 		EE271C5526E3513500B384BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5426E3513500B384BF /* AppDelegate.m */; };
 		EE271C5826E3513500B384BF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5726E3513500B384BF /* SceneDelegate.m */; };
 		EE271C5B26E3513500B384BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5A26E3513500B384BF /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		EE0ED3B2271AE9BE00FE6032 /* ValidBST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidBST.h; sourceTree = "<group>"; };
 		EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidBST.m; sourceTree = "<group>"; };
 		EE0ED3B6271AEE1800FE6032 /* done.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = done.h; sourceTree = "<group>"; };
+		EE0ED3B9271BBA1700FE6032 /* BuildTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildTree.h; sourceTree = "<group>"; };
+		EE0ED3BA271BBA1700FE6032 /* BuildTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuildTree.m; sourceTree = "<group>"; };
 		EE271C5026E3513500B384BF /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE271C5326E3513500B384BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE271C5426E3513500B384BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				EE5068DE2719C35C00A94209 /* Sort.h */,
 				EE5068DF2719C35C00A94209 /* Sort.m */,
 				EE271C6426E3513600B384BF /* Info.plist */,
+				EE0ED3B9271BBA1700FE6032 /* BuildTree.h */,
+				EE0ED3BA271BBA1700FE6032 /* BuildTree.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				EE5068E5271A614400A94209 /* MaxArea.m in Sources */,
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
 				EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */,
+				EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */,
 				EE905C602717179A00FF9860 /* ListNode.m in Sources */,
 				EE905C552717152A00FF9860 /* TreeNode.m in Sources */,
 				EE5068DC2719C13C00A94209 /* TreeSum.m in Sources */,

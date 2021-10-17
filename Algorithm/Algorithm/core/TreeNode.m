@@ -14,6 +14,13 @@
     return [NSString stringWithFormat:@"value:%@", self.value];
 }
 
+- (id)copyWithZone:(nullable NSZone *)zone {
+    TreeNode *node = [[[self class] alloc] init];
+    node.left = self.left;
+    node.right = self.right;
+    node.value = self.value;
+    return node;
+}
 
 //树节点的值都大于0
 + (instancetype)treeWithArray:(NSArray<NSNumber *> *)array {
