@@ -10,11 +10,13 @@
 @implementation LargestLevelValue
 
 + (void)run {
-//    int a[] = {1, 3, 2, 5, 3, 0, 9};
-    int a[] = {1, 0, 9};
-    NSArray *result = [self largestValue:[TreeNode treeWithArray:cArray2ocArray(a, 3)]];
-    NSLog(@"largest level value: %@" , result);
+    int a[] = {1, 3, 2, 5, 3, 0, 9};
+//    int a[] = {1, 0, 9};
+//    NSArray *result = [self largestValue:[TreeNode treeWithArray:cArray2ocArray(a, 3)]];
+    int result = [self findBottomLeftValue:[TreeNode treeWithArray:cArray2ocArray(a, 7)]];
+    NSLog(@"largest level value: %d" , result);
 }
+
 + (NSArray<NSNumber *> *)largestValue:(TreeNode *)root {
     if (!root) {
         return @[];
@@ -38,6 +40,30 @@
         }];
         [result addObject:@(curLevelLargest)];
         level = nextLevel;
+    }
+    return result;
+}
+
+
++ (int)findBottomLeftValue:(TreeNode *)root {
+    if (!root) {
+        return INT_MIN;
+    }
+    int result = INT_MIN;
+    NSMutableArray<TreeNode *> *level = [NSMutableArray array];
+    [level addObject:root];
+    while (level.count > 0) {
+        result = IV(level.firstObject.value);
+        NSUInteger count = level.count;
+        for (int i = 0; i<count; ++i) {
+            if (level[0].left) {
+                [level addObject:level[0].left];
+            }
+            if (level[0].right) {
+                [level addObject:level[0].right];
+            }
+            [level removeObjectAtIndex:0];
+        }
     }
     return result;
 }
