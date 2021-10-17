@@ -22,6 +22,9 @@
 #import "DailyTem.h"
 #import "ValidBST.h"
 #import "BuildTree.h"
+#import "SubStructure.h"
+#import "TreeToDoublyList.h"
+#import "LargestLevelValue.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -70,6 +73,9 @@
 //    [ValidBST run];
 //    [List run];
 //    [Search run];
-    [BuildTree run];
+//    [BuildTree run];
+//    [SubStructure run];
+//    [TreeToDoublyList run];
+    [LargestLevelValue run];
 }
 @end

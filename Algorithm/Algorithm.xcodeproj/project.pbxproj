@@ -13,6 +13,9 @@
 		EE0ED3AA271AB6CC00FE6032 /* DailyTem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3A9271AB6CC00FE6032 /* DailyTem.m */; };
 		EE0ED3B4271AE9BE00FE6032 /* ValidBST.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */; };
 		EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3BA271BBA1700FE6032 /* BuildTree.m */; };
+		EE0ED3BF271C4E7B00FE6032 /* SubStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3BE271C4E7B00FE6032 /* SubStructure.m */; };
+		EE0ED3CA271C597A00FE6032 /* TreeToDoublyList.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3C9271C597A00FE6032 /* TreeToDoublyList.m */; };
+		EE0ED3CE271C5F2900FE6032 /* LargestLevelValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */; };
 		EE271C5526E3513500B384BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5426E3513500B384BF /* AppDelegate.m */; };
 		EE271C5826E3513500B384BF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5726E3513500B384BF /* SceneDelegate.m */; };
 		EE271C5B26E3513500B384BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE271C5A26E3513500B384BF /* ViewController.m */; };
@@ -50,6 +53,12 @@
 		EE0ED3B6271AEE1800FE6032 /* done.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = done.h; sourceTree = "<group>"; };
 		EE0ED3B9271BBA1700FE6032 /* BuildTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildTree.h; sourceTree = "<group>"; };
 		EE0ED3BA271BBA1700FE6032 /* BuildTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuildTree.m; sourceTree = "<group>"; };
+		EE0ED3BD271C4E7B00FE6032 /* SubStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubStructure.h; sourceTree = "<group>"; };
+		EE0ED3BE271C4E7B00FE6032 /* SubStructure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubStructure.m; sourceTree = "<group>"; };
+		EE0ED3C8271C597A00FE6032 /* TreeToDoublyList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeToDoublyList.h; sourceTree = "<group>"; };
+		EE0ED3C9271C597A00FE6032 /* TreeToDoublyList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeToDoublyList.m; sourceTree = "<group>"; };
+		EE0ED3CC271C5F2900FE6032 /* LargestLevelValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LargestLevelValue.h; sourceTree = "<group>"; };
+		EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LargestLevelValue.m; sourceTree = "<group>"; };
 		EE271C5026E3513500B384BF /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE271C5326E3513500B384BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE271C5426E3513500B384BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,8 +140,6 @@
 				EE5068DE2719C35C00A94209 /* Sort.h */,
 				EE5068DF2719C35C00A94209 /* Sort.m */,
 				EE271C6426E3513600B384BF /* Info.plist */,
-				EE0ED3B9271BBA1700FE6032 /* BuildTree.h */,
-				EE0ED3BA271BBA1700FE6032 /* BuildTree.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -157,6 +164,14 @@
 		EE905C4B2717144500FF9860 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				EE0ED3CC271C5F2900FE6032 /* LargestLevelValue.h */,
+				EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */,
+				EE0ED3C8271C597A00FE6032 /* TreeToDoublyList.h */,
+				EE0ED3C9271C597A00FE6032 /* TreeToDoublyList.m */,
+				EE0ED3BD271C4E7B00FE6032 /* SubStructure.h */,
+				EE0ED3BE271C4E7B00FE6032 /* SubStructure.m */,
+				EE0ED3B9271BBA1700FE6032 /* BuildTree.h */,
+				EE0ED3BA271BBA1700FE6032 /* BuildTree.m */,
 				EE5068D02719ADCB00A94209 /* Algorithm.h */,
 				EE5068D12719ADCB00A94209 /* Algorithm.m */,
 				EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */,
@@ -268,9 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0ED3A6271AAB8500FE6032 /* MaxProfit.m in Sources */,
+				EE0ED3BF271C4E7B00FE6032 /* SubStructure.m in Sources */,
 				EE271C5B26E3513500B384BF /* ViewController.m in Sources */,
 				EE5068E02719C35C00A94209 /* Sort.m in Sources */,
 				EE0ED39C271A69BF00FE6032 /* Permute.m in Sources */,
+				EE0ED3CA271C597A00FE6032 /* TreeToDoublyList.m in Sources */,
 				EE271C5526E3513500B384BF /* AppDelegate.m in Sources */,
 				EE5068D82719BA5900A94209 /* SearchRange.m in Sources */,
 				EE271C6626E3513600B384BF /* main.m in Sources */,
@@ -282,6 +299,7 @@
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
 				EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */,
 				EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */,
+				EE0ED3CE271C5F2900FE6032 /* LargestLevelValue.m in Sources */,
 				EE905C602717179A00FF9860 /* ListNode.m in Sources */,
 				EE905C552717152A00FF9860 /* TreeNode.m in Sources */,
 				EE5068DC2719C13C00A94209 /* TreeSum.m in Sources */,
