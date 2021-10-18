@@ -25,6 +25,8 @@
 #import "SubStructure.h"
 #import "TreeToDoublyList.h"
 #import "LargestLevelValue.h"
+#import "RotateRight.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) LRU *lru;
@@ -76,6 +78,7 @@
 //    [BuildTree run];
 //    [SubStructure run];
 //    [TreeToDoublyList run];
-    [LargestLevelValue run];
+//    [LargestLevelValue run];
+    [RotateRight run];
 }
 @end

@@ -34,6 +34,7 @@
 		EE5068DC2719C13C00A94209 /* TreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068DB2719C13C00A94209 /* TreeSum.m */; };
 		EE5068E02719C35C00A94209 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068DF2719C35C00A94209 /* Sort.m */; };
 		EE5068E5271A614400A94209 /* MaxArea.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068E4271A614400A94209 /* MaxArea.m */; };
+		EE710375271D0126000BEB2D /* RotateRight.m in Sources */ = {isa = PBXBuildFile; fileRef = EE710374271D0126000BEB2D /* RotateRight.m */; };
 		EE905C4F2717149100FF9860 /* TwoSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C4E2717149100FF9860 /* TwoSum.m */; };
 		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
 		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
@@ -93,6 +94,8 @@
 		EE5068DF2719C35C00A94209 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
 		EE5068E3271A614400A94209 /* MaxArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxArea.h; sourceTree = "<group>"; };
 		EE5068E4271A614400A94209 /* MaxArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxArea.m; sourceTree = "<group>"; };
+		EE710373271D0126000BEB2D /* RotateRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateRight.h; sourceTree = "<group>"; };
+		EE710374271D0126000BEB2D /* RotateRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotateRight.m; sourceTree = "<group>"; };
 		EE905C4D2717149100FF9860 /* TwoSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoSum.h; sourceTree = "<group>"; };
 		EE905C4E2717149100FF9860 /* TwoSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoSum.m; sourceTree = "<group>"; };
 		EE905C52271714F400FF9860 /* BaseDataStruct.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDataStruct.pch; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				EE5068DE2719C35C00A94209 /* Sort.h */,
 				EE5068DF2719C35C00A94209 /* Sort.m */,
 				EE271C6426E3513600B384BF /* Info.plist */,
+				EE710373271D0126000BEB2D /* RotateRight.h */,
+				EE710374271D0126000BEB2D /* RotateRight.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				EE271C5826E3513500B384BF /* SceneDelegate.m in Sources */,
 				EE5068D22719ADCB00A94209 /* Algorithm.m in Sources */,
 				EE5068C92719AD6B00A94209 /* RemoveNthFromEnd.m in Sources */,
+				EE710375271D0126000BEB2D /* RotateRight.m in Sources */,
 				EE271C6E26E351D200B384BF /* LRU.m in Sources */,
 				EE271C7426E492A500B384BF /* Search.m in Sources */,
 			);
