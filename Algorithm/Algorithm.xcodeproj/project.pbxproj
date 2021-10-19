@@ -38,6 +38,7 @@
 		EE905C4F2717149100FF9860 /* TwoSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C4E2717149100FF9860 /* TwoSum.m */; };
 		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
 		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
+		EEB361A4271EF95800C97E6A /* SortList.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB361A3271EF95800C97E6A /* SortList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,8 @@
 		EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmProtocol.h; sourceTree = "<group>"; };
 		EE905C5E2717179A00FF9860 /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
 		EE905C5F2717179A00FF9860 /* ListNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
+		EEB361A2271EF95800C97E6A /* SortList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortList.h; sourceTree = "<group>"; };
+		EEB361A3271EF95800C97E6A /* SortList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				EE271C6426E3513600B384BF /* Info.plist */,
 				EE710373271D0126000BEB2D /* RotateRight.h */,
 				EE710374271D0126000BEB2D /* RotateRight.m */,
+				EEB361A2271EF95800C97E6A /* SortList.h */,
+				EEB361A3271EF95800C97E6A /* SortList.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0ED3A6271AAB8500FE6032 /* MaxProfit.m in Sources */,
+				EEB361A4271EF95800C97E6A /* SortList.m in Sources */,
 				EE0ED3BF271C4E7B00FE6032 /* SubStructure.m in Sources */,
 				EE271C5B26E3513500B384BF /* ViewController.m in Sources */,
 				EE5068E02719C35C00A94209 /* Sort.m in Sources */,
