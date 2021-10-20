@@ -30,38 +30,15 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) LRU *lru;
-@property (nonatomic, strong) List *list;
-@property (nonatomic, strong) Search *search;
-@property (nonatomic, strong) BinaryTree *bTree;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    NSArray *arr =
-//    @[@[@1,@1,@1],@[@1,@2,@2],@[@1,@3,@2],@[@2,@1],@[@1,@4,@4],@[@2,@2]];
-    @[@[@1,@1,@1],@[@1,@2,@2],@[@2,@1],@[@1,@3,@3],@[@2,@2],@[@1,@4,@4],@[@2,@1],@[@2,@3],@[@2,@4]];
-
-//    self.lru = [[LRU alloc] initWithArray:arr count:2];
-    
-    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self touchesBegan:[NSSet set] withEvent:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.list = [[List alloc] initWithAray:@[@1, @2, @3]];
-//    self.list = [[List alloc] initWithAray:@[@1, @2, @3]];
-//    self.list = [[List alloc] initWithAray:@[]];
-//    [self.list reverse];
-//    self.list = [[List alloc] initWithAray:@[@1, @2, @3,@4,@5] circlePoint:1];
-//    [self.list checkCircle];
-//    self.search = [[Search alloc] init];
-//    [self.search bianrySearch:3];
-    
-//    self.bTree = [[BinaryTree alloc] init];
-    
 //    [TwoSum run];
 //    [RobRoom run];
 //    [RemoveNthFromEnd run];
@@ -80,7 +57,7 @@
 //    [SubStructure run];
 //    [TreeToDoublyList run];
 //    [LargestLevelValue run];
-    [RotateRight run];
+//    [RotateRight run];
     [SortList run];
 }
 @end

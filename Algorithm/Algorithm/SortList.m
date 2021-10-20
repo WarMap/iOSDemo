@@ -11,7 +11,7 @@
 
 + (void)run {
     
-    int a[] = {1,3,4,5,7,2,6};
+    int a[] = {1,5,4,3,7,2,6};
     ListNode *node = [[ListNode alloc] initWithArray:cArray2ocArray(a, 7)];
     ListNode *result = [self sortList:node];
     [result output];
@@ -19,7 +19,8 @@
 
 
 + (ListNode *)sortList:(ListNode *)head {
-    return [self _sortList:head tail:nil];
+//    return [self _sortList:head tail:nil];
+    return [self _sortList:head];
 }
 
 + (ListNode *)_sortList:(ListNode *)head tail:(ListNode *)tail {
@@ -63,5 +64,22 @@
         temp.next = temp2;
     }
     return dummy.next;
+}
+
++ (ListNode *)_sortList:(ListNode *)head {
+    if (!head || !head.next) {
+        return head;
+    }
+    ListNode *fast = head.next;
+    ListNode *slow = head;
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    ListNode *mid = slow.next;
+    slow.next = nil;
+    ListNode *left = [self _sortList:head];
+    ListNode *right = [self _sortList:mid];
+    return  [self merge:left head2:right];
 }
 @end
