@@ -34,6 +34,7 @@
 		EE5068DC2719C13C00A94209 /* TreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068DB2719C13C00A94209 /* TreeSum.m */; };
 		EE5068E02719C35C00A94209 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068DF2719C35C00A94209 /* Sort.m */; };
 		EE5068E5271A614400A94209 /* MaxArea.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5068E4271A614400A94209 /* MaxArea.m */; };
+		EE561E9A271F9D7F00891041 /* OddEventList.m in Sources */ = {isa = PBXBuildFile; fileRef = EE561E99271F9D7F00891041 /* OddEventList.m */; };
 		EE710375271D0126000BEB2D /* RotateRight.m in Sources */ = {isa = PBXBuildFile; fileRef = EE710374271D0126000BEB2D /* RotateRight.m */; };
 		EE905C4F2717149100FF9860 /* TwoSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C4E2717149100FF9860 /* TwoSum.m */; };
 		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
@@ -95,6 +96,8 @@
 		EE5068DF2719C35C00A94209 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
 		EE5068E3271A614400A94209 /* MaxArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxArea.h; sourceTree = "<group>"; };
 		EE5068E4271A614400A94209 /* MaxArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxArea.m; sourceTree = "<group>"; };
+		EE561E98271F9D7F00891041 /* OddEventList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OddEventList.h; sourceTree = "<group>"; };
+		EE561E99271F9D7F00891041 /* OddEventList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OddEventList.m; sourceTree = "<group>"; };
 		EE710373271D0126000BEB2D /* RotateRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateRight.h; sourceTree = "<group>"; };
 		EE710374271D0126000BEB2D /* RotateRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotateRight.m; sourceTree = "<group>"; };
 		EE905C4D2717149100FF9860 /* TwoSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoSum.h; sourceTree = "<group>"; };
@@ -146,10 +149,8 @@
 				EE5068DE2719C35C00A94209 /* Sort.h */,
 				EE5068DF2719C35C00A94209 /* Sort.m */,
 				EE271C6426E3513600B384BF /* Info.plist */,
-				EE710373271D0126000BEB2D /* RotateRight.h */,
-				EE710374271D0126000BEB2D /* RotateRight.m */,
-				EEB361A2271EF95800C97E6A /* SortList.h */,
-				EEB361A3271EF95800C97E6A /* SortList.m */,
+				EE561E98271F9D7F00891041 /* OddEventList.h */,
+				EE561E99271F9D7F00891041 /* OddEventList.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -174,6 +175,10 @@
 		EE905C4B2717144500FF9860 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				EE710373271D0126000BEB2D /* RotateRight.h */,
+				EE710374271D0126000BEB2D /* RotateRight.m */,
+				EEB361A2271EF95800C97E6A /* SortList.h */,
+				EEB361A3271EF95800C97E6A /* SortList.m */,
 				EE0ED3CC271C5F2900FE6032 /* LargestLevelValue.h */,
 				EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */,
 				EE0ED3C8271C597A00FE6032 /* TreeToDoublyList.h */,
@@ -308,6 +313,7 @@
 				EE28DADA2717BB2800EEE23E /* RobRoom.m in Sources */,
 				EE5068E5271A614400A94209 /* MaxArea.m in Sources */,
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
+				EE561E9A271F9D7F00891041 /* OddEventList.m in Sources */,
 				EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */,
 				EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */,
 				EE0ED3CE271C5F2900FE6032 /* LargestLevelValue.m in Sources */,

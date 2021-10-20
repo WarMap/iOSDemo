@@ -27,6 +27,7 @@
 #import "LargestLevelValue.h"
 #import "RotateRight.h"
 #import "SortList.h"
+#import "OddEventList.h"
 
 @interface ViewController ()
 
@@ -58,6 +59,7 @@
 //    [TreeToDoublyList run];
 //    [LargestLevelValue run];
 //    [RotateRight run];
-    [SortList run];
+//    [SortList run];
+    [OddEventList run];
 }
 @end

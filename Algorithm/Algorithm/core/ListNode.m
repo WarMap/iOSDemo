@@ -31,6 +31,12 @@
     return self;
 }
 
+
++ (instancetype)listWithArray:(NSArray<NSNumber *> *)array {
+    ListNode *node = [[ListNode alloc] initWithArray:array];
+    return node;
+}
+
 - (void)output {
     ListNode *tem = self;
     int i = 1;
