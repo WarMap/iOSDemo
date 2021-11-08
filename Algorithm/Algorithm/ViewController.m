@@ -46,7 +46,7 @@
 //    [SearchRange run];
 //    [TreeSum run];
 //    [MaxArea run];
-//    [Permute run];
+    [Permute run];
 //    [Canjump run];
 //    [MaxProfit run];
 //    [DailyTem run];
@@ -60,6 +60,6 @@
 //    [LargestLevelValue run];
 //    [RotateRight run];
 //    [SortList run];
-    [OddEventList run];
+//    [OddEventList run];
 }
 @end
