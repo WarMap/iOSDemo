@@ -40,13 +40,14 @@
     [self touchesBegan:[NSSet set] withEvent:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
 //    [RemoveNthFromEnd run];
 //    [SearchRange run];
 //    [TreeSum run];
 //    [MaxArea run];
-    [Permute run];
+//    [Permute run];
 //    [Canjump run];
 //    [MaxProfit run];
 //    [DailyTem run];
