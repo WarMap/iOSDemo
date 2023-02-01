@@ -21,7 +21,7 @@
     TreeNode *root = [TreeNode treeWithArray:cArray2ocArray(arr, 7)];
 //    NSArray<TreeNode *> *nodes = [self _inorderScan:root];
 //    NSLog(@"levelScan--%@", nodes);
-    NSArray<NSArray *> *result = [self zigzagLevelScan:root];
+    NSArray *result = [self depthScan:root];
         NSLog(@"levelScan--%@", result);
 }
 //层级遍历
@@ -77,13 +77,21 @@
 
 
 + (NSArray<TreeNode *> *)depthScan:(TreeNode *)root {
-    if (root) {
+    if (!root) {
         NSLog(@"has no node");
         return nil;
     }
     NSMutableArray *array = [NSMutableArray array];
-    [self _preorderScan:root res:array];
+    [self preorderScan:root res:array];
     return array;
+}
++ (void)preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
+    if (!root) {
+        return;
+    }
+    [res addObject:root];
+    [self preorderScan:root.left res:res];
+    [self preorderScan:root.right res:res];
 }
 //前序遍历
 + (void)_preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
