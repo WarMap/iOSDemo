@@ -21,7 +21,7 @@
     TreeNode *root = [TreeNode treeWithArray:cArray2ocArray(arr, 7)];
 //    NSArray<TreeNode *> *nodes = [self _inorderScan:root];
 //    NSLog(@"levelScan--%@", nodes);
-    NSArray *result = [self depthScan:root];
+    NSArray *result = [self _postorderScan:root];
         NSLog(@"levelScan--%@", result);
 }
 //层级遍历
@@ -85,6 +85,7 @@
     [self preorderScan:root res:array];
     return array;
 }
+//前序遍历
 + (void)preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
     if (!root) {
         return;
@@ -93,24 +94,14 @@
     [self preorderScan:root.left res:res];
     [self preorderScan:root.right res:res];
 }
-//前序遍历
-+ (void)_preorderScan:(TreeNode *)root res:(NSMutableArray<TreeNode *> *)res {
-    if (!root) {
-        return;
-    }
-    [res addObject:root];
-    [self _preorderScan:root.left res:res];
-    [self _preorderScan:root.right res:res];
-}
 
-+ (NSArray<TreeNode *> *)_preorderScan:(TreeNode *)root {
-    NSMutableArray<TreeNode *> *stack = [NSMutableArray array];
-    NSMutableArray<TreeNode *> *result = [NSMutableArray array];
-    [stack addObject:root];
-    while (stack.count > 0) {
++ (NSArray<TreeNode *> *)preorderScan:(TreeNode *)root {
+    NSMutableArray *result = [NSMutableArray array];
+    NSMutableArray *stack = [NSMutableArray arrayWithObject:root];
+    while (stack.count>0) {
         TreeNode *node = stack.lastObject;
         [result addObject:node];
-        [stack removeLastObject];
+        [stack removeObject:node];
         if (node.right) {
             [stack addObject:node.right];
         }
@@ -160,9 +151,8 @@
 }
 //（前序时中左右，类似写法搞成中右左，然后在反转）
 + (NSArray<TreeNode *> *)_postorderScan:(TreeNode *)root {
-    NSMutableArray<TreeNode *> *stack = [NSMutableArray array];
+    NSMutableArray<TreeNode *> *stack = [NSMutableArray arrayWithObject:root];
     NSMutableArray<TreeNode *> *result = [NSMutableArray array];
-    [stack addObject:root];
     while (stack.count > 0) {
         TreeNode *node = stack.lastObject;
         [result addObject:node];
