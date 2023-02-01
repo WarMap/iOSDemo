@@ -27,43 +27,13 @@
 //层级遍历
 + (NSArray<TreeNode *> *)levelScan:(TreeNode *)root {
     if (!root) {
-        NSLog(@"has no node");
         return nil;
     }
+    NSMutableArray *level = [NSMutableArray arrayWithObject:root];
     NSMutableArray *result = [NSMutableArray array];
-    NSMutableArray<TreeNode *> *array = [NSMutableArray arrayWithObject:root];
-    while (array.count > 0) {
-        NSMutableArray<TreeNode *> *nextLevel = [NSMutableArray array];
-        [array enumerateObjectsUsingBlock:^(TreeNode *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [result addObject:obj];
-            if (obj.left) {
-                [nextLevel addObject:obj.left];
-            }
-            if (obj.right) {
-                [nextLevel addObject:obj.right];
-            }
-        }];
-        array = nextLevel;
-    }
-    return result;
-}
-
-+ (NSArray<NSArray *> *)zigzagLevelScan:(TreeNode *)root {
-    if (!root) {
-        NSLog(@"has no node");
-        return nil;
-    }
-    NSMutableArray<NSArray *> *result = [NSMutableArray array];
-    NSMutableArray<TreeNode *> *level = [NSMutableArray array];
-    [level addObject:root];
-    BOOL reverse = true;
     while (level.count > 0) {
-        if (reverse) {
-            [result addObject:level];
-        } else {
-            [result addObject:[level reverseObjectEnumerator].allObjects];
-        }
-        NSMutableArray<TreeNode *> *nextLevel = [NSMutableArray array];
+        [result addObjectsFromArray:level];
+        NSMutableArray *nextLevel = [NSMutableArray array];
         for (TreeNode *node in level) {
             if (node.left) {
                 [nextLevel addObject:node.left];
@@ -72,8 +42,35 @@
                 [nextLevel addObject:node.right];
             }
         }
-        reverse = !reverse;
         level = nextLevel;
+    }
+    return result;
+}
+
++ (NSArray<NSArray *> *)zigzagLevelScan:(TreeNode *)root {
+    if (!root) {
+        return nil;
+    }
+    NSMutableArray *level = [NSMutableArray arrayWithObject:root];
+    NSMutableArray *result = [NSMutableArray array];
+    BOOL reverse = false;
+    while (level.count > 0) {
+        if (reverse) {
+            [result addObjectsFromArray:level.reverseObjectEnumerator.allObjects];
+        } else {
+            [result addObjectsFromArray:level];
+        }
+        NSMutableArray *nextLevel = [NSMutableArray array];
+        for (TreeNode *node in level) {
+            if (node.left) {
+                [nextLevel addObject:node.left];
+            }
+            if (node.right) {
+                [nextLevel addObject:node.right];
+            }
+        }
+        level = nextLevel;
+        reverse = !reverse;
     }
     return result;
 }
