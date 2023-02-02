@@ -43,13 +43,17 @@
             [stack addObject:root];
             root = root.left;
         } else {
+//            1.取节点
             TreeNode *node = stack.lastObject;
+//            2.对应操作
             if (k >= node.value.intValue) {
                 return NO;
             }
             k = IV(node.value);
             NSLog(@"scan: %@", node.value);
+//            3.删节点
             [stack removeLastObject];
+//            4.递归下去
             root = node.right;
         }
     }
