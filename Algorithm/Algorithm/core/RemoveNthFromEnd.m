@@ -10,31 +10,27 @@
 @implementation RemoveNthFromEnd
 
 + (void)run {
-    ListNode *n = [[ListNode alloc] initWithArray:@[@1, @2, @3, @4, @5]];
-    n = [self removeNth:2 fromList:n];
+    int a[] = {1,2,3,4,5,6,7};
+    ListNode *n = [[ListNode alloc] initWithArray:cArray2ocArray(a,7)];
+    n = [self removeNth:1 fromList:n];
     [n output];
 }
 
-/// 这里要return head，不然删第一个节点时，入参是不会变的。删后面的没问题
-/// @param n <#n description#>
-/// @param head <#head description#>
 + (ListNode *)removeNth:(int)n fromList:(ListNode *)head {
-    ListNode *result = [[ListNode alloc] initWithValue:-1 next:head];
-    ListNode *pointer = head;
-    //找到要移除位置的元素，注意是倒数
-    while (pointer) {
-        pointer = pointer.next;
-        n = n - 1;
-        if (n < 0) {
-            result = result.next;
-        }
+    ListNode *dummy = [ListNode nodeWithValue:0 next:head];
+    ListNode *point = dummy;
+    for (int i = 1 ; i < n; ++i) {
+        point = point.next;
     }
-    //如果是result没有移动则是要删掉头
-    if (result.value == -1) {
-        head = head.next;
-    } else {
-        result.next = result.next.next;
+    ListNode *target = dummy;
+    ListNode *pre = target;
+    while (point.next) {
+        pre = target;
+        point = point.next;
+        target = target.next;
     }
-    return head;
+    NSLog(@"delete %@", target);
+    pre.next = target.next;
+    return dummy.next;
 }
 @end

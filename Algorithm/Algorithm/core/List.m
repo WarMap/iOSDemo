@@ -75,7 +75,7 @@
     }
     return dummy.next;
 }
-
+//https://leetcode.cn/problems/linked-list-cycle-ii/
 + (void)checkCircleTest:(ListNode *)node {
     ListNode *slow = node;
     ListNode *fast = node;
@@ -83,7 +83,7 @@
         slow = slow.next;
         fast = fast.next.next;
         if (slow == fast) {
-            NSLog(@"又环");
+            NSLog(@"有环");
             slow = node;
             int k = 0;
             while (slow != fast) {

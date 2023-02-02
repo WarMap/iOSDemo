@@ -43,7 +43,7 @@
 //    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
-//    [RemoveNthFromEnd run];
+    [RemoveNthFromEnd run];
 //    [SearchRange run];
 //    [TreeSum run];
 //    [MaxArea run];
@@ -53,7 +53,7 @@
 //    [DailyTem run];
 //    [BinaryTree run];
 //    [ValidBST run];
-    [List run];
+//    [List run];
 //    [Search run];
 //    [BuildTree run];
 //    [SubStructure run];

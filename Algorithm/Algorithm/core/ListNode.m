@@ -50,4 +50,9 @@
         ++i;
     }
 }
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%d", self.value];
+}
 @end
