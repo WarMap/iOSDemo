@@ -15,7 +15,7 @@
     n = [self removeNth:1 fromList:n];
     [n output];
 }
-
+//https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
 + (ListNode *)removeNth:(int)n fromList:(ListNode *)head {
     ListNode *dummy = [ListNode nodeWithValue:0 next:head];
     ListNode *point = dummy;
