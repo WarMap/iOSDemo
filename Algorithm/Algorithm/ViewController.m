@@ -40,7 +40,7 @@
     [self touchesBegan:[NSSet set] withEvent:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [BinaryTree run];
+//    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
 //    [RemoveNthFromEnd run];
@@ -52,7 +52,7 @@
 //    [MaxProfit run];
 //    [DailyTem run];
 //    [BinaryTree run];
-//    [ValidBST run];
+    [ValidBST run];
 //    [List run];
 //    [Search run];
 //    [BuildTree run];
