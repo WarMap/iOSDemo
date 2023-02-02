@@ -52,8 +52,8 @@
 //    [MaxProfit run];
 //    [DailyTem run];
 //    [BinaryTree run];
-    [ValidBST run];
-//    [List run];
+//    [ValidBST run];
+    [List run];
 //    [Search run];
 //    [BuildTree run];
 //    [SubStructure run];

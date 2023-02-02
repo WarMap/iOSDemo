@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithValue:(int)value next:(ListNode * _Nullable)node;
 - (instancetype)initWithArray:(NSArray<NSNumber *> *)array;
 + (instancetype)listWithArray:(NSArray<NSNumber *> *)array;
-
++ (instancetype)nodeWithValue:(int)value next:(ListNode * _Nullable)node;
 - (void)output;
 @end
 

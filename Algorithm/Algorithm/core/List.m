@@ -41,38 +41,39 @@
     ListNode *node = [self reverse:[[ListNode alloc] initWithArray:cArray2ocArray(a, 5)] begin:2 end:3];
     [node output];
 }
-
+//https://leetcode.cn/problems/reverse-linked-list/
 + (ListNode *)reverse:(ListNode *)head {
-    ListNode *node = head;
-    ListNode *node2 = node.next;
-    node.next = nil;
-    ListNode *node3 = node2.next;
-    while (node2) {
-        node2.next = node;
-        node = node2;
-        node2 = node3;
-        node3 = node2.next;
+    ListNode *dummy = [ListNode nodeWithValue:0 next:head];
+    ListNode *c = head;
+    ListNode *next = nil;
+    while (c.next) {
+        next = c.next;
+        c.next = next.next;
+        next.next = dummy.next;
+        dummy.next = next;
     }
-    return node;
+    return dummy.next;
 }
 
+//https://leetcode.cn/problems/reverse-linked-list-ii/
 + (ListNode *)reverse:(ListNode *)head begin:(NSUInteger)begin end:(NSUInteger)end {
-    ListNode *dummy = [[ListNode alloc] initWithValue:0 next:head];
-    ListNode *g = dummy;
-    
-    //移动到指定位置
+    ListNode *dummy = [ListNode nodeWithValue:0 next:head];
+    ListNode *pre = dummy;
     for (int step = 0; step < begin-1; ++step) {
-        g = g.next;
+        pre = pre.next;
     }
-    ListNode *p = g.next;
-    NSUInteger count = end - begin;
-    for (int i = 0; i < count; ++i) {
-        ListNode *removed = p.next;
-        p.next = removed.next;
-        removed.next = g.next;
-        g.next = removed;
+    ListNode *cur = pre.next;
+    ListNode *next = nil;
+    NSUInteger count = end-begin;
+    NSUInteger i = 0;
+    while (i < count) {
+        next = cur.next;
+        cur.next = next.next;
+        next.next = pre.next;
+        pre.next = next;
+        ++i;
     }
-    return head;
+    return dummy.next;
 }
 
 + (void)checkCircleTest:(ListNode *)node {

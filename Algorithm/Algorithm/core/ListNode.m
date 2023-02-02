@@ -9,6 +9,10 @@
 
 @implementation ListNode
 
++ (instancetype)nodeWithValue:(int)value next:(ListNode *)node {
+    return [[ListNode alloc] initWithValue:value next:node];
+}
+
 - (instancetype)initWithValue:(int)value next:(ListNode * _Nullable)node {
     self = [super init];
     if (self) {
@@ -43,6 +47,7 @@
     while (tem) {
         NSLog(@"第%d节点 - %d",i, tem.value);
         tem = tem.next;
+        ++i;
     }
 }
 @end
