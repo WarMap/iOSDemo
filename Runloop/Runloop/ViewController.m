@@ -55,12 +55,12 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self gcdTest];
-    if (self.thread) {
-        [self performSelector:@selector(touchTest) onThread:self.thread withObject:nil waitUntilDone:YES];
-    } else {
-        NSLog(@"thread not exist, stop touch");
-    }
+    [self gcdTest];
+//    if (self.thread) {
+//        [self performSelector:@selector(touchTest) onThread:self.thread withObject:nil waitUntilDone:YES];
+//    } else {
+//        NSLog(@"thread not exist, stop touch");
+//    }
 }
 
 - (void)btnClick {
@@ -83,13 +83,14 @@
 }
 
 - (void)gcdTest {
-    NSLog(@"1");
-    [self performSelector:@selector(test2)];
-    [self performSelector:@selector(test3) withObject:nil afterDelay:0];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"5");
-    });
-    [self test2];
+    [self test4];
+//    NSLog(@"1");
+//    [self performSelector:@selector(test2)];
+//    [self performSelector:@selector(test3) withObject:nil afterDelay:0];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSLog(@"5");
+//    });
+//    [self test2];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        NSLog(@"4");
 //    });
@@ -99,6 +100,7 @@
 //    });
 //    [self test1];
 }
+
 
 - (void)test1 {
     NSLog(@"1");
@@ -110,6 +112,15 @@
     NSLog(@"3");
 }
 
+- (void)test4 {
+    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+        NSLog(@"====1=====");
+    }];
+    [thread start];
+    NSLog(@"-------2--------");
+//    *** Terminating app due to uncaught exception 'NSDestinationInvalidException', reason: '*** -[ViewController performSelector:onThread:withObject:waitUntilDone:modes:]: target thread exited while waiting for the perform'
+    [self performSelector:@selector(test2) onThread:thread withObject:nil waitUntilDone:YES];
+}
 
 //- (void)loadView {
 //    self.view = [self scrollView];
