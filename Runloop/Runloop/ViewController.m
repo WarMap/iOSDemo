@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) MPThread *thread;
+@property (nonatomic, assign) BOOL stop;
 
 @end
 
@@ -22,13 +24,22 @@
 //    self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view.
 //    [self runloopCallingOut];
-//    [self threadAndRunloop];
+    [self threadAndRunloop];
 //    [MPLRSource run];、
-    [self gcdTest];
+//    [self gcdTest];
 
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self gcdTest];
+//    [self gcdTest];
+    if (self.thread) {
+        [self performSelector:@selector(touchTest) onThread:self.thread withObject:nil waitUntilDone:YES];
+    } else {
+        NSLog(@"thread not exist, stop touch");
+    }
+}
+
+- (void)touchTest {
+    NSLog(@"touch  test ----");
 }
 
 - (void)gcdTest {
@@ -69,18 +80,41 @@
 ////    [self runloopCallingOut];
 //
 //}
+- (void)btnClick {
+    if (self.thread) {
+        [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+    } else {
+        NSLog(@"thread not exist, stop click");
+    }
+}
 
+- (void)stopThread {
+    self.stop = YES;
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    NSLog(@"stop_ clicked=-------");
+    self.thread = nil;
+}
 - (void)threadAndRunloop {
     //子线程runloop默认不开启
-    MPThread *thread = [[MPThread alloc] initWithBlock:^{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:btn];
+    [btn setBackgroundColor:[UIColor redColor]];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    self.thread = [[MPThread alloc] initWithBlock:^{
         NSLog(@"current thread: %@", [NSThread currentThread]);
-        [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-            NSLog(@"sub thread timer fired");
-        }];        
-        [[NSRunLoop currentRunLoop] run];
+//        [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            NSLog(@"sub thread timer fired");
+//        }];
+        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+        while (!self.stop) {
+            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        }
+//        [[NSRunLoop currentRunLoop] run];
+        NSLog(@"thread ____ending________");
     }];
-    thread.name = @"com.warmap.runloop";
-    [thread start];
+    self.thread.name = @"com.warmap.runloop";
+    [self.thread start];
 }
 
 - (void)runloopCallingOut {
