@@ -29,6 +29,31 @@
 //    [self gcdTest];
 
 }
+#pragma mark -
+#pragma mark - 线程保活
+- (void)threadAndRunloop {
+    //子线程runloop默认不开启
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:btn];
+    [btn setBackgroundColor:[UIColor redColor]];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    self.thread = [[MPThread alloc] initWithBlock:^{
+        NSLog(@"current thread: %@", [NSThread currentThread]);
+//        [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            NSLog(@"sub thread timer fired");
+//        }];
+        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+        while (!self.stop) {
+            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        }
+//        [[NSRunLoop currentRunLoop] run];
+        NSLog(@"thread ____ending________");
+    }];
+    self.thread.name = @"com.warmap.runloop";
+    [self.thread start];
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self gcdTest];
     if (self.thread) {
@@ -36,6 +61,21 @@
     } else {
         NSLog(@"thread not exist, stop touch");
     }
+}
+
+- (void)btnClick {
+    if (self.thread) {
+        [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+    } else {
+        NSLog(@"thread not exist, stop click");
+    }
+}
+
+- (void)stopThread {
+    self.stop = YES;
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    NSLog(@"stop_ clicked=-------");
+    self.thread = nil;
 }
 
 - (void)touchTest {
@@ -80,42 +120,7 @@
 ////    [self runloopCallingOut];
 //
 //}
-- (void)btnClick {
-    if (self.thread) {
-        [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
-    } else {
-        NSLog(@"thread not exist, stop click");
-    }
-}
 
-- (void)stopThread {
-    self.stop = YES;
-    CFRunLoopStop(CFRunLoopGetCurrent());
-    NSLog(@"stop_ clicked=-------");
-    self.thread = nil;
-}
-- (void)threadAndRunloop {
-    //子线程runloop默认不开启
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.view addSubview:btn];
-    [btn setBackgroundColor:[UIColor redColor]];
-    btn.frame = CGRectMake(100, 100, 100, 100);
-    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    self.thread = [[MPThread alloc] initWithBlock:^{
-        NSLog(@"current thread: %@", [NSThread currentThread]);
-//        [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//            NSLog(@"sub thread timer fired");
-//        }];
-        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
-        while (!self.stop) {
-            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        }
-//        [[NSRunLoop currentRunLoop] run];
-        NSLog(@"thread ____ending________");
-    }];
-    self.thread.name = @"com.warmap.runloop";
-    [self.thread start];
-}
 
 - (void)runloopCallingOut {
     //__CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__
