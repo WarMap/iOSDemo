@@ -16,10 +16,27 @@
 @implementation TwoSum
 
 + (void)run {
-    ListNode *node1 = [[ListNode alloc] initWithArray:@[@9,@9,@9,@9,@9,@9,@9]];
-    ListNode *node2 = [[ListNode alloc] initWithArray:@[@9,@9,@9,@9]];
-    ListNode *result = [self addNumber:node1 to:node2];
-    [result output];
+    NSArray *nums = @[@2, @7, @11, @15];
+    
+//    ListNode *node1 = [[ListNode alloc] initWithArray:@[@9,@9,@9,@9,@9,@9,@9]];
+//    ListNode *node2 = [[ListNode alloc] initWithArray:@[@9,@9,@9,@9]];
+//    ListNode *result = [self addNumber:node1 to:node2];
+//    [result output];
+    NSArray *res = [self twoSum:nums target:9];
+    NSLog(@"result = %@", res);
+}
+
++ (NSArray *)twoSum:(NSArray *)nums target:(int)target {
+    NSMutableDictionary *temp = [NSMutableDictionary dictionary];
+    for (int i = 0; i<nums.count; ++i) {
+        NSNumber *num = nums[i];
+        if (temp[@(target - num.intValue)]) {
+            return @[temp[@(target - num.intValue)], @(i)];
+        } else {
+            temp[num] = @(i);
+        }
+    }
+    return @[];
 }
 
 + (ListNode *)addNumber:(ListNode *)node1 to:(ListNode *)node2 {

@@ -55,12 +55,14 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self gcdTest];
+//    [self gcdTest];
 //    if (self.thread) {
 //        [self performSelector:@selector(touchTest) onThread:self.thread withObject:nil waitUntilDone:YES];
 //    } else {
 //        NSLog(@"thread not exist, stop touch");
 //    }
+    int res = [self recurAdd:100];
+    NSLog(@"100 == %d", res);
 }
 
 - (void)btnClick {
@@ -82,8 +84,10 @@
     NSLog(@"touch  test ----");
 }
 
+
 - (void)gcdTest {
-    [self test4];
+    
+//    [self test4];
 //    NSLog(@"1");
 //    [self performSelector:@selector(test2)];
 //    [self performSelector:@selector(test3) withObject:nil afterDelay:0];

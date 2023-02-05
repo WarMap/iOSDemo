@@ -28,6 +28,7 @@
 #import "RotateRight.h"
 #import "SortList.h"
 #import "OddEventList.h"
+#import "Recursion.h"
 
 @interface ViewController ()
 
@@ -40,10 +41,11 @@
     [self touchesBegan:[NSSet set] withEvent:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [Recursion run];
 //    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
-    [RemoveNthFromEnd run];
+//    [RemoveNthFromEnd run];
 //    [SearchRange run];
 //    [TreeSum run];
 //    [MaxArea run];
@@ -63,4 +65,5 @@
 //    [SortList run];
 //    [OddEventList run];
 }
+
 @end

@@ -39,6 +39,9 @@
 		EE905C4F2717149100FF9860 /* TwoSum.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C4E2717149100FF9860 /* TwoSum.m */; };
 		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
 		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
+		EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769A298EA826005A0797 /* MaxSubarray.m */; };
+		EEB2769E298F3627005A0797 /* Docs.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769D298F3627005A0797 /* Docs.m */; };
+		EEB276A1298F3770005A0797 /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A0298F3770005A0797 /* Recursion.m */; };
 		EEB361A4271EF95800C97E6A /* SortList.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB361A3271EF95800C97E6A /* SortList.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +111,12 @@
 		EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmProtocol.h; sourceTree = "<group>"; };
 		EE905C5E2717179A00FF9860 /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
 		EE905C5F2717179A00FF9860 /* ListNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
+		EEB27699298EA826005A0797 /* MaxSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxSubarray.h; sourceTree = "<group>"; };
+		EEB2769A298EA826005A0797 /* MaxSubarray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxSubarray.m; sourceTree = "<group>"; };
+		EEB2769C298F3627005A0797 /* Docs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Docs.h; sourceTree = "<group>"; };
+		EEB2769D298F3627005A0797 /* Docs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Docs.m; sourceTree = "<group>"; };
+		EEB2769F298F3770005A0797 /* Recursion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recursion.h; sourceTree = "<group>"; };
+		EEB276A0298F3770005A0797 /* Recursion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recursion.m; sourceTree = "<group>"; };
 		EEB361A2271EF95800C97E6A /* SortList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortList.h; sourceTree = "<group>"; };
 		EEB361A3271EF95800C97E6A /* SortList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +187,8 @@
 				EE710373271D0126000BEB2D /* RotateRight.h */,
 				EE710374271D0126000BEB2D /* RotateRight.m */,
 				EEB361A2271EF95800C97E6A /* SortList.h */,
+				EEB27699298EA826005A0797 /* MaxSubarray.h */,
+				EEB2769A298EA826005A0797 /* MaxSubarray.m */,
 				EEB361A3271EF95800C97E6A /* SortList.m */,
 				EE0ED3CC271C5F2900FE6032 /* LargestLevelValue.h */,
 				EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */,
@@ -224,6 +235,10 @@
 				EE905C4E2717149100FF9860 /* TwoSum.m */,
 				EE0ED3B2271AE9BE00FE6032 /* ValidBST.h */,
 				EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */,
+				EEB2769C298F3627005A0797 /* Docs.h */,
+				EEB2769D298F3627005A0797 /* Docs.m */,
+				EEB2769F298F3770005A0797 /* Recursion.h */,
+				EEB276A0298F3770005A0797 /* Recursion.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -300,12 +315,14 @@
 				EE0ED3A6271AAB8500FE6032 /* MaxProfit.m in Sources */,
 				EEB361A4271EF95800C97E6A /* SortList.m in Sources */,
 				EE0ED3BF271C4E7B00FE6032 /* SubStructure.m in Sources */,
+				EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */,
 				EE271C5B26E3513500B384BF /* ViewController.m in Sources */,
 				EE5068E02719C35C00A94209 /* Sort.m in Sources */,
 				EE0ED39C271A69BF00FE6032 /* Permute.m in Sources */,
 				EE0ED3CA271C597A00FE6032 /* TreeToDoublyList.m in Sources */,
 				EE271C5526E3513500B384BF /* AppDelegate.m in Sources */,
 				EE5068D82719BA5900A94209 /* SearchRange.m in Sources */,
+				EEB2769E298F3627005A0797 /* Docs.m in Sources */,
 				EE271C6626E3513600B384BF /* main.m in Sources */,
 				EE271C7126E364AA00B384BF /* List.m in Sources */,
 				EE0ED3B4271AE9BE00FE6032 /* ValidBST.m in Sources */,
@@ -315,6 +332,7 @@
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
 				EE561E9A271F9D7F00891041 /* OddEventList.m in Sources */,
 				EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */,
+				EEB276A1298F3770005A0797 /* Recursion.m in Sources */,
 				EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */,
 				EE0ED3CE271C5F2900FE6032 /* LargestLevelValue.m in Sources */,
 				EE905C602717179A00FF9860 /* ListNode.m in Sources */,
