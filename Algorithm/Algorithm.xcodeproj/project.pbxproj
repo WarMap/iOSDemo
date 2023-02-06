@@ -42,6 +42,8 @@
 		EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769A298EA826005A0797 /* MaxSubarray.m */; };
 		EEB2769E298F3627005A0797 /* Docs.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769D298F3627005A0797 /* Docs.m */; };
 		EEB276A1298F3770005A0797 /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A0298F3770005A0797 /* Recursion.m */; };
+		EEB276A429914095005A0797 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A329914095005A0797 /* DP.m */; };
+		EEB276A72991445B005A0797 /* Parentheses.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A62991445B005A0797 /* Parentheses.m */; };
 		EEB361A4271EF95800C97E6A /* SortList.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB361A3271EF95800C97E6A /* SortList.m */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,10 @@
 		EEB2769D298F3627005A0797 /* Docs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Docs.m; sourceTree = "<group>"; };
 		EEB2769F298F3770005A0797 /* Recursion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recursion.h; sourceTree = "<group>"; };
 		EEB276A0298F3770005A0797 /* Recursion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recursion.m; sourceTree = "<group>"; };
+		EEB276A229914095005A0797 /* DP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DP.h; sourceTree = "<group>"; };
+		EEB276A329914095005A0797 /* DP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DP.m; sourceTree = "<group>"; };
+		EEB276A52991445B005A0797 /* Parentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parentheses.h; sourceTree = "<group>"; };
+		EEB276A62991445B005A0797 /* Parentheses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Parentheses.m; sourceTree = "<group>"; };
 		EEB361A2271EF95800C97E6A /* SortList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortList.h; sourceTree = "<group>"; };
 		EEB361A3271EF95800C97E6A /* SortList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +245,10 @@
 				EEB2769D298F3627005A0797 /* Docs.m */,
 				EEB2769F298F3770005A0797 /* Recursion.h */,
 				EEB276A0298F3770005A0797 /* Recursion.m */,
+				EEB276A229914095005A0797 /* DP.h */,
+				EEB276A329914095005A0797 /* DP.m */,
+				EEB276A52991445B005A0797 /* Parentheses.h */,
+				EEB276A62991445B005A0797 /* Parentheses.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -329,10 +339,12 @@
 				EE0ED3AA271AB6CC00FE6032 /* DailyTem.m in Sources */,
 				EE28DADA2717BB2800EEE23E /* RobRoom.m in Sources */,
 				EE5068E5271A614400A94209 /* MaxArea.m in Sources */,
+				EEB276A429914095005A0797 /* DP.m in Sources */,
 				EE905C4F2717149100FF9860 /* TwoSum.m in Sources */,
 				EE561E9A271F9D7F00891041 /* OddEventList.m in Sources */,
 				EE0ED3A1271AA25200FE6032 /* Canjump.m in Sources */,
 				EEB276A1298F3770005A0797 /* Recursion.m in Sources */,
+				EEB276A72991445B005A0797 /* Parentheses.m in Sources */,
 				EE0ED3BB271BBA1700FE6032 /* BuildTree.m in Sources */,
 				EE0ED3CE271C5F2900FE6032 /* LargestLevelValue.m in Sources */,
 				EE905C602717179A00FF9860 /* ListNode.m in Sources */,

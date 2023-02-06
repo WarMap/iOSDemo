@@ -29,6 +29,8 @@
 #import "SortList.h"
 #import "OddEventList.h"
 #import "Recursion.h"
+#import "DP.h"
+#import "Parentheses.h"
 
 @interface ViewController ()
 
@@ -41,7 +43,7 @@
     [self touchesBegan:[NSSet set] withEvent:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [Recursion run];
+//    [Recursion run];
 //    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
@@ -64,6 +66,8 @@
 //    [RotateRight run];
 //    [SortList run];
 //    [OddEventList run];
+//    [DP run];
+    [Parentheses run];
 }
 
 @end
