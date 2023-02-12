@@ -67,7 +67,8 @@
 //    [SortList run];
 //    [OddEventList run];
 //    [DP run];
-    [Parentheses run];
+//    [Parentheses run];
+    [LRU run];
 }
 
 @end

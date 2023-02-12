@@ -18,6 +18,37 @@
 
 @implementation Item
 
++ (instancetype)itemWithValue:(NSNumber *)value
+                          key:(NSString *)key
+                         next:(Item *)next
+                          pre:(Item *)pre {
+    Item *item = [[Item alloc] init];
+    item.value = value;
+    item.key = key;
+    item.next = next;
+    item.pre = pre;
+    return item;
+}
+
+- (void)output {
+    Item *tem = self;
+    int i = 1;
+    while (tem) {
+        NSLog(@"第%d节点 - %@",i, tem.value);
+        tem = tem.next;
+        ++i;
+    }
+}
+
++ (instancetype)itemWithValue:(NSNumber *)value
+                          key:(NSString *)key {
+    Item *item = [[Item alloc] init];
+    item.value = value;
+    item.key = key;
+    item.next = nil;
+    item.pre = nil;
+    return item;
+}
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@", self.value];
@@ -30,103 +61,93 @@
 
 @property (nonatomic, strong) NSMutableDictionary *dic;
 @property (nonatomic, assign) NSUInteger count;
-@property (nonatomic, strong) Item *firstItem;
-@property (nonatomic, strong) Item *lastItem;
+@property (nonatomic, assign) NSUInteger capacity;
+@property (nonatomic, strong) Item *headItem;
+@property (nonatomic, strong) Item *tailItem;
 
 @end
 
 @implementation LRU
 
-- (instancetype)initWithArray:(NSArray *)array count:(NSUInteger)count {
++ (void)run {
+    Item *i0 = [Item itemWithValue:@(0) key:@"0"];
+    Item *i1 = [Item itemWithValue:@(1) key:@"1"];
+    Item *i2 = [Item itemWithValue:@(2) key:@"2"];
+    Item *i3 = [Item itemWithValue:@(3) key:@"3"];
+    LRU *lru = [[LRU alloc] initWithCapacity:5];
+    [lru addItem:i0];
+    [lru addItem:i1];
+    [lru addItem:i2];
+    [lru addItem:i3];
+    [lru getItemWithKey:@"2"];
+     [lru.headItem output];
+}
+
+- (instancetype)initWithCapacity:(NSUInteger)capacity {
     if (self = [super init]) {
-        self.dic = [NSMutableDictionary dictionaryWithCapacity:count];
-        self.count = count;
-        [self parseArray:array];
+        self.dic = [NSMutableDictionary dictionaryWithCapacity:capacity];
+        self.headItem = [Item itemWithValue:@(-1) key:@"head"];
+        self.tailItem = [Item itemWithValue:@(-1) key:@"tail"];
+        self.headItem.next = self.tailItem;
+        self.tailItem.pre = self.headItem;
+        self.capacity = capacity;
+        self.count = 0;
     }
     return self;
 }
 
-- (void)parseArray:(NSArray *)array {
-    [array enumerateObjectsUsingBlock:^(NSArray *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (![obj isKindOfClass:[NSArray class]]) {
-            return;
-        }
-        NSNumber *opt = obj.firstObject;
-        if (opt.intValue == 1) {
-            // write
-            NSString *key = ((NSNumber *)obj[1]).stringValue;
-            [self storeValve:obj.lastObject key:key];
-        } else if (opt.intValue == 2) {
-            //read
-            NSString *key = ((NSNumber *)obj[1]).stringValue;
-            NSLog(@"%@", [self readValueWithKey:key]) ;
-        }
-        
-    }];
-}
-
 #pragma mark - lru操作
 
-- (void)storeValve:(NSNumber *)value key:(NSString *)key {
-    Item *tmp = [[Item alloc] init];
-    tmp.value = value;
-    tmp.key = key;
-    [self setItem2First:tmp];
-    if (!self.lastItem) {
-        self.lastItem = tmp;
+- (Item *)getItemWithKey:(NSString *)key {
+    if (key.length <= 0 && !self.dic[key]) {
+        return nil;
     }
-    self.dic[key] = tmp;
-    [self cut];
+    Item *item = self.dic[key];
+    [self move2Head:item];
+    return item;
 }
 
-- (NSNumber *)readValueWithKey:(NSString *)key {
-    Item *tmp = self.dic[key];
-    if (tmp) {
-        [self deleteItem:tmp];
-        [self setItem2First:tmp];
-        return tmp.value;
-    }
-    return @(-1);
-}
-
-- (void)cut {
-    while (self.dic.allKeys.count > _count) {
-        [self.dic allKeysForObject:self.lastItem];
-        [self deleteItem:self.lastItem];
-    }
-}
-
-#pragma mark - 链表操作
-/// 添加到链表头
-/// @param item <#item description#>
-- (void)setItem2First:(Item *)item {
-    if (!item || item.key.length == 0 || item == self.firstItem) {
+- (void)addItem:(Item *)item {
+    if (!item) {
         return;
     }
-    self.dic[item.key] = item;
-    item.next = self.firstItem;
-    self.firstItem.pre = item;
-    self.firstItem = item;
+    if (!self.dic[item.key]) {
+        [self add2Head:item];
+        self.dic[item.key] = item;
+        self.count += 1;
+        if (self.count > self.capacity) {
+            Item *removed = [self removeTail];
+            self.dic[removed.key] = nil;
+            self.count -= 1;
+        }
+    } else {
+        Item *tmp = self.dic[item.key];
+        tmp.value = item.value;
+        [self move2Head:tmp];
+    }
 }
 
+- (void)add2Head:(Item *)item {
+    item.pre = self.headItem;
+    item.next = self.headItem.next;
+    self.headItem.next.pre = item;
+    self.headItem.next = item;
+}
 
-/// 删除链表某个节点
-/// @param item <#item description#>
-- (void)deleteItem:(Item *)item {
-    if (self.lastItem == item) {
-        self.lastItem = item.pre;
-    }
-    if (self.firstItem == item) {
-        self.firstItem = item.next;
-    }
-    self.dic[item.key] = nil;
+- (void)move2Head:(Item *)item {
+    [self removeItem:item];
+    [self add2Head:item];
+}
+
+- (void)removeItem:(Item *)item {
     item.pre.next = item.next;
-    item.next = item.pre;
+    item.next.pre = item.pre;
 }
 
-
-
-
-
+- (Item *)removeTail {
+    Item *item = self.tailItem.pre;
+    [self removeItem:item];
+    return item;
+}
 
 @end
