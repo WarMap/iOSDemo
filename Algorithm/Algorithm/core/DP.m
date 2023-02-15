@@ -11,6 +11,7 @@
 
 + (void)run {
     [self testclimbStairs];
+    [self testMiniTotal];
 }
 //https://leetcode.cn/problems/climbing-stairs/
 + (void)testclimbStairs {
@@ -26,4 +27,21 @@
     }
     return dp[n];
 }
+
++ (void)testMiniTotal {
+    NSArray *triangle = @[@[@2],@[@3,@4],@[@6,@5,@7],@[@4,@1,@8,@3]];
+    int i = [self miniTotal:triangle];
+    NSLog(@"mini path = %d", i);
+}
+
++ (int)miniTotal:(NSArray <NSArray <NSNumber *>*>*)triangle {
+    NSMutableArray <NSNumber *>*mini = [NSMutableArray arrayWithArray:triangle.lastObject] ;
+    for (int i=triangle.count-2; i>=0; --i) {
+        for (int j = 0; j<triangle[i].count; ++j) {
+            mini[j] = @(triangle[i][j].intValue + MIN(mini[j].intValue, mini[j+1].intValue));
+        }
+    }
+    return mini[0].intValue;
+}
+
 @end

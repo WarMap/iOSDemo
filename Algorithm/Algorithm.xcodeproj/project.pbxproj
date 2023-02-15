@@ -45,6 +45,7 @@
 		EEB276A429914095005A0797 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A329914095005A0797 /* DP.m */; };
 		EEB276A72991445B005A0797 /* Parentheses.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A62991445B005A0797 /* Parentheses.m */; };
 		EEB361A4271EF95800C97E6A /* SortList.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB361A3271EF95800C97E6A /* SortList.m */; };
+		EEE9928D299B372B00E4A9A3 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9928C299B372B00E4A9A3 /* Stock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,8 @@
 		EEB276A62991445B005A0797 /* Parentheses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Parentheses.m; sourceTree = "<group>"; };
 		EEB361A2271EF95800C97E6A /* SortList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortList.h; sourceTree = "<group>"; };
 		EEB361A3271EF95800C97E6A /* SortList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortList.m; sourceTree = "<group>"; };
+		EEE9928B299B372B00E4A9A3 /* Stock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
+		EEE9928C299B372B00E4A9A3 /* Stock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,29 +193,23 @@
 		EE905C4B2717144500FF9860 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				EE710373271D0126000BEB2D /* RotateRight.h */,
-				EE710374271D0126000BEB2D /* RotateRight.m */,
-				EEB361A2271EF95800C97E6A /* SortList.h */,
-				EEB27699298EA826005A0797 /* MaxSubarray.h */,
-				EEB2769A298EA826005A0797 /* MaxSubarray.m */,
-				EEB361A3271EF95800C97E6A /* SortList.m */,
-				EE0ED3CC271C5F2900FE6032 /* LargestLevelValue.h */,
-				EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */,
-				EE0ED3C8271C597A00FE6032 /* TreeToDoublyList.h */,
-				EE0ED3C9271C597A00FE6032 /* TreeToDoublyList.m */,
-				EE0ED3BD271C4E7B00FE6032 /* SubStructure.h */,
-				EE0ED3BE271C4E7B00FE6032 /* SubStructure.m */,
-				EE0ED3B9271BBA1700FE6032 /* BuildTree.h */,
-				EE0ED3BA271BBA1700FE6032 /* BuildTree.m */,
 				EE5068D02719ADCB00A94209 /* Algorithm.h */,
 				EE5068D12719ADCB00A94209 /* Algorithm.m */,
 				EE905C5C2717169200FF9860 /* AlgorithmProtocol.h */,
 				EE27616526E5ABE200B384BF /* BinaryTree.h */,
 				EE27616626E5ABE200B384BF /* BinaryTree.m */,
+				EE0ED3B9271BBA1700FE6032 /* BuildTree.h */,
+				EE0ED3BA271BBA1700FE6032 /* BuildTree.m */,
 				EE0ED39F271AA25200FE6032 /* Canjump.h */,
 				EE0ED3A0271AA25200FE6032 /* Canjump.m */,
 				EE0ED3A8271AB6CC00FE6032 /* DailyTem.h */,
 				EE0ED3A9271AB6CC00FE6032 /* DailyTem.m */,
+				EEB2769C298F3627005A0797 /* Docs.h */,
+				EEB2769D298F3627005A0797 /* Docs.m */,
+				EEB276A229914095005A0797 /* DP.h */,
+				EEB276A329914095005A0797 /* DP.m */,
+				EE0ED3CC271C5F2900FE6032 /* LargestLevelValue.h */,
+				EE0ED3CD271C5F2900FE6032 /* LargestLevelValue.m */,
 				EE271C6F26E364AA00B384BF /* List.h */,
 				EE271C7026E364AA00B384BF /* List.m */,
 				EE905C5E2717179A00FF9860 /* ListNode.h */,
@@ -223,32 +220,40 @@
 				EE5068E4271A614400A94209 /* MaxArea.m */,
 				EE0ED3A4271AAB8500FE6032 /* MaxProfit.h */,
 				EE0ED3A5271AAB8500FE6032 /* MaxProfit.m */,
+				EEB27699298EA826005A0797 /* MaxSubarray.h */,
+				EEB2769A298EA826005A0797 /* MaxSubarray.m */,
+				EEB276A52991445B005A0797 /* Parentheses.h */,
+				EEB276A62991445B005A0797 /* Parentheses.m */,
 				EE0ED39A271A69BF00FE6032 /* Permute.h */,
 				EE0ED39B271A69BF00FE6032 /* Permute.m */,
+				EEB2769F298F3770005A0797 /* Recursion.h */,
+				EEB276A0298F3770005A0797 /* Recursion.m */,
 				EE5068C72719AD6B00A94209 /* RemoveNthFromEnd.h */,
 				EE5068C82719AD6B00A94209 /* RemoveNthFromEnd.m */,
 				EE28DAD82717BB2800EEE23E /* RobRoom.h */,
 				EE28DAD92717BB2800EEE23E /* RobRoom.m */,
+				EE710373271D0126000BEB2D /* RotateRight.h */,
+				EE710374271D0126000BEB2D /* RotateRight.m */,
 				EE271C7226E492A500B384BF /* Search.h */,
 				EE271C7326E492A500B384BF /* Search.m */,
 				EE5068D62719BA5900A94209 /* SearchRange.h */,
 				EE5068D72719BA5900A94209 /* SearchRange.m */,
+				EEB361A2271EF95800C97E6A /* SortList.h */,
+				EEB361A3271EF95800C97E6A /* SortList.m */,
+				EEE9928B299B372B00E4A9A3 /* Stock.h */,
+				EEE9928C299B372B00E4A9A3 /* Stock.m */,
+				EE0ED3BD271C4E7B00FE6032 /* SubStructure.h */,
+				EE0ED3BE271C4E7B00FE6032 /* SubStructure.m */,
 				EE905C532717152A00FF9860 /* TreeNode.h */,
 				EE905C542717152A00FF9860 /* TreeNode.m */,
 				EE5068DA2719C13C00A94209 /* TreeSum.h */,
 				EE5068DB2719C13C00A94209 /* TreeSum.m */,
+				EE0ED3C8271C597A00FE6032 /* TreeToDoublyList.h */,
+				EE0ED3C9271C597A00FE6032 /* TreeToDoublyList.m */,
 				EE905C4D2717149100FF9860 /* TwoSum.h */,
 				EE905C4E2717149100FF9860 /* TwoSum.m */,
 				EE0ED3B2271AE9BE00FE6032 /* ValidBST.h */,
 				EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */,
-				EEB2769C298F3627005A0797 /* Docs.h */,
-				EEB2769D298F3627005A0797 /* Docs.m */,
-				EEB2769F298F3770005A0797 /* Recursion.h */,
-				EEB276A0298F3770005A0797 /* Recursion.m */,
-				EEB276A229914095005A0797 /* DP.h */,
-				EEB276A329914095005A0797 /* DP.m */,
-				EEB276A52991445B005A0797 /* Parentheses.h */,
-				EEB276A62991445B005A0797 /* Parentheses.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */,
 				EE271C5B26E3513500B384BF /* ViewController.m in Sources */,
 				EE5068E02719C35C00A94209 /* Sort.m in Sources */,
+				EEE9928D299B372B00E4A9A3 /* Stock.m in Sources */,
 				EE0ED39C271A69BF00FE6032 /* Permute.m in Sources */,
 				EE0ED3CA271C597A00FE6032 /* TreeToDoublyList.m in Sources */,
 				EE271C5526E3513500B384BF /* AppDelegate.m in Sources */,
