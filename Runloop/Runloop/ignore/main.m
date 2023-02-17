@@ -11,7 +11,7 @@
 
 int main(int argc, char * argv[]) {
     
-    [MPRunloopObserver beginObserver];
+//    [MPRunloopObserver beginObserver];
     
     NSString * appDelegateClassName;
     @autoreleasepool {

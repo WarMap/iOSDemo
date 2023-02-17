@@ -18,6 +18,8 @@
 		EEBE48EA2662894100732E0C /* MPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBE48E92662894100732E0C /* MPThread.m */; };
 		EEE11683266324B30010107E /* MPLRSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE11682266324B30010107E /* MPLRSource.m */; };
 		EEE99292299E345B00E4A9A3 /* MPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99291299E345B00E4A9A3 /* MPPerson.m */; };
+		EEE99295299FA92600E4A9A3 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99294299FA92600E4A9A3 /* Block.m */; };
+		EEE99298299FA95800E4A9A3 /* BaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99297299FA95800E4A9A3 /* BaseItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +214,10 @@
 		EEE11682266324B30010107E /* MPLRSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPLRSource.m; sourceTree = "<group>"; };
 		EEE99290299E345B00E4A9A3 /* MPPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPPerson.h; sourceTree = "<group>"; };
 		EEE99291299E345B00E4A9A3 /* MPPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPPerson.m; sourceTree = "<group>"; };
+		EEE99293299FA92600E4A9A3 /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		EEE99294299FA92600E4A9A3 /* Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		EEE99296299FA95800E4A9A3 /* BaseItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseItem.h; sourceTree = "<group>"; };
+		EEE99297299FA95800E4A9A3 /* BaseItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,6 +467,10 @@
 				EE5D71432662822000DC0FA6 /* AppDelegate.m */,
 				EE5D71452662822000DC0FA6 /* SceneDelegate.h */,
 				EE5D71462662822000DC0FA6 /* SceneDelegate.m */,
+				EEE99293299FA92600E4A9A3 /* Block.h */,
+				EEE99294299FA92600E4A9A3 /* Block.m */,
+				EEE99296299FA95800E4A9A3 /* BaseItem.h */,
+				EEE99297299FA95800E4A9A3 /* BaseItem.m */,
 			);
 			path = ignore;
 			sourceTree = "<group>";
@@ -567,6 +577,8 @@
 				EE5D71552662822000DC0FA6 /* main.m in Sources */,
 				EE2189DB268E9E17006D57B6 /* MPRunloopObserver.m in Sources */,
 				EEE11683266324B30010107E /* MPLRSource.m in Sources */,
+				EEE99295299FA92600E4A9A3 /* Block.m in Sources */,
+				EEE99298299FA95800E4A9A3 /* BaseItem.m in Sources */,
 				EE5D71472662822000DC0FA6 /* SceneDelegate.m in Sources */,
 				EEBE48EA2662894100732E0C /* MPThread.m in Sources */,
 			);
