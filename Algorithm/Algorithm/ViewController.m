@@ -67,10 +67,10 @@
 //    [RotateRight run];
 //    [SortList run];
 //    [OddEventList run];
-    [DP run];
+//    [DP run];
 //    [Parentheses run];
 //    [LRU run];
-//    [Stock run];
+    [Stock run];
 }
 
 @end
