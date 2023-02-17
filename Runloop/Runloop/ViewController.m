@@ -9,7 +9,7 @@
 #import "MPThread.h"
 #import "MPLRSource.h"
 #import "MPRunloopObserver.h"
-
+#import "MPPerson.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) MPThread *thread;
@@ -17,16 +17,68 @@
 
 @end
 
+typedef void (^mpblock)(void);
 @implementation ViewController
 
+typedef void (^MJBlock) (void);
+
+struct __Block_byref_age_0 {
+    void *__isa;
+    struct __Block_byref_age_0 *__forwarding;
+    int __flags;
+    int __size;
+    int age;
+};
+
+struct __main_block_desc_0 {
+    size_t reserved;
+    size_t Block_size;
+    void (*copy)(void);
+    void (*dispose)(void);
+};
+
+struct __block_impl {
+    void *isa;
+    int Flags;
+    int Reserved;
+    void *FuncPtr;
+};
+
+struct __main_block_impl_0 {
+    struct __block_impl impl;
+    struct __main_block_desc_0* Desc;
+    struct __Block_byref_age_0 *age;
+};
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view.
 //    [self runloopCallingOut];
-    [self threadAndRunloop];
-//    [MPLRSource run];、
+//    [self threadAndRunloop];
+//    [MPLRSource run];
 //    [self gcdTest];
+    
+//    __block NSObject *a = [[NSObject alloc] init];
+    MPPerson *person = [[MPPerson alloc] init];
+    person.age = 3;
+    NSObject *obj = [NSObject alloc];
+    int b =7;
+    int *a = &b;
+    __block int age = 10;
+    mpblock my = ^(void) {
+        NSLog(@"11 %d", age);
+//        NSLog(@"ddd - %@", a);
+    };
+//    NSLog(@"11 %@", a);
+//    NSLog(@"11 %ll", );
+    struct __main_block_impl_0 *blockImp = (__bridge struct __main_block_impl_0 *)my;
+    struct __main_block_impl_0 *blockImp12 = (__bridge struct __main_block_impl_0 *)^(void){
+        NSLog(@"%d",age);
+    };
+    NSLog(@"my %@", my);
+    my();
+    NSLog(@"tmp %@", ^(void){NSLog(@"");});
+    NSLog(@"obj %@", obj);
 
 }
 #pragma mark -
@@ -61,8 +113,9 @@
 //    } else {
 //        NSLog(@"thread not exist, stop touch");
 //    }
-    int res = [self recurAdd:100];
-    NSLog(@"100 == %d", res);
+//    int res = [self recurAdd:100];
+//    NSLog(@"100 == %d", res);
+    [self runloopCallingOut];
 }
 
 - (void)btnClick {
@@ -138,10 +191,13 @@
 
 
 - (void)runloopCallingOut {
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    long wait = dispatch_semaphore_wait(sema, 3*NSEC_PER_MSEC);
     //__CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"dispatch_get_main_queue");
     });
+    UIButton *btn;
     //__CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__
     [self performSelector:@selector(fire) withObject:nil afterDelay:1.0];
     //__CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__

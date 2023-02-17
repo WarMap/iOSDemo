@@ -17,6 +17,7 @@
 		EE5D71552662822000DC0FA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5D71542662822000DC0FA6 /* main.m */; };
 		EEBE48EA2662894100732E0C /* MPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBE48E92662894100732E0C /* MPThread.m */; };
 		EEE11683266324B30010107E /* MPLRSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE11682266324B30010107E /* MPLRSource.m */; };
+		EEE99292299E345B00E4A9A3 /* MPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99291299E345B00E4A9A3 /* MPPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,6 +210,8 @@
 		EEE1167D266323D30010107E /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		EEE11681266324B30010107E /* MPLRSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPLRSource.h; sourceTree = "<group>"; };
 		EEE11682266324B30010107E /* MPLRSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPLRSource.m; sourceTree = "<group>"; };
+		EEE99290299E345B00E4A9A3 /* MPPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPPerson.h; sourceTree = "<group>"; };
+		EEE99291299E345B00E4A9A3 /* MPPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +440,8 @@
 				EEE1167E266324120010107E /* ignore */,
 				EEBE48E5266283CC00732E0C /* CFRunLoop.c */,
 				EEBE48E6266283CC00732E0C /* CFRunLoop.h */,
+				EEE99290299E345B00E4A9A3 /* MPPerson.h */,
+				EEE99291299E345B00E4A9A3 /* MPPerson.m */,
 				EE5D71482662822000DC0FA6 /* ViewController.h */,
 				EE5D71492662822000DC0FA6 /* ViewController.m */,
 			);
@@ -557,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE5D714A2662822000DC0FA6 /* ViewController.m in Sources */,
+				EEE99292299E345B00E4A9A3 /* MPPerson.m in Sources */,
 				EE5D71442662822000DC0FA6 /* AppDelegate.m in Sources */,
 				EE5D71552662822000DC0FA6 /* main.m in Sources */,
 				EE2189DB268E9E17006D57B6 /* MPRunloopObserver.m in Sources */,
