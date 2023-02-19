@@ -12,6 +12,7 @@
 + (void)run {
     [self testclimbStairs];
     [self testMiniTotal];
+    [self testMinPath];
 }
 //https://leetcode.cn/problems/climbing-stairs/
 + (void)testclimbStairs {
@@ -42,6 +43,38 @@
         }
     }
     return mini[0].intValue;
+}
+//https://leetcode.cn/problems/minimum-path-sum/
++ (void)testMinPath {
+    NSArray *array = @[@[@1,@3,@1].mutableCopy,
+                       @[@1,@5,@1],
+                       @[@4,@2,@1]
+    ];
+    int res = [self minPath:array];
+    NSLog(@"mini path count = %d", res);
+}
+
++ (int)minPath:(NSArray <NSArray <NSNumber *>*>*)path {
+    int row = path.count;
+    int col = path.firstObject.count;
+    NSMutableArray <NSMutableArray <NSNumber *>*>*dp = [NSMutableArray array];
+    for (NSArray *row in path) {
+        [dp addObject:row.mutableCopy];
+    }
+    for (int i = row-1; i>=0; --i) {
+        for (int j = col-1; j>=0; --j) {
+            if (i == row-1 && j == col-1) {
+                dp[i][j] = path[i][j];
+            } else if (i == row-1) {
+                dp[i][j] = @(IV(path[i][j])+IV(dp[i][j+1]));
+            } else if (j == col-1) {
+                dp[i][j] = @(IV(path[i][j])+IV(dp[i+1][j]));
+            } else {
+                dp[i][j] = @(IV(path[i][j])+MIN(IV(dp[i+1][j]), IV(dp[i][j+1])));
+            }
+        }
+    }
+    return IV(dp[0][0]);
 }
 
 @end
