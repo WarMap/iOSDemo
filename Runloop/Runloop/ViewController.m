@@ -11,6 +11,8 @@
 #import "MPRunloopObserver.h"
 #import "MPPerson.h"
 #import "Block.h"
+#import "Runloop.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) MPThread *thread;
@@ -26,8 +28,8 @@
 }
 
 - (void)test {
-    [Block test];
-
+//    [Block test];
+    [Runloop test];
 }
 #pragma mark -
 #pragma mark - 线程保活

@@ -16,10 +16,6 @@
 #import "MPThreadUtil.h"
 
 using namespace std;
-#define KSVideoPreloadInfoLog(frmt, ...)   KSTLogAMInfo(frmt, ##__VA_ARGS__)
-#define KS_VIDEO_PRELOAD_PAGE_STAY_TIME_LOG(frmt, ...) KSVideoPreloadInfoLog(@"[页面停留时长]", frmt, ##__VA_ARGS__)
-#define KSMPLOG(frmt, ...) KSVideoPreloadInfoLog((@[@"war", @"map"]), frmt, ##__VA_ARGS__)
-#define KSVideoPreloadMGRErrorLog(frmt, ...) KSVideoPreloadInfoLog(@"Manager", frmt, ##__VA_ARGS__)
 
 @interface ViewController ()<NSPortDelegate>
 
@@ -57,8 +53,6 @@ using namespace std;
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    KSVideoPreloadMGRErrorLog(@"注册数据源结束 dataSource为空");
 //    KS_VIDEO_PRELOAD_PAGE_STAY_TIME_LOG(@"添加了一个次均播放时长 %@", @(3));
-    KSVideoPreloadInfoLog(@"nihao");
-    KSMPLOG(@"hhhhhhhh");
 }
 - (void)setupGes {
     UITapGestureRecognizer *tapGES = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleFingerdidTapView:)];

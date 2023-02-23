@@ -20,6 +20,7 @@
 		EEE99292299E345B00E4A9A3 /* MPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99291299E345B00E4A9A3 /* MPPerson.m */; };
 		EEE99295299FA92600E4A9A3 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99294299FA92600E4A9A3 /* Block.m */; };
 		EEE99298299FA95800E4A9A3 /* BaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE99297299FA95800E4A9A3 /* BaseItem.m */; };
+		EEE9929E29A727B000E4A9A3 /* Runloop.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9929D29A727B000E4A9A3 /* Runloop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +219,8 @@
 		EEE99294299FA92600E4A9A3 /* Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		EEE99296299FA95800E4A9A3 /* BaseItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseItem.h; sourceTree = "<group>"; };
 		EEE99297299FA95800E4A9A3 /* BaseItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseItem.m; sourceTree = "<group>"; };
+		EEE9929C29A727B000E4A9A3 /* Runloop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runloop.h; sourceTree = "<group>"; };
+		EEE9929D29A727B000E4A9A3 /* Runloop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Runloop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +474,8 @@
 				EEE99294299FA92600E4A9A3 /* Block.m */,
 				EEE99296299FA95800E4A9A3 /* BaseItem.h */,
 				EEE99297299FA95800E4A9A3 /* BaseItem.m */,
+				EEE9929C29A727B000E4A9A3 /* Runloop.h */,
+				EEE9929D29A727B000E4A9A3 /* Runloop.m */,
 			);
 			path = ignore;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 				EEE99295299FA92600E4A9A3 /* Block.m in Sources */,
 				EEE99298299FA95800E4A9A3 /* BaseItem.m in Sources */,
 				EE5D71472662822000DC0FA6 /* SceneDelegate.m in Sources */,
+				EEE9929E29A727B000E4A9A3 /* Runloop.m in Sources */,
 				EEBE48EA2662894100732E0C /* MPThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
