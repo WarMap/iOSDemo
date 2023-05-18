@@ -131,6 +131,7 @@
 }
 
 - (void)textBarShouldBeginEditing:(BMTextFiledBar *)textBar {
+//  即将开始编辑，根据textview里面的内容修改布局
 //  更新直系子view高度
     CGFloat height = [self.textBar calTextViewHeigh];
     [self customLayoutWithTextViewHeight:height];
@@ -139,13 +140,13 @@
     [self.textBar updateWithNewTextViewHeight:height];
 }
 
-#pragma mark - Label
+#pragma mark - BMInputAnimater
+//输入状态时的动画
 - (void)animateWithOldHeight:(CGFloat)oldHeight newHeight:(CGFloat)newHeight {
     CGFloat height = newHeight - oldHeight;
     self.textBar.height += height;
     self.textBarContainer.height += height;
     self.collectionview.top = self.textBarContainer.bottom;
-    self.collectionview.bottom = self.superview.height;
     [self.textBar updateWithNewTextViewHeight:newHeight];
 }
 
