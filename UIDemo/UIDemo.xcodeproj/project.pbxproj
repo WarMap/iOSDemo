@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373F56232A16321300247349 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F56222A16321300247349 /* DemoViewController.m */; };
+		373F56262A16FBB200247349 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F56252A16FBB200247349 /* NavViewController.m */; };
+		3783BEDB2A2629B5002C09F5 /* TransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3783BEDA2A2629B5002C09F5 /* TransformView.m */; };
 		37879DEA2A14FA380014CE88 /* BMCollectonTextFiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37879DE22A14FA380014CE88 /* BMCollectonTextFiledView.m */; };
 		37879DEB2A14FA380014CE88 /* BMTextFiledBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37879DE42A14FA380014CE88 /* BMTextFiledBar.m */; };
 		37879DEC2A14FA380014CE88 /* BMInputAnimater.m in Sources */ = {isa = PBXBuildFile; fileRef = 37879DE62A14FA380014CE88 /* BMInputAnimater.m */; };
@@ -22,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373F56212A16321300247349 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		373F56222A16321300247349 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		373F56242A16FBB200247349 /* NavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
+		373F56252A16FBB200247349 /* NavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
+		3783BED92A2629B5002C09F5 /* TransformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformView.h; sourceTree = "<group>"; };
+		3783BEDA2A2629B5002C09F5 /* TransformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformView.m; sourceTree = "<group>"; };
 		37879DE22A14FA380014CE88 /* BMCollectonTextFiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCollectonTextFiledView.m; sourceTree = "<group>"; };
 		37879DE32A14FA380014CE88 /* BMFloweryCharacterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMFloweryCharacterManager.h; sourceTree = "<group>"; };
 		37879DE42A14FA380014CE88 /* BMTextFiledBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTextFiledBar.m; sourceTree = "<group>"; };
@@ -107,6 +116,12 @@
 				37BCF3E12A138B6E0091FE56 /* LaunchScreen.storyboard */,
 				37BCF3E42A138B6E0091FE56 /* Info.plist */,
 				37BCF3E52A138B6E0091FE56 /* main.m */,
+				373F56212A16321300247349 /* DemoViewController.h */,
+				373F56222A16321300247349 /* DemoViewController.m */,
+				373F56242A16FBB200247349 /* NavViewController.h */,
+				373F56252A16FBB200247349 /* NavViewController.m */,
+				3783BED92A2629B5002C09F5 /* TransformView.h */,
+				3783BEDA2A2629B5002C09F5 /* TransformView.m */,
 			);
 			path = UIDemo;
 			sourceTree = "<group>";
@@ -182,8 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37BCF3DB2A138B6D0091FE56 /* ViewController.m in Sources */,
+				3783BEDB2A2629B5002C09F5 /* TransformView.m in Sources */,
+				373F56262A16FBB200247349 /* NavViewController.m in Sources */,
 				37879DEC2A14FA380014CE88 /* BMInputAnimater.m in Sources */,
 				37879DF12A14FBFB0014CE88 /* UIView+kit.m in Sources */,
+				373F56232A16321300247349 /* DemoViewController.m in Sources */,
 				37879DEA2A14FA380014CE88 /* BMCollectonTextFiledView.m in Sources */,
 				37BCF3D52A138B6D0091FE56 /* AppDelegate.m in Sources */,
 				37BCF3E62A138B6E0091FE56 /* main.m in Sources */,
