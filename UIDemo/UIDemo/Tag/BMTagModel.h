@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *viewPv;
 @property (nonatomic, copy) NSString *isHotTopic;
 
+@property (nonatomic, assign) BOOL isMore;
 - (BOOL)hasHotImage;
 
 @end

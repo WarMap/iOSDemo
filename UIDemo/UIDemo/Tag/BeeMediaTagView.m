@@ -55,7 +55,9 @@
 
 - (void)fireRequest
 {
-    self.dataSource = @[@"特种兵极限挑战",@"天南地北粽子大赏",@"特种兵旅游",@"端午节传统",@"拍背六月份需求做完了吗",@"可能做不完了",@"不会影响假期吧",@"就是这么多需求",@"这也看不掉",@"就这样写吧huugugfhfghgf"];
+    self.dataSource = @[@"特种兵极限挑战",@"天南地北粽子大赏",@"特种兵旅游",@"端午节传统",@"拍背六月份需求做完了吗",@"可能做不完了",@"不会影响假期吧",@"就是这么多需求",@"这也看不掉",@"就这样写吧huugugfhfghgf",@"更多话题"];
+    
+    
 }
 
 - (void)setupUI
@@ -249,6 +251,8 @@
     model.name = string;
     if (indexPath.row == 1) {
         model.isHotTopic = @"1";
+    } else if (indexPath.row == (self.dataSource.count-1)) {
+        model.isMore = YES;
     }
     CGFloat extW = [BMTopicCollectionViewCell extWidthWithModel:model];
     CGFloat width = [string sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.f]}].width +
@@ -285,14 +289,18 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *tmpCell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(BMTopicCollectionViewCell.class)
-                                                                           forIndexPath:indexPath];
+                                                                              forIndexPath:indexPath];
     BMTopicCollectionViewCell *cell = (BMTopicCollectionViewCell *)tmpCell;
     BMTagModel *model = [[BMTagModel alloc] init];
     model.name = self.dataSource[indexPath.row];
     if (indexPath.row == 1) {
         model.isHotTopic = @"1";
+    } else if (indexPath.row == (self.dataSource.count-1)) {
+        model.isMore = YES;
     }
     cell.model = model;
+    
+    
     return cell;
 }
 
