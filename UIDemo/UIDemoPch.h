@@ -9,6 +9,8 @@
 #define UIDemoPch_h
 #import <UIKit/UIKit.h>
 #import "UIView+kit.h"
+#import "NSMutableArray+utils.h"
+#import "NSMutableDictionary+utils.h"
 
 #define WS(weakSelf) __weak typeof (self) weakSelf = self;
 
