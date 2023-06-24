@@ -7,6 +7,7 @@
 //
 
 #import "BMTopicCollectionViewCell.h"
+#import "BeeMediaMarco.h"
 
 @interface BMTopicCollectionViewCell ()
 
@@ -15,8 +16,6 @@
 @property (nonatomic, strong) UILabel *label;
 
 @end
-
-#define fjlog(args...) NSLog(@"fengjiu %@",[NSString stringWithFormat:args]);
 
 
 @implementation BMTopicCollectionViewCell

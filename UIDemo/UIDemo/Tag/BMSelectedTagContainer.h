@@ -10,9 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class BMSelectedTagContainer;
+
+@protocol BMSelectedTagContainerDelegate <NSObject>
+
+- (void)selectedTagContainerDeseleted:(BMSelectedTagContainer *)container;
+
+@end
+
 @interface BMSelectedTagContainer : UIView
 
 @property (nonatomic, strong) BMTagModel *model;
+@property (nonatomic, weak) id<BMSelectedTagContainerDelegate> delegate;
++ (CGFloat)defaultHeight;
 
 @end
 

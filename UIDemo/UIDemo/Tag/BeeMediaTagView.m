@@ -29,7 +29,7 @@
 @property (nonatomic, strong) BMTopicCollectionViewCell *selectedCell;
 @property (nonatomic, copy) NSArray *dataSource;
 
-@property (nonatomic, strong) UIView *selectedContainer;
+@property (nonatomic, strong) BMSelectedTagContainer *selectedContainer;
 
 @property (nonatomic, assign) BOOL twoLineHasSetup;
 @property (nonatomic, assign) BOOL selectedHasSetup;
@@ -167,6 +167,13 @@
                                               0,
                                               self.width,
                                               [self.class selectedHeight]);
+    NSInteger index = [self selectedCellIndex];
+    if (index != NSNotFound) {
+        BMTagModel *mode = [[BMTagModel alloc ] init];
+        mode.name = self.dataSource[index];
+        self.selectedContainer.model = mode;
+    }
+
     [self addSubview:self.selectedContainer];
     
 }
@@ -189,7 +196,7 @@
 /// 选中标签后的高度
 + (CGFloat)selectedHeight
 {
-    return 50;
+    return [BMSelectedTagContainer defaultHeight];
 }
 
 
@@ -299,6 +306,16 @@
     [self setupUI];
 }
 
+#pragma mark -
+- (void)selectedTagContainerDeseleted:(BMSelectedTagContainer *)container
+{
+    NSIndexPath *path = [self.collectionView indexPathsForSelectedItems].firstObject;
+    if (path) {
+        [self.collectionView deselectItemAtIndexPath:path animated:NO];
+        [self setupUI];
+    }
+}
+
 #pragma mark - getter
 
 - (UIView *)container
@@ -340,14 +357,12 @@
     return _leftIcon;
 }
 
-
-
-
 - (UIView *)selectedContainer
 {
     if (!_selectedContainer) {
-        _selectedContainer = [[UIView alloc] init];
-        _selectedContainer.backgroundColor = [UIColor grayColor];
+        _selectedContainer = [[BMSelectedTagContainer alloc] init];
+        _selectedContainer.backgroundColor = [UIColor blackColor];
+        _selectedContainer.delegate = self;
     }
     return _selectedContainer;
 }
