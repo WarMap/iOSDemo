@@ -365,7 +365,7 @@
     return _leftIcon;
 }
 
-- (UIView *)selectedContainer
+- (BMSelectedTagContainer *)selectedContainer
 {
     if (!_selectedContainer) {
         _selectedContainer = [[BMSelectedTagContainer alloc] init];

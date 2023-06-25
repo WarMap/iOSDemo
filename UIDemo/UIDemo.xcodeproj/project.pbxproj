@@ -37,6 +37,8 @@
 		3781A7C22A4442C60016F2CE /* BMCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7C12A4442C60016F2CE /* BMCollectionReusableView.m */; };
 		3781A7C52A44432D0016F2CE /* BMCollectionViewBackgroundViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7C42A44432D0016F2CE /* BMCollectionViewBackgroundViewLayoutAttributes.m */; };
 		3781A7E62A468DD40016F2CE /* BMSelectedTagContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7E52A468DD40016F2CE /* BMSelectedTagContainer.m */; };
+		3781A7EF2A483B2F0016F2CE /* BMFoldableTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7EE2A483B2F0016F2CE /* BMFoldableTagView.m */; };
+		3781A7F22A48422F0016F2CE /* BMTwoImageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7F12A48422F0016F2CE /* BMTwoImageTagView.m */; };
 		3783BEDB2A2629B5002C09F5 /* TransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3783BEDA2A2629B5002C09F5 /* TransformView.m */; };
 		37879DEA2A14FA380014CE88 /* BMCollectonTextFiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37879DE22A14FA380014CE88 /* BMCollectonTextFiledView.m */; };
 		37879DEB2A14FA380014CE88 /* BMTextFiledBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37879DE42A14FA380014CE88 /* BMTextFiledBar.m */; };
@@ -176,6 +178,10 @@
 		3781A7C42A44432D0016F2CE /* BMCollectionViewBackgroundViewLayoutAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMCollectionViewBackgroundViewLayoutAttributes.m; sourceTree = "<group>"; };
 		3781A7E42A468DD40016F2CE /* BMSelectedTagContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMSelectedTagContainer.h; sourceTree = "<group>"; };
 		3781A7E52A468DD40016F2CE /* BMSelectedTagContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMSelectedTagContainer.m; sourceTree = "<group>"; };
+		3781A7ED2A483B2F0016F2CE /* BMFoldableTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMFoldableTagView.h; sourceTree = "<group>"; };
+		3781A7EE2A483B2F0016F2CE /* BMFoldableTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMFoldableTagView.m; sourceTree = "<group>"; };
+		3781A7F02A48422F0016F2CE /* BMTwoImageTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMTwoImageTagView.h; sourceTree = "<group>"; };
+		3781A7F12A48422F0016F2CE /* BMTwoImageTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMTwoImageTagView.m; sourceTree = "<group>"; };
 		3783BED92A2629B5002C09F5 /* TransformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformView.h; sourceTree = "<group>"; };
 		3783BEDA2A2629B5002C09F5 /* TransformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformView.m; sourceTree = "<group>"; };
 		37879DE22A14FA380014CE88 /* BMCollectonTextFiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCollectonTextFiledView.m; sourceTree = "<group>"; };
@@ -412,6 +418,10 @@
 				3781A7A12A42A4450016F2CE /* BMTopicCollectionViewCell.m */,
 				3781A7E42A468DD40016F2CE /* BMSelectedTagContainer.h */,
 				3781A7E52A468DD40016F2CE /* BMSelectedTagContainer.m */,
+				3781A7ED2A483B2F0016F2CE /* BMFoldableTagView.h */,
+				3781A7EE2A483B2F0016F2CE /* BMFoldableTagView.m */,
+				3781A7F02A48422F0016F2CE /* BMTwoImageTagView.h */,
+				3781A7F12A48422F0016F2CE /* BMTwoImageTagView.m */,
 			);
 			path = Tag;
 			sourceTree = "<group>";
@@ -815,6 +825,7 @@
 				37BCF3D82A138B6D0091FE56 /* SceneDelegate.m in Sources */,
 				69A01E3A7826CB26704880F6 /* LKS_LocalInspectPanelLabelView.m in Sources */,
 				C4E63EA5F28653C27726B1D9 /* LKS_LocalInspectManager.m in Sources */,
+				3781A7F22A48422F0016F2CE /* BMTwoImageTagView.m in Sources */,
 				AEAE499FC0438D5A24F467BE /* LKS_LocalInspectViewController.m in Sources */,
 				19A2B966621C150FD1D2EB3E /* UIImage+LookinServer.m in Sources */,
 				82448EB16076630E9A3AED63 /* UITableView+LookinServer.m in Sources */,
@@ -870,6 +881,7 @@
 				864DA7E017C0F6414834F972 /* NSObject+Lookin.m in Sources */,
 				F6AC032949272F7F75B7204D /* Color+Lookin.m in Sources */,
 				B6B3BB5799DFF4726BA6450B /* LookinMethodTraceRecord.m in Sources */,
+				3781A7EF2A483B2F0016F2CE /* BMFoldableTagView.m in Sources */,
 				D02954FEABCFC5782B3928D3 /* LookinObject.m in Sources */,
 				6637EB605D0D24B9ADBC87C9 /* LookinMsgAttribute.m in Sources */,
 				86F522E4BAFFF4E462F971E8 /* LookinMsgTargetAction.m in Sources */,

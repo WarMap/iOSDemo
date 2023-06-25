@@ -11,6 +11,8 @@
 #import "DemoViewController.h"
 #import "BeeMediaTagView.h"
 #import "BMCollectionViewHorzontalLayout.h"
+#import "BMTwoImageTagView.h"
+
 
 @interface ViewController ()<UITextViewDelegate, BeeMediaTagViewDelegate>
 
@@ -22,6 +24,8 @@
 @property (nonatomic, strong) UIView *myView;
 @property (nonatomic, assign) CGFloat sca;
 @property (nonatomic, strong) BeeMediaTagView *topicView;
+@property (nonatomic, strong) BMTwoImageTagView *tagView;
+
 @end
 
 @implementation ViewController
