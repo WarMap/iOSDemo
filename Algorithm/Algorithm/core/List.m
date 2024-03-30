@@ -11,16 +11,17 @@
 
 + (void)run {
 //    [self reverseTest];
-//    [self checkCircle];
-    [self testMergeTwoList];
+    [self checkCircle];
+//    [self testMergeTwoList];
 }
 
 + (void)checkCircle {
-        int a[] = {1,2,3,4,5,6,7};
+    int a[] = {1,2,3,4,5,6,7};
     ListNode *node = [[ListNode alloc] initWithArray:cArray2ocArray(a, 7)];
     [self setupLink:node circle:3 count:7];
     [self checkCircleTest:node];
 }
+
 
 + (void)setupLink:(ListNode *)head
            circle:(NSUInteger)circle
@@ -109,7 +110,6 @@
 }
 
 + (ListNode *)mergeTwoList:(ListNode *)list1 list2:(ListNode*)list2 {
-    ListNode *dummp = [ListNode nodeWithValue:-1 next:nil];
     if (!list1) return list2;
     if (!list2) return list1;
     if (list1.value <= list2.value) {

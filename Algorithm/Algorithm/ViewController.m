@@ -58,7 +58,7 @@
 //    [DailyTem run];
 //    [BinaryTree run];
 //    [ValidBST run];
-//    [List run];
+    [List run];
 //    [Search run];
 //    [BuildTree run];
 //    [SubStructure run];
@@ -69,7 +69,7 @@
 //    [OddEventList run];
 //    [DP run];
 //    [Parentheses run];
-    [LRU run];
+//    [LRU run];
 //    [Stock run];
 }
 

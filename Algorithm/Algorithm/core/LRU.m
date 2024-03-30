@@ -110,7 +110,7 @@
 - (void)insertItemAtHead:(Item *)item
 {
     self.dic[item.key] = item;
-    if (_headItem) {
+    if (_headItem) { 
         item.next = _headItem;
         _headItem.pre = item;
         _headItem = item;
