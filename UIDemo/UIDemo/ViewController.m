@@ -6,80 +6,118 @@
 //
 
 #import "ViewController.h"
-#import "BMFloweryCharacterManager.h"
-#import "TransformView.h"
+#import "MyScrollDelegate.h"
+#include "dobby.h"
+#include <objc/runtime.h>
+#include <mach/mach_time.h>
+#include <objc/message.h>
+
+#include <objc/runtime.h>
+#include <objc/message.h>
+#include <mach/mach_time.h>
+#include "dobby.h"
 #import "DemoViewController.h"
-#import "BeeMediaTagView.h"
-#import "BMCollectionViewHorzontalLayout.h"
-#import "BMTwoImageTagView.h"
 
 
-@interface ViewController ()<UITextViewDelegate, BeeMediaTagViewDelegate>
+static void (*orig_objc_msgSend)(id, SEL, ...);
 
-@property (nonatomic, strong) UITextView *textView;
-@property (nonatomic, strong) NSHashTable *weakArray;
-@property (nonatomic, strong) BMFloweryCharacterManager *manager;
-@property (nonatomic, strong) UIImageView *progressView;
+// 此函数将被用来替换原始的 objc_msgSend
+static void my_objc_msgSend(id self, SEL _cmd, ...) {
 
-@property (nonatomic, strong) UIView *myView;
-@property (nonatomic, assign) CGFloat sca;
-@property (nonatomic, strong) BeeMediaTagView *topicView;
-@property (nonatomic, strong) BMTwoImageTagView *tagView;
+}
 
+__attribute__((constructor))
+void initialize_and_hook(void) {
+    // 在运行时初始化时，Hook objc_msgSend
+//    if (DobbyHook((void *)objc_msgSend, (void *)my_objc_msgSend, (void **)&orig_objc_msgSend) == 1) {
+//        // Hook 成功
+//        NSLog(@"hook success");
+//    } else {
+//        // Hook 失败，需要处理错误
+//        NSLog(@"hook fail");
+//
+//    }
+}
+
+
+@interface ViewController ()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) MyScrollDelegate *scrollDelegate;
 @end
 
 @implementation ViewController
-#define kHeightOfTopicView 103.f
 
-#define textHeight  36
++(void)load
+{
+//    initialize_hook();
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.redColor;
+//    self.scrollDelegate = [[MyScrollDelegate alloc] init];
+//    [self setupScrollView];
+//    DobbyHook(test_sum, new_sum, NULL);
 
     
 }
-- (BeeMediaTagView *)topicView
+
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    if (!_topicView) {
-        _topicView = [[BeeMediaTagView alloc] initWithFrame:CGRectMake(0,
-                                                                       100,
-                                                                       self.view.bounds.size.width,
-                                                                       kHeightOfTopicView)];
-        _topicView.backgroundColor = [UIColor blackColor];
-        _topicView.delegate = self;
+    NSLog(@"1 %@", NSStringFromSelector(_cmd));
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"1 %@", NSStringFromSelector(_cmd));
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    NSLog(@"1 %@", NSStringFromSelector(_cmd));
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+    NSLog(@"1 %@", NSStringFromSelector(_cmd));
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    DemoViewController *vc = [[DemoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#define pageCount 20
+
+- (void)setupScrollView
+{
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollView];
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.delegate = self.scrollDelegate;
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height * pageCount);
+    for (NSInteger i = 0; i < pageCount; ++i) {
+        UIView *view = [self.class randomColorViewWithFrame:self.scrollView.bounds];
+        view.top = i*self.scrollView.bounds.size.height;
+        [self.scrollView addSubview:view];
     }
-    return _topicView;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self.view addSubview:self.topicView];
-}
 
-#pragma mark - Label
-/// 某个tag被选中
-/// - Parameters:
-///   - tagView: <#tagView description#>
-///   - model: <#model description#>
-- (void)tagView:(BeeMediaTagView *)tagView tagSelected:(BMTagModel *)model
++ (UIView *)randomColorViewWithFrame:(CGRect)frame 
 {
+    UIView *view = [[UIView alloc] initWithFrame:frame];
     
-}
-
-
-/// tagview的高度发生变化
-/// - Parameters:
-///   - tagView: <#tagView description#>
-///   - height: <#height description#>
-- (void)tagView:(BeeMediaTagView *)tagView heightChanged:(CGFloat)height
-{
-    [UIView animateWithDuration:0.25 animations:^{
-        self.topicView.height = height;
-    } completion:^(BOOL finished) {
-        
-    }];
+    // 生成随机颜色
+    CGFloat red = arc4random_uniform(256) / 255.0;
+    CGFloat green = arc4random_uniform(256) / 255.0;
+    CGFloat blue = arc4random_uniform(256) / 255.0;
+    
+    view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    
+    return view;
 }
 
 
 
 @end
-
