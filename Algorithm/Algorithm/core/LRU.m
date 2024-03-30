@@ -41,7 +41,8 @@
 }
 
 + (instancetype)itemWithValue:(NSNumber *)value
-                          key:(NSString *)key {
+                          key:(NSString *)key 
+{
     Item *item = [[Item alloc] init];
     item.value = value;
     item.key = key;
@@ -75,21 +76,17 @@
     Item *i2 = [Item itemWithValue:@(2) key:@"2"];
     Item *i3 = [Item itemWithValue:@(3) key:@"3"];
     LRU *lru = [[LRU alloc] initWithCapacity:5];
-    [lru addItem:i0];
-    [lru addItem:i1];
-    [lru addItem:i2];
-    [lru addItem:i3];
-    [lru getItemWithKey:@"2"];
+    [lru insertItemAtHead:i0];
+    [lru insertItemAtHead:i1];
+    [lru insertItemAtHead:i2];
+    [lru insertItemAtHead:i3];
+    [lru objectForKey:@"2"];
      [lru.headItem output];
 }
 
 - (instancetype)initWithCapacity:(NSUInteger)capacity {
     if (self = [super init]) {
         self.dic = [NSMutableDictionary dictionaryWithCapacity:capacity];
-        self.headItem = [Item itemWithValue:@(-1) key:@"head"];
-        self.tailItem = [Item itemWithValue:@(-1) key:@"tail"];
-        self.headItem.next = self.tailItem;
-        self.tailItem.pre = self.headItem;
         self.capacity = capacity;
         self.count = 0;
     }
@@ -98,56 +95,85 @@
 
 #pragma mark - lru操作
 
-- (Item *)getItemWithKey:(NSString *)key {
-    if (key.length <= 0 && !self.dic[key]) {
+- (Item *)objectForKey:(id)key
+{
+    if (!key) {
         return nil;
     }
-    Item *item = self.dic[key];
-    [self move2Head:item];
+    Item *item = [self.dic objectForKey:key];
+    if (item) {
+        [self bringItemToHead:item];
+    }
     return item;
 }
 
-- (void)addItem:(Item *)item {
-    if (!item) {
+- (void)insertItemAtHead:(Item *)item
+{
+    self.dic[item.key] = item;
+    if (_headItem) {
+        item.next = _headItem;
+        _headItem.pre = item;
+        _headItem = item;
+    } else {
+        _headItem = _tailItem = item;
+    }
+}
+
+- (void)bringItemToHead:(Item *)item
+{
+    if (_headItem == item) {
         return;
     }
-    if (!self.dic[item.key]) {
-        [self add2Head:item];
-        self.dic[item.key] = item;
-        self.count += 1;
-        if (self.count > self.capacity) {
-            Item *removed = [self removeTail];
-            self.dic[removed.key] = nil;
-            self.count -= 1;
-        }
+    if (_tailItem == item) {
+        _tailItem = _tailItem.pre;
+        _tailItem.next = nil;
     } else {
-        Item *tmp = self.dic[item.key];
-        tmp.value = item.value;
-        [self move2Head:tmp];
+        item.next.pre = item.pre;
+        item.pre.next = item.next;
+    }
+    item.next = _headItem;
+    item.pre = nil;
+    _headItem.pre = item;
+    _headItem = item;
+}
+
+- (void)removeItem:(Item *)item
+{
+    [self.dic removeObjectForKey:item.key];
+    if (item.next) {
+        item.next.pre = item.pre;
+    }
+    if (item.pre) {
+        item.pre.next = item.next;
+    }
+    if (_headItem == item) {
+        _headItem = item.next;
+    }
+    if (_tailItem == item) {
+        _tailItem = item.pre;
     }
 }
 
-- (void)add2Head:(Item *)item {
-    item.pre = self.headItem;
-    item.next = self.headItem.next;
-    self.headItem.next.pre = item;
-    self.headItem.next = item;
+- (Item *)removeTailItem
+{
+    if (!_tailItem) {
+        return nil;
+    }
+    Item *tail = _tailItem;
+    [self.dic removeObjectForKey:_tailItem.key];
+    if (_headItem == _tailItem) {
+        _headItem = _tailItem = nil;
+    } else {
+        _tailItem = _tailItem.pre;
+        _tailItem.next = nil;
+    }
+    return tail;
 }
 
-- (void)move2Head:(Item *)item {
-    [self removeItem:item];
-    [self add2Head:item];
-}
-
-- (void)removeItem:(Item *)item {
-    item.pre.next = item.next;
-    item.next.pre = item.pre;
-}
-
-- (Item *)removeTail {
-    Item *item = self.tailItem.pre;
-    [self removeItem:item];
-    return item;
+- (void)removeAll
+{
+    _headItem = _tailItem = nil;
+    self.dic = [NSMutableDictionary dictionary];
 }
 
 @end
