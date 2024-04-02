@@ -11,6 +11,7 @@
 #include <objc/runtime.h>
 #include <mach/mach_time.h>
 #include <objc/message.h>
+#import "MyView.h"
 
 #include <objc/runtime.h>
 #include <objc/message.h>
@@ -48,11 +49,10 @@ void initialize_and_hook(void) {
 
 @implementation ViewController
 
-+(void)load
+- (void)loadView
 {
-//    initialize_hook();
+    self.view = [[MyView alloc] init];
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.redColor;
@@ -86,6 +86,7 @@ void initialize_and_hook(void) {
     DemoViewController *vc = [[DemoViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 
 #define pageCount 20
 

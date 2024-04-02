@@ -12,6 +12,7 @@
 		373F56262A16FBB200247349 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F56252A16FBB200247349 /* NavViewController.m */; };
 		375E8E932BB0202800E4E59F /* libdobby.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E8E922BB0202800E4E59F /* libdobby.dylib */; };
 		375E8E952BB0226400E4E59F /* libdobby.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 375E8E922BB0202800E4E59F /* libdobby.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		377B59DC2BBA4F4D00EADDD0 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 377B59DB2BBA4F4D00EADDD0 /* MyView.m */; };
 		3781A7AB2A42A6840016F2CE /* NSMutableArray+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7AA2A42A6840016F2CE /* NSMutableArray+utils.m */; };
 		3781A7AE2A42A9F90016F2CE /* NSMutableDictionary+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781A7AD2A42A9F90016F2CE /* NSMutableDictionary+utils.m */; };
 		3783BEDB2A2629B5002C09F5 /* TransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3783BEDA2A2629B5002C09F5 /* TransformView.m */; };
@@ -52,6 +53,8 @@
 		373F56252A16FBB200247349 /* NavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
 		375E8E922BB0202800E4E59F /* libdobby.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdobby.dylib; sourceTree = "<group>"; };
 		375E8E942BB0208C00E4E59F /* dobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dobby.h; sourceTree = "<group>"; };
+		377B59DA2BBA4F4D00EADDD0 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		377B59DB2BBA4F4D00EADDD0 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		3781A7A72A42A5BA0016F2CE /* BeeMediaMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeMediaMarco.h; sourceTree = "<group>"; };
 		3781A7A92A42A6840016F2CE /* NSMutableArray+utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+utils.h"; sourceTree = "<group>"; };
 		3781A7AA2A42A6840016F2CE /* NSMutableArray+utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+utils.m"; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				37BCF3DA2A138B6D0091FE56 /* ViewController.m */,
 				37163AB02BA2D6FD0077006F /* MyScrollDelegate.h */,
 				37163AB12BA2D6FD0077006F /* MyScrollDelegate.m */,
+				377B59DA2BBA4F4D00EADDD0 /* MyView.h */,
+				377B59DB2BBA4F4D00EADDD0 /* MyView.m */,
 			);
 			path = UIDemo;
 			sourceTree = SOURCE_ROOT;
@@ -263,6 +268,7 @@
 				3783BEDB2A2629B5002C09F5 /* TransformView.m in Sources */,
 				37E9EAE72BB7BB980078B28F /* YYCache.m in Sources */,
 				373F56262A16FBB200247349 /* NavViewController.m in Sources */,
+				377B59DC2BBA4F4D00EADDD0 /* MyView.m in Sources */,
 				37879DF12A14FBFB0014CE88 /* UIView+kit.m in Sources */,
 				373F56232A16321300247349 /* DemoViewController.m in Sources */,
 				37BCF3D52A138B6D0091FE56 /* AppDelegate.m in Sources */,
