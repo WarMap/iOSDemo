@@ -32,6 +32,7 @@
 #import "DP.h"
 #import "Parentheses.h"
 #import "Stock.h"
+#import "String.h"
 
 @interface ViewController ()
 
@@ -45,6 +46,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [Recursion run];
+    [String run];
 //    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
@@ -58,7 +60,7 @@
 //    [DailyTem run];
 //    [BinaryTree run];
 //    [ValidBST run];
-    [List run];
+//    [List run];
 //    [Search run];
 //    [BuildTree run];
 //    [SubStructure run];
