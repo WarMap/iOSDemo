@@ -19,6 +19,10 @@
 //    NSString *originalString = @"  Hello,     World! How are you?   ";
     NSString *inputString = @"ccaabbcb";//@"abcabcbb";
     NSLog(@"%ld",(long)[self lengthOfLongestSubstringTwoDistinct:inputString]);
+    NSArray<NSNumber *> *testArray = @[@2, @3, @1, @2, @4, @3];
+    NSInteger targetSum = 7;
+    NSInteger result = [self minSubArrayLen:targetSum array:testArray];
+    NSLog(@"The minimum length of a subarray is %ld", (long)result);
 }
 
 // 151 反转单词
@@ -66,7 +70,7 @@
 }
 
 + (NSInteger)lengthOfLongestSubstringTwoDistinct:(NSString *)s {
-    NSMutableDictionary *map = [NSMutableDictionary dictionaryWithCapacity:2];
+    NSMutableDictionary *map = [NSMutableDictionary dictionaryWithCapacity:3];
     NSInteger start = 0, maxLength = 0;
     for (NSInteger end = 0; end < s.length; end++) {
         map[[s substringWithRange:NSMakeRange(end, 1)]] = @(end);
@@ -82,6 +86,22 @@
     }
     return maxLength;
 }
+
+// 方法实现
++ (NSInteger)minSubArrayLen:(NSInteger)s array:(NSArray<NSNumber *> *)nums {
+    NSInteger n = nums.count;
+    NSInteger start = 0, sum = 0, minLength = NSIntegerMax;
+    for (NSInteger end = 0; end < n; end++) {
+        sum += nums[end].integerValue;
+        while (sum >= s) {
+            minLength = MIN(minLength, end - start + 1);
+            sum -= nums[start].integerValue;
+            start++;
+        }
+    }
+    return minLength == NSIntegerMax ? 0 : minLength;
+}
+
 
 @end
 
