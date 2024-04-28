@@ -34,6 +34,7 @@
 #import "Stock.h"
 #import "String.h"
 #import "Math.h"
+#import "TwoPointer.h"
 
 @interface ViewController ()
 
@@ -48,7 +49,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [Recursion run];
 //    [String run];
-    [Math run];
+//    [Math run];
+    [TwoPointer run];
 //    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];

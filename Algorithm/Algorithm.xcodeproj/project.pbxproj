@@ -41,6 +41,7 @@
 		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
 		EEA7F0212BD8822100DAD057 /* String.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA7F0202BD8822100DAD057 /* String.m */; };
 		EEA7F0242BDDC9FA00DAD057 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA7F0232BDDC9FA00DAD057 /* Math.m */; };
+		EEA7F0272BDDCE7900DAD057 /* TwoPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA7F0262BDDCE7900DAD057 /* TwoPointer.m */; };
 		EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769A298EA826005A0797 /* MaxSubarray.m */; };
 		EEB2769E298F3627005A0797 /* Docs.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769D298F3627005A0797 /* Docs.m */; };
 		EEB276A1298F3770005A0797 /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A0298F3770005A0797 /* Recursion.m */; };
@@ -120,6 +121,8 @@
 		EEA7F0202BD8822100DAD057 /* String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = String.m; sourceTree = "<group>"; };
 		EEA7F0222BDDC9FA00DAD057 /* Math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		EEA7F0232BDDC9FA00DAD057 /* Math.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
+		EEA7F0252BDDCE7900DAD057 /* TwoPointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoPointer.h; sourceTree = "<group>"; };
+		EEA7F0262BDDCE7900DAD057 /* TwoPointer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoPointer.m; sourceTree = "<group>"; };
 		EEB27699298EA826005A0797 /* MaxSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxSubarray.h; sourceTree = "<group>"; };
 		EEB2769A298EA826005A0797 /* MaxSubarray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxSubarray.m; sourceTree = "<group>"; };
 		EEB2769C298F3627005A0797 /* Docs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Docs.h; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				EEA7F0202BD8822100DAD057 /* String.m */,
 				EEA7F0222BDDC9FA00DAD057 /* Math.h */,
 				EEA7F0232BDDC9FA00DAD057 /* Math.m */,
+				EEA7F0252BDDCE7900DAD057 /* TwoPointer.h */,
+				EEA7F0262BDDCE7900DAD057 /* TwoPointer.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */,
 				EE271C5B26E3513500B384BF /* ViewController.m in Sources */,
 				EE5068E02719C35C00A94209 /* Sort.m in Sources */,
+				EEA7F0272BDDCE7900DAD057 /* TwoPointer.m in Sources */,
 				EEA7F0212BD8822100DAD057 /* String.m in Sources */,
 				EEE9928D299B372B00E4A9A3 /* Stock.m in Sources */,
 				EE0ED39C271A69BF00FE6032 /* Permute.m in Sources */,
