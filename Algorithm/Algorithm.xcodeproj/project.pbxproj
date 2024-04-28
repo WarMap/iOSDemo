@@ -40,6 +40,7 @@
 		EE905C552717152A00FF9860 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C542717152A00FF9860 /* TreeNode.m */; };
 		EE905C602717179A00FF9860 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EE905C5F2717179A00FF9860 /* ListNode.m */; };
 		EEA7F0212BD8822100DAD057 /* String.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA7F0202BD8822100DAD057 /* String.m */; };
+		EEA7F0242BDDC9FA00DAD057 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA7F0232BDDC9FA00DAD057 /* Math.m */; };
 		EEB2769B298EA826005A0797 /* MaxSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769A298EA826005A0797 /* MaxSubarray.m */; };
 		EEB2769E298F3627005A0797 /* Docs.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2769D298F3627005A0797 /* Docs.m */; };
 		EEB276A1298F3770005A0797 /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB276A0298F3770005A0797 /* Recursion.m */; };
@@ -117,6 +118,8 @@
 		EE905C5F2717179A00FF9860 /* ListNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
 		EEA7F01F2BD8822100DAD057 /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
 		EEA7F0202BD8822100DAD057 /* String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = String.m; sourceTree = "<group>"; };
+		EEA7F0222BDDC9FA00DAD057 /* Math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		EEA7F0232BDDC9FA00DAD057 /* Math.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
 		EEB27699298EA826005A0797 /* MaxSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxSubarray.h; sourceTree = "<group>"; };
 		EEB2769A298EA826005A0797 /* MaxSubarray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxSubarray.m; sourceTree = "<group>"; };
 		EEB2769C298F3627005A0797 /* Docs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Docs.h; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				EE0ED3B3271AE9BE00FE6032 /* ValidBST.m */,
 				EEA7F01F2BD8822100DAD057 /* String.h */,
 				EEA7F0202BD8822100DAD057 /* String.m */,
+				EEA7F0222BDDC9FA00DAD057 /* Math.h */,
+				EEA7F0232BDDC9FA00DAD057 /* Math.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				EE710375271D0126000BEB2D /* RotateRight.m in Sources */,
 				EE271C6E26E351D200B384BF /* LRU.m in Sources */,
 				EE271C7426E492A500B384BF /* Search.m in Sources */,
+				EEA7F0242BDDC9FA00DAD057 /* Math.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
