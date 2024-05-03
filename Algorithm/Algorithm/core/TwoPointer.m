@@ -21,7 +21,7 @@
     NSLog(@"The maximum area is: %ld", maxArea); // 输出最大面积
 
 }
-
+// 11
 + (NSInteger)maxArea:(NSArray<NSNumber *> *)height {
     NSInteger maxarea = 0, l = 0;
     NSInteger r = [height count] - 1;

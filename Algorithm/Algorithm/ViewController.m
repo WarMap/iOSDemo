@@ -35,6 +35,7 @@
 #import "String.h"
 #import "Math.h"
 #import "TwoPointer.h"
+#import "Sort.h"
 
 @interface ViewController ()
 
@@ -50,7 +51,9 @@
 //    [Recursion run];
 //    [String run];
 //    [Math run];
-    [TwoPointer run];
+//    [TwoPointer run];
+    [Sort run];
+
 //    [BinaryTree run];
 //    [TwoSum run];
 //    [RobRoom run];
