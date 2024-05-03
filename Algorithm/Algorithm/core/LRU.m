@@ -95,6 +95,10 @@
 
 #pragma mark - lru操作
 
+// 读
+// 写 1.直接写 2.读后写
+// 删 1.删某个 2.删尾部 3 删所有
+
 - (Item *)objectForKey:(id)key
 {
     if (!key) {

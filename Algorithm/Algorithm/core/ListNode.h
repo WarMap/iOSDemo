@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) ListNode * __nullable next;
 @property (nonatomic, assign) int value;
-
+- (instancetype)initWithValue:(int)value;
 - (instancetype)initWithValue:(int)value next:(ListNode * _Nullable)node;
 - (instancetype)initWithArray:(NSArray<NSNumber *> *)array;
 + (instancetype)listWithArray:(NSArray<NSNumber *> *)array;

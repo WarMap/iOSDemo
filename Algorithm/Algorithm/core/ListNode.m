@@ -13,6 +13,11 @@
     return [[ListNode alloc] initWithValue:value next:node];
 }
 
+- (instancetype)initWithValue:(int)value
+{
+    return [self initWithValue:value next:nil];
+}
+
 - (instancetype)initWithValue:(int)value next:(ListNode * _Nullable)node {
     self = [super init];
     if (self) {

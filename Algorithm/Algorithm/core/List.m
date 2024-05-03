@@ -11,10 +11,13 @@
 
 + (void)run {
 //    [self reverseTest];
-    [self checkCircle];
+//    [self checkCircle];
+    [self testRemoveNthNode];
 //    [self testMergeTwoList];
 }
 
+#pragma mark -
+#pragma mark - 环检测
 + (void)checkCircle {
     int a[] = {1,2,3,4,5,6,7};
     ListNode *node = [[ListNode alloc] initWithArray:cArray2ocArray(a, 7)];
@@ -37,14 +40,18 @@
     dummy.next = circlePoint;
 }
 
+#pragma mark -
+#pragma mark - 反转列表
 + (void)reverseTest {
     int a[] = {1,2,3,4,5};
 //    ListNode *node = [self reverse:[[ListNode alloc] initWithArray:cArray2ocArray(a, 5)]];
     ListNode *node = [self reverse:[[ListNode alloc] initWithArray:cArray2ocArray(a, 5)] begin:2 end:3];
     [node output];
 }
+
 //https://leetcode.cn/problems/reverse-linked-list/
-+ (ListNode *)reverse:(ListNode *)head {
++ (ListNode *)reverse:(ListNode *)head
+{
     ListNode *dummy = [ListNode nodeWithValue:0 next:head];
     ListNode *c = head;
     ListNode *next = nil;
@@ -99,6 +106,51 @@
     }
     NSLog(@"没有环");
 }
+
++ (void)testRemoveNthNode
+{
+    // 创建一个链表用于测试：1 -> 2 -> 3 -> 4 -> 5
+    ListNode *node1 = [[ListNode alloc] initWithValue:1];
+    ListNode *node2 = [[ListNode alloc] initWithValue:2];
+    ListNode *node3 = [[ListNode alloc] initWithValue:3];
+    ListNode *node4 = [[ListNode alloc] initWithValue:4];
+    ListNode *node5 = [[ListNode alloc] initWithValue:5];
+    
+    node1.next = node2;
+    node2.next = node3;
+    node3.next = node4;
+    node4.next = node5;
+    
+    NSInteger n = 1;
+    
+    // 移除倒数第 n 个节点
+    ListNode *newHead = [self removeNthFromEnd:node1 nth:n];
+    
+    NSLog(@"Linked list after removing %ldth node from end: ", (long)n);
+    [newHead output];
+}
+
++ (ListNode *)removeNthFromEnd:(ListNode *)list nth:(NSUInteger)n
+{
+    ListNode *dummy = [[ListNode alloc] initWithValue:0 next:list];
+    ListNode *c = dummy;
+    ListNode *k = dummy;
+    // 移动 first 指针使得它与 second 指针相隔 n+1 个节点
+     for (NSInteger i = 0; i < n; i++) {
+         k = k.next;
+     }
+     
+    while (k.next) {
+        c = c.next;
+        k = k.next;
+    }
+    c.next = c.next.next;
+    return dummy.next;
+}
+
+
+#pragma mark -
+#pragma mark - 合并有序列表
 //https://leetcode.cn/problems/merge-two-sorted-lists/
 + (void)testMergeTwoList {
     int a[] = {1,2,4};
