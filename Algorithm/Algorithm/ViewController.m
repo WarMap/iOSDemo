@@ -52,7 +52,7 @@
 //    [String run];
 //    [Math run];
 //    [TwoPointer run];
-//    [Sort run];
+    [Sort run];
 
 //    [BinaryTree run];
 //    [TwoSum run];
@@ -67,7 +67,7 @@
 //    [DailyTem run];
 //    [BinaryTree run];
 //    [ValidBST run];
-    [List run];
+//    [List run];
 //    [Search run];
 //    [BuildTree run];
 //    [SubStructure run];

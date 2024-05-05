@@ -11,8 +11,8 @@
 
 + (void)run
 {
-    NSMutableArray *array = [NSMutableArray arrayWithObjects:@(1), @(2), @(3), nil];
-    [self swapArray:array indexA:0 indexB:2];
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@(4), @(2), @(1), @9, nil];
+    [self insertSort:array];
     NSLog(@"array: %@", array);
 }
 
@@ -38,10 +38,10 @@
     array[indexA] = array[indexB];
     array[indexB] = tmp;
     
-//    array[indexA] = @([array[indexA] integerValue] ^ [array[indexB] integerValue]);
-//    array[indexB] = @([array[indexA] integerValue] ^ [array[indexB] integerValue]);
-//    array[indexA] = @([array[indexA] integerValue] ^ [array[indexB] integerValue]);
-
+    //    array[indexA] = @([array[indexA] integerValue] ^ [array[indexB] integerValue]);
+    //    array[indexB] = @([array[indexA] integerValue] ^ [array[indexB] integerValue]);
+    //    array[indexA] = @([array[indexA] integerValue] ^ [array[indexB] integerValue]);
+    
 }
 
 + (NSArray<NSNumber *> *)me:(NSArray<NSNumber *> *)ar
@@ -108,5 +108,24 @@
     
     return result;
 }
+
++ (NSArray<NSNumber *> *)insertSort:(NSArray<NSNumber *> *)array
+{
+    NSMutableArray<NSNumber *> *res = [NSMutableArray arrayWithArray:array];
+    for (NSInteger i = 1; i < res.count; ++i) {
+        NSNumber *v = res[i];
+        NSInteger j=i-1;
+        for (;j>=0; j--) {
+            if (res[j].integerValue > v.integerValue) {
+                res[j+1] = res[j];
+            } else {
+                break;
+            }
+        }
+        res[j+1] = v;
+    }
+    return res.copy;
+}
+
 
 @end
